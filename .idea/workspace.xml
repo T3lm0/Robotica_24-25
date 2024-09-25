@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="ejemplo1" targetName="ejemplo1" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1d3075f3-e312-454e-9cba-abe5d64336ff" name="Changes" comment="Subo el ejercicio 2">
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/reply/cache-v2-daac822571ccfae2457f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/reply/cmakeFiles-v1-ad6022eae45dcaf7047a.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/reply/codemodel-v2-7aab0857295594ce20c2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/reply/directory-.-db94c623072ea0d52cea.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/reply/index-2024-09-24T14-55-59-0772.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/reply/target-ejemplo1-b51edb650a26142fa601.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/reply/target-ejemplo1_autogen-f57b6030322cff1b6d5c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/reply/target-ejemplo1_autogen_timestamp_deps-c5129146a71114d0625e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.cmake/api/v1/reply/toolchains-v1-5f30bc6e808bb27bc21e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.idea/QtSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.idea/ejemplo2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/3.29.6/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/3.29.6/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/3.29.6/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/3.29.6/CompilerIdCXX/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/clean_additional.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/clion-Default-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/ejemplo1.dir/ejemplo2.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/ejemplo1.dir/main.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/ejemplo1_autogen.dir/AutogenInfo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/ejemplo1_autogen.dir/AutogenUsed.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/ejemplo1_autogen.dir/ParseCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeFiles/rules.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/build.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/ejemplo1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/ejemplo1_autogen/deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/ejemplo1_autogen/moc_predefs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/ejemplo1_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/ejemplo1_autogen/timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/ejemplo2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/ejemplo2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejemplo2/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/main" />
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="ejercicio2/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jcumbres&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/T3lm0/Robotica_24-25.git&quot;,
+    &quot;accountId&quot;: &quot;8035929c-2623-4d90-a3f7-025c3290f559&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2mWIeU0GgZpKgxapZRxbcjWrBgQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CMake Application.ejemplo1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/CMakeLists.txt&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ejemplo1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ejemplo1" TARGET_NAME="ejemplo1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ejemplo1" RUN_TARGET_NAME="ejemplo1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d3075f3-e312-454e-9cba-abe5d64336ff" name="Changes" comment="" />
+      <created>1727186000164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727186000164</updated>
+      <workItem from="1727186001246" duration="224000" />
+      <workItem from="1727186674045" duration="97000" />
+      <workItem from="1727186776331" duration="10000" />
+      <workItem from="1727262587530" duration="336000" />
+      <workItem from="1727262991125" duration="1008000" />
+    </task>
+    <task id="LOCAL-00001" summary="no va">
+      <option name="closed" value="true" />
+      <created>1727263021658</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727263021658</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Subo el ejercicio 2">
+      <option name="closed" value="true" />
+      <created>1727263396397</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727263396398</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="no va" />
+    <MESSAGE value="Subo el ejercicio 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Subo el ejercicio 2" />
+  </component>
+</project>

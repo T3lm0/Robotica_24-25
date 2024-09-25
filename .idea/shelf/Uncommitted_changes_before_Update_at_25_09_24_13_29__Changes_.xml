@@ -1,0 +1,40 @@
+<changelist name="Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]" date="1727263799140" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 25/09/24 13:29 [Changes]" />
+  <binary>
+    <option name="AFTER_PATH" value="ejemplo2/.ninja_deps" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]/.ninja_deps" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="ejemplo2/CMakeFiles/3.29.6/CompilerIdC/a.out" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]/a.out" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="ejemplo2/CMakeFiles/ejemplo1.dir/main.cpp.o" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]/main.cpp.o" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="ejemplo2/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]/CMakeDetermineCompilerABI_CXX.bin" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="ejemplo2/CMakeFiles/ejemplo1.dir/ejemplo1_autogen/mocs_compilation.cpp.o" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]/mocs_compilation.cpp.o" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="ejemplo2/CMakeFiles/ejemplo1.dir/ejemplo2.cpp.o" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]/ejemplo2.cpp.o" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="ejemplo2/CMakeFiles/3.29.6/CompilerIdCXX/a.out" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]/a1.out" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="ejemplo2/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]/CMakeDetermineCompilerABI_C.bin" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="ejemplo2/ejemplo1" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_09_24_13_29_[Changes]/ejemplo1" />
+  </binary>
+</changelist>
