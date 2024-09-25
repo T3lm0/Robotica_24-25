@@ -1,4 +1,4 @@
-# Install script for directory: /home/usuario/Descargas/ejemplo1-resuelto/ejemplo1/ejemplo1
+# Install script for directory: /home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ejemplo1"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/usuario/Descargas/ejemplo1-resuelto/ejemplo1/ejemplo1/ejemplo1")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/ejemplo1")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ejemplo1" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ejemplo1")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -66,5 +66,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/usuario/Descargas/ejemplo1-resuelto/ejemplo1/ejemplo1/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

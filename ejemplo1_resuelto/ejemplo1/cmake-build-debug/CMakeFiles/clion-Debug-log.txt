@@ -1,4 +1,4 @@
-/snap/clion/292/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/usuario/Descargas/ejemplo1-resuelto/ejemplo1/ejemplo1 -B /home/usuario/Descargas/ejemplo1-resuelto/ejemplo1/ejemplo1
+/snap/clion/296/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1 -B /home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1
 CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
   CMake.
@@ -8,7 +8,6 @@ CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
 
 
 -- COMPILING WITH QT6
--- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
 -- Configuring done (0.2s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/usuario/Descargas/ejemplo1-resuelto/ejemplo1/ejemplo1
+-- Build files have been written to: /home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1

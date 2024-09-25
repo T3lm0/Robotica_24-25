@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'counterDlg.ui'
 **
-** Created by: Qt User Interface Compiler version 6.2.4
+** Created by: Qt User Interface Compiler version 6.4.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -30,24 +30,24 @@ public:
     void setupUi(QWidget *Counter)
     {
         if (Counter->objectName().isEmpty())
-            Counter->setObjectName(QString::fromUtf8("Counter"));
+            Counter->setObjectName("Counter");
         Counter->resize(400, 300);
         button = new QPushButton(Counter);
-        button->setObjectName(QString::fromUtf8("button"));
+        button->setObjectName("button");
         button->setGeometry(QRect(90, 190, 201, 41));
         lcdNumber = new QLCDNumber(Counter);
-        lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
+        lcdNumber->setObjectName("lcdNumber");
         lcdNumber->setGeometry(QRect(50, 40, 301, 91));
         reset = new QPushButton(Counter);
-        reset->setObjectName(QString::fromUtf8("reset"));
+        reset->setObjectName("reset");
         reset->setGeometry(QRect(90, 250, 201, 41));
         slider = new QSlider(Counter);
-        slider->setObjectName(QString::fromUtf8("slider"));
+        slider->setObjectName("slider");
         slider->setGeometry(QRect(10, 150, 160, 16));
         slider->setMinimum(1);
         slider->setOrientation(Qt::Horizontal);
         displaySlider = new QLCDNumber(Counter);
-        displaySlider->setObjectName(QString::fromUtf8("displaySlider"));
+        displaySlider->setObjectName("displaySlider");
         displaySlider->setGeometry(QRect(180, 150, 41, 20));
 
         retranslateUi(Counter);
