@@ -1,9 +1,0 @@
-/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/CMakeFiles/ejemplo1.dir
-/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/CMakeFiles/edit_cache.dir
-/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/CMakeFiles/list_install_components.dir
-/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/CMakeFiles/install.dir
-/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/CMakeFiles/install/local.dir
-/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/CMakeFiles/install/strip.dir
-/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/CMakeFiles/ejemplo1_autogen_timestamp_deps.dir
-/home/ubuntu/CLionProjects/Robotica_24-25/ejemplo1_resuelto/ejemplo1/CMakeFiles/ejemplo1_autogen.dir
