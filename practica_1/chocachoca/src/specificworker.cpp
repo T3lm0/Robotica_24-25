@@ -84,6 +84,14 @@ void SpecificWorker::compute()
 
     for (auto &i: ldata)
     	qDebug() << i.dist << i.angle;
+
+	//float adv = 0.f; float side = 0; float rot = 0.f;
+	//try{
+	//	ldata = omnirobot_proxy->setSpeedBase(adv, side, rot);
+	//}catch(){
+	//}
+
+	
 }
 
 void SpecificWorker::emergency()
