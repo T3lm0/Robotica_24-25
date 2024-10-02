@@ -20,6 +20,11 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeUnixFindMake.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake"
 		},
 		{
@@ -2430,8 +2435,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/usuario/robocomp/components/grupo_12/practica_1/chocachoca",
-		"source" : "/home/usuario/robocomp/components/grupo_12/practica_1/chocachoca"
+		"build" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_1/chocachoca",
+		"source" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_1/chocachoca"
 	},
 	"version" : 
 	{

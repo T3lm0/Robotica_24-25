@@ -62,15 +62,15 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "ICES__home_usuario_robocomp_components_grupo_12_practica_1_chocachoca_src::@145eef247bfb46b6828c",
-					"jsonFile" : "target-ICES__home_usuario_robocomp_components_grupo_12_practica_1_chocachoca_src-1ad049fc1a5a16568c67.json",
-					"name" : "ICES__home_usuario_robocomp_components_grupo_12_practica_1_chocachoca_src",
+					"id" : "ICES__home_usuario_robocomp_ws_src_robocomp_components_grupo_12_practica_1_chocachoca_src::@145eef247bfb46b6828c",
+					"jsonFile" : "target-ICES__home_usuario_robocomp_ws_src_robocomp_components_grupo_12_practica_1_chocachoca_src-4b99217d0c2c1a6648b0.json",
+					"name" : "ICES__home_usuario_robocomp_ws_src_robocomp_components_grupo_12_practica_1_chocachoca_src",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "chocachoca::@145eef247bfb46b6828c",
-					"jsonFile" : "target-chocachoca-637d6bc7c92a9984664d.json",
+					"jsonFile" : "target-chocachoca-3fda4353627e068fbea0.json",
 					"name" : "chocachoca",
 					"projectIndex" : 0
 				},
@@ -94,8 +94,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/usuario/robocomp/components/grupo_12/practica_1/chocachoca",
-		"source" : "/home/usuario/robocomp/components/grupo_12/practica_1/chocachoca"
+		"build" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_1/chocachoca",
+		"source" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_1/chocachoca"
 	},
 	"version" : 
 	{

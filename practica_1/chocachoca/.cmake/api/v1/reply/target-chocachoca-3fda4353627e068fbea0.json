@@ -217,15 +217,15 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/usuario/robocomp/components/grupo_12/practica_1/chocachoca/src/chocachoca_autogen/include"
+					"path" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_1/chocachoca/src/chocachoca_autogen/include"
 				},
 				{
 					"backtrace" : 21,
-					"path" : "/home/usuario/robocomp/components/grupo_12/practica_1/chocachoca/src"
+					"path" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_1/chocachoca/src"
 				},
 				{
 					"backtrace" : 21,
-					"path" : "/home/usuario/robocomp/components/grupo_12/practica_1/chocachoca/src/."
+					"path" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_1/chocachoca/src/."
 				},
 				{
 					"backtrace" : 21,
@@ -237,7 +237,7 @@
 				},
 				{
 					"backtrace" : 21,
-					"path" : "/home/usuario/robocomp/components/grupo_12/practica_1/chocachoca"
+					"path" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_1/chocachoca"
 				},
 				{
 					"backtrace" : 23,
@@ -330,7 +330,7 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ICES__home_usuario_robocomp_components_grupo_12_practica_1_chocachoca_src::@145eef247bfb46b6828c"
+			"id" : "ICES__home_usuario_robocomp_ws_src_robocomp_components_grupo_12_practica_1_chocachoca_src::@145eef247bfb46b6828c"
 		},
 		{
 			"id" : "chocachoca_autogen_timestamp_deps::@145eef247bfb46b6828c"
@@ -376,7 +376,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-L/home/robocomp/robocomp///classes",
+				"fragment" : "-L/home/robocomp/robocomp//classes",
 				"role" : "libraries"
 			},
 			{

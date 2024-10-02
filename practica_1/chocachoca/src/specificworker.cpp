@@ -77,23 +77,54 @@ void SpecificWorker::initialize()
 
 void SpecificWorker::compute()
 {
+	// read laser data
 	RoboCompLaser::TLaserData ldata;
-    try {
-    	ldata = laser_proxy->getLaserData();
-    } catch(const Ice::Exception &e){std::cout << "Exception: "<<e.what() << std::endl;}
+	try {ldata = laser_proxy->getLaserData();}
+	catch(const Ice::Exception &e){std::cout << "Exception: "<<e.what() << std::endl;}
 
-    for (auto &i: ldata)
-    	qDebug() << i.dist << i.angle;
+	// for (auto &i: ldata)
+	// 	qDebug() << i.dist;
 
-	//float adv = 0.f; float side = 0; float rot = 0.f;
-	//try{
-	//	ldata = omnirobot_proxy->setSpeedBase(adv, side, rot);
-	//}catch(){
-	//}
-
-	
+	// State machine
+	switch(state)
+	{
+		case STATE::FORWARD:
+			state = forward(ldata);
+			break;
+		case STATE::TURN:
+			break;
+	}
 }
 
+//////////////////////////////////////////////////////////////////////////////
+SpecificWorker::STATE SpecificWorker::forward(const RoboCompLaser::TLaserData &ldata)
+{
+	// exit conditions
+	// check central distance in LiDAR
+	int offset = ldata.size()*3/8;
+	auto min_dist = std::min_element(begin(ldata)+offset, end(ldata)-offset,
+		[](auto &a, auto &b){ return a.dist < b.dist;});
+	if(min_dist->dist < 200)
+	{
+		//parar
+		// return STATE::turn;
+	}
+
+	// my thing
+
+
+}
+
+// float adv = 0.f; float side = 500; float rot = 0.f;
+// try{
+// 	omnirobot_proxy->setSpeedBase(adv, side, rot);
+// }catch(const Ice::Exception &e){
+// 	std::cout << "Exception: "<<e.what() << std::endl;
+// }
+
+
+
+/////////////////////////////////////////////////////////////////////////////
 void SpecificWorker::emergency()
 {
     std::cout << "Emergency worker" << std::endl;
