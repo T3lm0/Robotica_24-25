@@ -1,5 +1,5 @@
 /*
- *    Copyright (C) 2024 by YOUR NAME HERE
+ *    Copyright (C)2019 by YOUR NAME HERE
  *
  *    This file is part of RoboComp
  *
@@ -18,8 +18,8 @@
  */
 
 /**
-	\brief
-	@author authorname
+       \brief
+       @author authorname
 */
 
 
@@ -27,10 +27,9 @@
 #ifndef SPECIFICWORKER_H
 #define SPECIFICWORKER_H
 
-//#define HIBERNATION_ENABLED
-
 #include <genericworker.h>
-#include "abstract_graphic_viewer/abstract_graphic_viewer.h"
+#include <grid2d/grid.h>
+#include <abstract_graphic_viewer/abstract_graphic_viewer.h>
 
 class SpecificWorker : public GenericWorker
 {
@@ -41,36 +40,24 @@ class SpecificWorker : public GenericWorker
         bool setParams(RoboCompCommonBehavior::ParameterList params);
 
     public slots:
-        void initialize();
         void compute();
-        void emergency();
-        void restore();
-        int startup_check();
+        void initialize(int period);
+        void reset_time();
 
+        //--------------------
     private:
-        struct Params
-        {
-            float ROBOT_WIDTH = 460;  // mm
-            float ROBOT_LENGTH = 480;  // mm
-            std::string LIDAR_NAME_LOW = "bpearl";
-            std::string LIDAR_NAME_HIGH = "helios";
-            //QRectF GRID_MAX_DIM{-6000, -6000, 12000, 12000};
-            QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
-
-        };
-        Params params;
-
-        bool startup_check_flag;
+        Grid fm;
+        QElapsedTimer time;
+        int COUNT_DOWN=180; //secs
         AbstractGraphicViewer *viewer;
 
-        // state machine
-        enum class STATE {FORWARD, TURN};
-        STATE state = STATE::FORWARD;
-
-        using RetVal = std::tuple<STATE, float, float>;
-        RetVal forward(auto &filtered_points);
-        RetVal turn(auto &filtered_points);
-        void draw_lidar(auto &filtered_points, QGraphicsScene *scene) const;
+        //robot
+        const int ROBOT_LENGTH = 400;
+        QGraphicsPolygonItem *robot_polygon;
+        int robot_id;
+        std::vector<QPointF> trail;
+        std::vector<QGraphicsItem *> items;
+        void draw_trail(const QPointF &new_point);
 };
 
 #endif

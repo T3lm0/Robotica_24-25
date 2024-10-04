@@ -1,5 +1,5 @@
 /*
- *    Copyright (C) 2024 by YOUR NAME HERE
+ *    Copyright (C) 2023 by YOUR NAME HERE
  *
  *    This file is part of RoboComp
  *
@@ -18,11 +18,11 @@
  */
 
 
-/** \mainpage RoboComp::chocachoca
+/** \mainpage RoboComp::aspirador
  *
  * \section intro_sec Introduction
  *
- * The chocachoca component...
+ * The aspirador component...
  *
  * \section interface_sec Interface
  *
@@ -34,7 +34,7 @@
  * ...
  *
  * \subsection install2_ssec Compile and install
- * cd chocachoca
+ * cd aspirador
  * <br>
  * cmake . && make
  * <br>
@@ -52,7 +52,7 @@
  *
  * \subsection execution_ssec Execution
  *
- * Just: "${PATH_TO_BINARY}/chocachoca --Ice.Config=${PATH_TO_CONFIG_FILE}"
+ * Just: "${PATH_TO_BINARY}/aspirador --Ice.Config=${PATH_TO_CONFIG_FILE}"
  *
  * \subsection running_ssec Once running
  *
@@ -86,10 +86,10 @@
 
 
 
-class chocachoca : public RoboComp::Application
+class aspirador : public RoboComp::Application
 {
 public:
-	chocachoca (QString prfx, bool startup_check) { prefix = prfx.toStdString(); this->startup_check_flag=startup_check; }
+	aspirador (QString prfx, bool startup_check) { prefix = prfx.toStdString(); this->startup_check_flag=startup_check; }
 private:
 	void initialize();
 	std::string prefix;
@@ -100,14 +100,14 @@ public:
 	virtual int run(int, char*[]);
 };
 
-void ::chocachoca::initialize()
+void ::aspirador::initialize()
 {
 	// Config file properties read example
 	// configGetString( PROPERTY_NAME_1, property1_holder, PROPERTY_1_DEFAULT_VALUE );
 	// configGetInt( PROPERTY_NAME_2, property1_holder, PROPERTY_2_DEFAULT_VALUE );
 }
 
-int ::chocachoca::run(int argc, char* argv[])
+int ::aspirador::run(int argc, char* argv[])
 {
 #ifdef USE_QTGUI
 	QApplication a(argc, argv);  // GUI application
@@ -130,27 +130,10 @@ int ::chocachoca::run(int argc, char* argv[])
 
 	int status=EXIT_SUCCESS;
 
-	RoboCompLidar3D::Lidar3DPrxPtr lidar3d_proxy;
 	RoboCompOmniRobot::OmniRobotPrxPtr omnirobot_proxy;
 
 	string proxy, tmp;
 	initialize();
-
-	try
-	{
-		if (not GenericMonitor::configGetString(communicator(), prefix, "Lidar3DProxy", proxy, ""))
-		{
-			cout << "[" << PROGRAM_NAME << "]: Can't read configuration for proxy Lidar3DProxy\n";
-		}
-		lidar3d_proxy = Ice::uncheckedCast<RoboCompLidar3D::Lidar3DPrx>( communicator()->stringToProxy( proxy ) );
-	}
-	catch(const Ice::Exception& ex)
-	{
-		cout << "[" << PROGRAM_NAME << "]: Exception creating proxy Lidar3D: " << ex;
-		return EXIT_FAILURE;
-	}
-	rInfo("Lidar3DProxy initialized Ok!");
-
 
 	try
 	{
@@ -168,7 +151,7 @@ int ::chocachoca::run(int argc, char* argv[])
 	rInfo("OmniRobotProxy initialized Ok!");
 
 
-	tprx = std::make_tuple(lidar3d_proxy,omnirobot_proxy);
+	tprx = std::make_tuple(omnirobot_proxy);
 	SpecificWorker *worker = new SpecificWorker(tprx, startup_check_flag);
 	//Monitor thread
 	SpecificMonitor *monitor = new SpecificMonitor(worker,communicator());
@@ -285,7 +268,7 @@ int main(int argc, char* argv[])
 		}
 
 	}
-	::chocachoca app(prefix, startup_check_flag);
+	::aspirador app(prefix, startup_check_flag);
 
 	return app.main(argc, argv, configFile.toLocal8Bit().data());
 }

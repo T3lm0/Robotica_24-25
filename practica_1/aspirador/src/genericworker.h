@@ -1,5 +1,5 @@
 /*
- *    Copyright (C) 2024 by YOUR NAME HERE
+ *    Copyright (C) 2023 by YOUR NAME HERE
  *
  *    This file is part of RoboComp
  *
@@ -30,14 +30,8 @@
 #endif
 #include <ui_mainUI.h>
 #include <CommonBehavior.h>
-#include <grafcetStep/GRAFCETStep.h>
-#include <QStateMachine>
-#include <QEvent>
-#include <QString>
-#include <functional>
 
 #include <GenericBase.h>
-#include <Lidar3D.h>
 #include <OmniRobot.h>
 
 
@@ -45,7 +39,7 @@
 #define BASIC_PERIOD 100
 
 
-using TuplePrx = std::tuple<RoboCompLidar3D::Lidar3DPrxPtr,RoboCompOmniRobot::OmniRobotPrxPtr>;
+using TuplePrx = std::tuple<RoboCompOmniRobot::OmniRobotPrxPtr>;
 
 
 class GenericWorker : public QWidget, public Ui_guiDlg
@@ -55,42 +49,29 @@ public:
 	GenericWorker(TuplePrx tprx);
 	virtual ~GenericWorker();
 	virtual void killYourSelf();
+	virtual void setPeriod(int p);
+
 	virtual bool setParams(RoboCompCommonBehavior::ParameterList params) = 0;
-
-	enum STATES { Initialize, Compute, Emergency, Restore, NumberOfStates };
-	void setPeriod(STATES state, int p);
-	int getPeriod(STATES state);
-
-	QStateMachine statemachine;
-	QTimer hibernationChecker;
-	atomic_bool hibernation = false;
+	QMutex *mutex;
 
 
-	RoboCompLidar3D::Lidar3DPrxPtr lidar3d_proxy;
 	RoboCompOmniRobot::OmniRobotPrxPtr omnirobot_proxy;
 
 
 protected:
 
+	QTimer timer;
+	int Period;
 
 private:
-	int period = BASIC_PERIOD;
-	std::vector<GRAFCETStep*> states;
+
 
 public slots:
-	virtual void initialize() = 0;
 	virtual void compute() = 0;
-	virtual void emergency() = 0;
-	virtual void restore() = 0;
-
-	void initializeWorker();
-	void hibernationCheck();
-
+	virtual void initialize(int period) = 0;
 	
 signals:
 	void kill();
-	void goToEmergency();
-	void goToRestore();
 };
 
 #endif
