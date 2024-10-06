@@ -113,7 +113,8 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &filtered_points)
 	size_t count = std::ranges::distance(filtered_points);
 	int offset = count*3/8;
 	std::vector<RoboCompLidar3D::TPoint> fp(filtered_points.begin(), filtered_points.end());
-	if(fp[(count/2)-offset].z > 0.3 && fp[(count/2)+offset].z > 0.3)
+	qDebug() << fp[(count/2)-offset].z << fp[(count/2)+offset].z;
+	if(fp[(count/2)-offset].z > 0.1 && fp[(count/2)+offset].z > 0.1)
 	{
 		omnirobot_proxy->setSpeedBase(0, MAX_ADV_SPEED, 0);
 		return SpecificWorker::RetVal(STATE::FORWARD,MAX_ADV_SPEED,0);
