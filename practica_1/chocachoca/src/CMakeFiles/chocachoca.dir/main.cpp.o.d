@@ -1189,12 +1189,12 @@ src/CMakeFiles/chocachoca.dir/main.cpp.o: \
  /usr/include/langinfo.h /usr/include/nl_types.h /usr/include/Ice/UUID.h \
  /usr/include/IceUtil/UUID.h /usr/include/IceStorm/IceStorm.h \
  /usr/include/IceStorm/Metrics.h /usr/include/IceStorm/Config.h \
- /home/telmo/robocomp/classes/rapplication/rapplication.h \
+ /home/robocomp/robocomp/classes/rapplication/rapplication.h \
  /usr/include/IceUtil/IceUtil.h /usr/include/IceUtil/Functional.h \
  /usr/include/IceUtil/MutexPtrLock.h /usr/include/IceUtil/RecMutex.h \
- /home/telmo/robocomp/classes/sigwatch/sigwatch.h \
+ /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
- /home/telmo/robocomp/classes/qlog/qlog.h \
+ /home/robocomp/robocomp/classes/qlog/qlog.h \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/config.h \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/config.h \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/genericmonitor.h \
@@ -1212,7 +1212,7 @@ src/CMakeFiles/chocachoca.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.h \
- /home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qabstractstate.h \
@@ -1230,7 +1230,7 @@ src/CMakeFiles/chocachoca.dir/main.cpp.o: \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.h \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/specificworker.h \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/genericworker.h \
- /home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \

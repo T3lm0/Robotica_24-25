@@ -28,7 +28,7 @@
 #define SPECIFICWORKER_H
 
 //#define HIBERNATION_ENABLED
-
+#define MAX_ADV_SPEED 5
 #include <genericworker.h>
 #include "abstract_graphic_viewer/abstract_graphic_viewer.h"
 

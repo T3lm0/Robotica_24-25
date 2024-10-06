@@ -71,9 +71,13 @@ void SpecificWorker::compute()
     try{ ldata =  lidar3d_proxy->getLidarData("bpearl", 0, 2*M_PI, 1);}
     catch(const Ice::Exception &e){std::cout << e << std::endl;}
 
+	// This filters the coordinate z and the distance2D of the data that was read by the laser, so it returns a filtered
+	// data based on the lambda function
+
     auto p_filter = std::ranges::views::filter(ldata.points,
                                                [](auto  &a){ return a.z > 0.1 and a.z < 0.3 and a.distance2d > 0.2;});
 
+	// With the info grabbed before, now we "paint" in Qt kind a map of the laser
     draw_lidar(p_filter, &viewer->scene);
 
     /// Add State machine with your sweeping logic
@@ -106,8 +110,14 @@ void SpecificWorker::compute()
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 SpecificWorker::RetVal SpecificWorker::forward(auto &filtered_points)
 {
-
-    return SpecificWorker::RetVal();
+	size_t count = std::ranges::distance(filtered_points);
+	int offset = count*3/8;
+	std::vector<RoboCompLidar3D::TPoint> fp(filtered_points.begin(), filtered_points.end());
+	if(fp[(count/2)-offset].z > 0.3 && fp[(count/2)+offset].z > 0.3)
+	{
+		omnirobot_proxy->setSpeedBase(0, MAX_ADV_SPEED, 0);
+		return SpecificWorker::RetVal(STATE::FORWARD,MAX_ADV_SPEED,0);
+	}else{return SpecificWorker::RetVal(STATE::TURN,0,0.5);}
 }
 
 SpecificWorker::RetVal SpecificWorker::turn(auto &filtered_points)
