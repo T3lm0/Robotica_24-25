@@ -75,7 +75,7 @@ void SpecificWorker::compute()
 	// data based on the lambda function
 
     auto p_filter = std::ranges::views::filter(ldata.points,
-                                               [](auto  &a){ return a.z > 0.1 and a.z < 0.3 and a.distance2d > 0.2;});
+                                               [](auto  &a){ return a.z > 100 and a.z < 3000 and a.distance2d > 200;});
 
 	// With the info grabbed before, now we "paint" in Qt kind a map of the laser
     draw_lidar(p_filter, &viewer->scene);
