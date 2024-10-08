@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainUI.ui'
 **
-** Created by: Qt User Interface Compiler version 6.4.2
+** Created by: Qt User Interface Compiler version 6.2.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -44,15 +44,15 @@ public:
     void setupUi(QWidget *guiDlg)
     {
         if (guiDlg->objectName().isEmpty())
-            guiDlg->setObjectName("guiDlg");
+            guiDlg->setObjectName(QString::fromUtf8("guiDlg"));
         guiDlg->resize(632, 486);
         verticalLayout_3 = new QVBoxLayout(guiDlg);
-        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         splitter = new QSplitter(guiDlg);
-        splitter->setObjectName("splitter");
+        splitter->setObjectName(QString::fromUtf8("splitter"));
         splitter->setOrientation(Qt::Horizontal);
         frame = new QFrame(splitter);
-        frame->setObjectName("frame");
+        frame->setObjectName(QString::fromUtf8("frame"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -63,7 +63,7 @@ public:
         frame->setFrameShadow(QFrame::Raised);
         splitter->addWidget(frame);
         frame_2 = new QFrame(splitter);
-        frame_2->setObjectName("frame_2");
+        frame_2->setObjectName(QString::fromUtf8("frame_2"));
         QSizePolicy sizePolicy1(QSizePolicy::MinimumExpanding, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -72,20 +72,20 @@ public:
         frame_2->setFrameShape(QFrame::StyledPanel);
         frame_2->setFrameShadow(QFrame::Raised);
         verticalLayout_2 = new QVBoxLayout(frame_2);
-        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label_2 = new QLabel(frame_2);
-        label_2->setObjectName("label_2");
+        label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setLayoutDirection(Qt::LeftToRight);
         label_2->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(label_2);
 
         lcdNumber_time = new QLCDNumber(frame_2);
-        lcdNumber_time->setObjectName("lcdNumber_time");
+        lcdNumber_time->setObjectName(QString::fromUtf8("lcdNumber_time"));
         QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Preferred);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -110,15 +110,15 @@ public:
         verticalLayout->addLayout(horizontalLayout);
 
         horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label = new QLabel(frame_2);
-        label->setObjectName("label");
+        label->setObjectName(QString::fromUtf8("label"));
         label->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(label);
 
         lcdNumber_percent = new QLCDNumber(frame_2);
-        lcdNumber_percent->setObjectName("lcdNumber_percent");
+        lcdNumber_percent->setObjectName(QString::fromUtf8("lcdNumber_percent"));
         QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Maximum);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
@@ -144,7 +144,7 @@ public:
         verticalLayout->addItem(verticalSpacer);
 
         pushButton = new QPushButton(frame_2);
-        pushButton->setObjectName("pushButton");
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
         verticalLayout->addWidget(pushButton);
 

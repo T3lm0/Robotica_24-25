@@ -32,6 +32,8 @@
 #include <genericworker.h>
 #include "abstract_graphic_viewer/abstract_graphic_viewer.h"
 
+#define MAX_ADV_SPEED 50000
+
 class SpecificWorker : public GenericWorker
 {
     Q_OBJECT

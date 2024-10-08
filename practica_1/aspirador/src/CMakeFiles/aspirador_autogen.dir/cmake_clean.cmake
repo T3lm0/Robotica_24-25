@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/aspirador_autogen"
   "aspirador_autogen/mocs_compilation.cpp"
-  "aspirador_autogen/timestamp"
 )
 
 # Per-language clean rules from dependency scanning.

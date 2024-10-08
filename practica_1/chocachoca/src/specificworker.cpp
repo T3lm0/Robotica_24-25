@@ -68,19 +68,18 @@ void SpecificWorker::initialize()
 void SpecificWorker::compute()
 {
     RoboCompLidar3D::TData ldata;
+
     try{ ldata =  lidar3d_proxy->getLidarData("bpearl", 0, 2*M_PI, 1);}
     catch(const Ice::Exception &e){std::cout << e << std::endl;}
-
     auto p_filter = std::ranges::views::filter(ldata.points,
-                                               [](auto  &a){ return a.z > 100 and a.z < 3000 and a.distance2d > 200;});
+                                               [](auto  &a){ return a.z > 100 and a.z < 300 and a.distance2d > 200;});
 
-    draw_lidar(p_filter, &viewer->scene);
+   draw_lidar(p_filter, &viewer->scene);
 
     /// Add State machine with your sweeping logic
     float advance_speed = 0.f;  // initial robot speeds for this iteration
     float rot_speed = 0.f;
     RetVal ret_val;
-
     switch(state)
     {
         case STATE::FORWARD:
@@ -97,7 +96,6 @@ void SpecificWorker::compute()
     /// unpack  the tuple
     auto [st, adv, rot] = ret_val;
     state = st;
-
     /// Send movements commands to the robot
     //try{ ldata =  omnirobot_proxy->setSpeedBase(0, adv, rot);
     //catch(const Ice::Exception &e){std::cout << e << std::endl;}
@@ -106,11 +104,10 @@ void SpecificWorker::compute()
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 SpecificWorker::RetVal SpecificWorker::forward(auto &filtered_points)
 {
-	size_t count = std::ranges::distance(filtered_points);
-	int offset = count*3/8;
 	std::vector<RoboCompLidar3D::TPoint> fp(filtered_points.begin(), filtered_points.end());
-	qDebug() << fp[(count/2)-offset].z << fp[(count/2)+offset].z;
-	if(fp[(count/2)-offset].z > 0.1 && fp[(count/2)+offset].z > 0.1)
+	int offset = fp.size()/2*1/8;
+	qDebug() << fp[(fp.size()/2)-offset].y << fp[(fp.size()/2)+offset].y;
+	if(fp[(fp.size()/2)-offset].y > 20 && fp[(fp.size()/2)+offset].y > 20)
 	{
 		omnirobot_proxy->setSpeedBase(0, MAX_ADV_SPEED, 0);
 		return SpecificWorker::RetVal(STATE::FORWARD,MAX_ADV_SPEED,0);
