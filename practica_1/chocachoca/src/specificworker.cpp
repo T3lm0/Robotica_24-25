@@ -80,7 +80,7 @@ void SpecificWorker::compute()
     float advance_speed = 0.f;  // initial robot speeds for this iteration
     float rot_speed = 0.f;
     RetVal ret_val;
-    switch(state)
+    switch(SpecificWorker::state)
     {
         case STATE::FORWARD:
         {
@@ -107,17 +107,27 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &filtered_points)
 	std::vector<RoboCompLidar3D::TPoint> fp(filtered_points.begin(), filtered_points.end());
 	int offset = fp.size()/2*1/8;
 	qDebug() << fp[(fp.size()/2)-offset].y << fp[(fp.size()/2)+offset].y;
-	if(fp[(fp.size()/2)-offset].y > 20 && fp[(fp.size()/2)+offset].y > 20)
+	if(fp[(fp.size()/2)-offset].y > 420 && fp[(fp.size()/2)+offset].y > 420)
 	{
 		omnirobot_proxy->setSpeedBase(0, MAX_ADV_SPEED, 0);
 		return SpecificWorker::RetVal(STATE::FORWARD,MAX_ADV_SPEED,0);
-	}else{return SpecificWorker::RetVal(STATE::TURN,0,0.5);}
+	}else{return SpecificWorker::RetVal(STATE::TURN,0,+200);}
 }
 
 SpecificWorker::RetVal SpecificWorker::turn(auto &filtered_points)
 {
-
-    return SpecificWorker::RetVal();
+	std::vector<RoboCompLidar3D::TPoint> fp(filtered_points.begin(), filtered_points.end());
+	int offset = fp.size()/2*1/8;
+	qDebug() << fp[(fp.size()/2)-offset].y << fp[(fp.size()/2)+offset].y;
+	if(fp[(fp.size()/2)-offset].y < 300 && fp[(fp.size()/2)+offset].y < 300)
+	{
+		auto p_min = std::ranges::min_element(filtered_points, [](auto &a, auto &b){return a.distance2d < b.distance2d;});
+		if(p_min->y < 0)
+		{
+			omnirobot_proxy->setSpeedBase(0,0,+0.5);
+		}else{omnirobot_proxy->setSpeedBase(0,0,-0.5);}
+		return SpecificWorker::RetVal(STATE::FORWARD,0,0);
+	}else{return SpecificWorker::RetVal(STATE::FORWARD,MAX_ADV_SPEED,0);}
 }
 
 /**
