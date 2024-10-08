@@ -1,0 +1,16 @@
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/CMakeFiles/install.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/CMakeFiles/install/local.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/CMakeFiles/ICES__home_telmo_robocomp_components_Robotica_24-25_practica_1_chocachoca_src.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/CMakeFiles/chocachoca.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/CMakeFiles/list_install_components.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/CMakeFiles/install.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/CMakeFiles/install/local.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/CMakeFiles/install/strip.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/CMakeFiles/chocachoca_autogen_timestamp_deps.dir
+/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/CMakeFiles/chocachoca_autogen.dir
