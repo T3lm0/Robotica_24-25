@@ -409,125 +409,125 @@ genericworker.cpp.s:
 	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/genericworker.cpp.s
 .PHONY : genericworker.cpp.s
 
-home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o: home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
-.PHONY : home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o: home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o
 
 # target to build an object file
-home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
-.PHONY : home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
 
-home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i: home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
-.PHONY : home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i: home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i
 
 # target to preprocess a source file
-home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
-.PHONY : home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
 
-home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s: home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
-.PHONY : home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s: home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s
 
 # target to generate assembly for a file
-home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
-.PHONY : home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+.PHONY : home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
 
-home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.o: home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
-.PHONY : home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.o
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.o: home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.o
 
 # target to build an object file
-home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
-.PHONY : home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
 
-home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.i: home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
-.PHONY : home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.i
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.i: home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.i
 
 # target to preprocess a source file
-home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
-.PHONY : home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
 
-home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.s: home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
-.PHONY : home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.s
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.s: home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.s
 
 # target to generate assembly for a file
-home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
-.PHONY : home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+.PHONY : home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
 
-home/telmo/robocomp/classes/qlog/qlog.o: home/telmo/robocomp/classes/qlog/qlog.cpp.o
-.PHONY : home/telmo/robocomp/classes/qlog/qlog.o
+home/robocomp/robocomp/classes/qlog/qlog.o: home/robocomp/robocomp/classes/qlog/qlog.cpp.o
+.PHONY : home/robocomp/robocomp/classes/qlog/qlog.o
 
 # target to build an object file
-home/telmo/robocomp/classes/qlog/qlog.cpp.o:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.o
-.PHONY : home/telmo/robocomp/classes/qlog/qlog.cpp.o
+home/robocomp/robocomp/classes/qlog/qlog.cpp.o:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o
+.PHONY : home/robocomp/robocomp/classes/qlog/qlog.cpp.o
 
-home/telmo/robocomp/classes/qlog/qlog.i: home/telmo/robocomp/classes/qlog/qlog.cpp.i
-.PHONY : home/telmo/robocomp/classes/qlog/qlog.i
+home/robocomp/robocomp/classes/qlog/qlog.i: home/robocomp/robocomp/classes/qlog/qlog.cpp.i
+.PHONY : home/robocomp/robocomp/classes/qlog/qlog.i
 
 # target to preprocess a source file
-home/telmo/robocomp/classes/qlog/qlog.cpp.i:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.i
-.PHONY : home/telmo/robocomp/classes/qlog/qlog.cpp.i
+home/robocomp/robocomp/classes/qlog/qlog.cpp.i:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i
+.PHONY : home/robocomp/robocomp/classes/qlog/qlog.cpp.i
 
-home/telmo/robocomp/classes/qlog/qlog.s: home/telmo/robocomp/classes/qlog/qlog.cpp.s
-.PHONY : home/telmo/robocomp/classes/qlog/qlog.s
+home/robocomp/robocomp/classes/qlog/qlog.s: home/robocomp/robocomp/classes/qlog/qlog.cpp.s
+.PHONY : home/robocomp/robocomp/classes/qlog/qlog.s
 
 # target to generate assembly for a file
-home/telmo/robocomp/classes/qlog/qlog.cpp.s:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.s
-.PHONY : home/telmo/robocomp/classes/qlog/qlog.cpp.s
+home/robocomp/robocomp/classes/qlog/qlog.cpp.s:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s
+.PHONY : home/robocomp/robocomp/classes/qlog/qlog.cpp.s
 
-home/telmo/robocomp/classes/rapplication/rapplication.o: home/telmo/robocomp/classes/rapplication/rapplication.cpp.o
-.PHONY : home/telmo/robocomp/classes/rapplication/rapplication.o
+home/robocomp/robocomp/classes/rapplication/rapplication.o: home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.o
 
 # target to build an object file
-home/telmo/robocomp/classes/rapplication/rapplication.cpp.o:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.o
-.PHONY : home/telmo/robocomp/classes/rapplication/rapplication.cpp.o
+home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
 
-home/telmo/robocomp/classes/rapplication/rapplication.i: home/telmo/robocomp/classes/rapplication/rapplication.cpp.i
-.PHONY : home/telmo/robocomp/classes/rapplication/rapplication.i
+home/robocomp/robocomp/classes/rapplication/rapplication.i: home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.i
 
 # target to preprocess a source file
-home/telmo/robocomp/classes/rapplication/rapplication.cpp.i:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.i
-.PHONY : home/telmo/robocomp/classes/rapplication/rapplication.cpp.i
+home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
 
-home/telmo/robocomp/classes/rapplication/rapplication.s: home/telmo/robocomp/classes/rapplication/rapplication.cpp.s
-.PHONY : home/telmo/robocomp/classes/rapplication/rapplication.s
+home/robocomp/robocomp/classes/rapplication/rapplication.s: home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.s
 
 # target to generate assembly for a file
-home/telmo/robocomp/classes/rapplication/rapplication.cpp.s:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.s
-.PHONY : home/telmo/robocomp/classes/rapplication/rapplication.cpp.s
+home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
+.PHONY : home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
 
-home/telmo/robocomp/classes/sigwatch/sigwatch.o: home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o
-.PHONY : home/telmo/robocomp/classes/sigwatch/sigwatch.o
+home/robocomp/robocomp/classes/sigwatch/sigwatch.o: home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.o
 
 # target to build an object file
-home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o
-.PHONY : home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o
+home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
 
-home/telmo/robocomp/classes/sigwatch/sigwatch.i: home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.i
-.PHONY : home/telmo/robocomp/classes/sigwatch/sigwatch.i
+home/robocomp/robocomp/classes/sigwatch/sigwatch.i: home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.i
 
 # target to preprocess a source file
-home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.i:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.i
-.PHONY : home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.i
+home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
 
-home/telmo/robocomp/classes/sigwatch/sigwatch.s: home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.s
-.PHONY : home/telmo/robocomp/classes/sigwatch/sigwatch.s
+home/robocomp/robocomp/classes/sigwatch/sigwatch.s: home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.s
 
 # target to generate assembly for a file
-home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.s:
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.s
-.PHONY : home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.s
+home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s:
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/chocachoca.dir/build.make src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
+.PHONY : home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -641,21 +641,21 @@ help:
 	@echo "... genericworker.o"
 	@echo "... genericworker.i"
 	@echo "... genericworker.s"
-	@echo "... home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o"
-	@echo "... home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i"
-	@echo "... home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s"
-	@echo "... home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.o"
-	@echo "... home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.i"
-	@echo "... home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.s"
-	@echo "... home/telmo/robocomp/classes/qlog/qlog.o"
-	@echo "... home/telmo/robocomp/classes/qlog/qlog.i"
-	@echo "... home/telmo/robocomp/classes/qlog/qlog.s"
-	@echo "... home/telmo/robocomp/classes/rapplication/rapplication.o"
-	@echo "... home/telmo/robocomp/classes/rapplication/rapplication.i"
-	@echo "... home/telmo/robocomp/classes/rapplication/rapplication.s"
-	@echo "... home/telmo/robocomp/classes/sigwatch/sigwatch.o"
-	@echo "... home/telmo/robocomp/classes/sigwatch/sigwatch.i"
-	@echo "... home/telmo/robocomp/classes/sigwatch/sigwatch.s"
+	@echo "... home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.o"
+	@echo "... home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.i"
+	@echo "... home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.s"
+	@echo "... home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.o"
+	@echo "... home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.i"
+	@echo "... home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.s"
+	@echo "... home/robocomp/robocomp/classes/qlog/qlog.o"
+	@echo "... home/robocomp/robocomp/classes/qlog/qlog.i"
+	@echo "... home/robocomp/robocomp/classes/qlog/qlog.s"
+	@echo "... home/robocomp/robocomp/classes/rapplication/rapplication.o"
+	@echo "... home/robocomp/robocomp/classes/rapplication/rapplication.i"
+	@echo "... home/robocomp/robocomp/classes/rapplication/rapplication.s"
+	@echo "... home/robocomp/robocomp/classes/sigwatch/sigwatch.o"
+	@echo "... home/robocomp/robocomp/classes/sigwatch/sigwatch.i"
+	@echo "... home/robocomp/robocomp/classes/sigwatch/sigwatch.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

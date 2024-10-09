@@ -1,4 +1,4 @@
-/snap/clion/296/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca -B /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/cmake-build-debug
+/snap/clion/296/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca -B /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug
 CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
   CMake.
@@ -7,8 +7,8 @@ CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
   CMake that the project does not need compatibility with older versions.
 
 
--- The C compiler identification is GNU 12.3.0
--- The CXX compiler identification is GNU 12.3.0
+-- The C compiler identification is GNU 13.2.0
+-- The CXX compiler identification is GNU 13.2.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Check for working C compiler: /usr/bin/cc - skipped
@@ -34,31 +34,31 @@ CMake Warning at src/CMakeLists.txt:5 (MESSAGE):
 -- Configuring for x86_64 architecture
 -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 -- Found WrapOpenGL: TRUE
--- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Found XKB: /usr/lib/x86_64-linux-gnu/libxkbcommon.so (found suitable version "1.6.0", minimum required is "0.5.0")
 -- Found WrapVulkanHeaders: /usr/include
--- Ice version: 3.7.6
+-- Ice version: 3.7.10
 -- Found the following Ice libraries:
 --   Ice++11 (required)
 --   IceStorm++11 (required)
--- Found Ice: /usr/bin/slice2cpp (found version "3.7.6")
+-- Found Ice: /usr/bin/slice2cpp (found version "3.7.10")
 -- RoboComp root is now set to /home/robocomp/robocomp//
 -- 
--- Ice version: 3.7.6
+-- Ice version: 3.7.10
 -- Found the following Ice libraries:
 --   Ice (required)
 --   IceStorm (required)
 -- The following Ice libraries were not found:
 --   IceUtil (optional)
--- Found Ice: /usr/bin/slice2cpp (found version "3.7.6")
--- BU Adding rule to generate /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.ice from /home/robocomp/robocomp//interfaces/IDSLs/CommonBehavior.idsl
--- BU Adding rule to generate /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/GenericBase.ice from /home/robocomp/robocomp//interfaces/IDSLs/GenericBase.idsl
--- BU Adding rule to generate /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.ice from /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl
--- BU Adding rule to generate /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.ice from /home/robocomp/robocomp//interfaces/IDSLs/OmniRobot.idsl
--- BU ice=>h/cpp: Adding rule to generate CommonBehavior.h and CommonBehavior.cpp from /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.ice
--- BU ice=>h/cpp: Adding rule to generate GenericBase.h and GenericBase.cpp from /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/GenericBase.ice
--- BU ice=>h/cpp: Adding rule to generate Lidar3D.h and Lidar3D.cpp from /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.ice
--- BU ice=>h/cpp: Adding rule to generate OmniRobot.h and OmniRobot.cpp from /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.ice
+-- Found Ice: /usr/bin/slice2cpp (found version "3.7.10")
+-- BU Adding rule to generate /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.ice from /home/robocomp/robocomp//interfaces/IDSLs/CommonBehavior.idsl
+-- BU Adding rule to generate /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/GenericBase.ice from /home/robocomp/robocomp//interfaces/IDSLs/GenericBase.idsl
+-- BU Adding rule to generate /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.ice from /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl
+-- BU Adding rule to generate /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.ice from /home/robocomp/robocomp//interfaces/IDSLs/OmniRobot.idsl
+-- BU ice=>h/cpp: Adding rule to generate CommonBehavior.h and CommonBehavior.cpp from /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.ice
+-- BU ice=>h/cpp: Adding rule to generate GenericBase.h and GenericBase.cpp from /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/GenericBase.ice
+-- BU ice=>h/cpp: Adding rule to generate Lidar3D.h and Lidar3D.cpp from /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.ice
+-- BU ice=>h/cpp: Adding rule to generate OmniRobot.h and OmniRobot.cpp from /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.ice
 -- Generating header file from mainUI.ui
--- Configuring done (1.1s)
+-- Configuring done (0.8s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/cmake-build-debug
+-- Build files have been written to: /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug

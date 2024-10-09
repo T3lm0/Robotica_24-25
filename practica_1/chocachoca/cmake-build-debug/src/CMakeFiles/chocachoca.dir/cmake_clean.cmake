@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/bin/chocachoca"
-  "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/bin/chocachoca.pdb"
+  "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/bin/chocachoca"
+  "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/bin/chocachoca.pdb"
   "CMakeFiles/chocachoca_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/chocachoca_autogen.dir/ParseCache.txt"
   "chocachoca_autogen"

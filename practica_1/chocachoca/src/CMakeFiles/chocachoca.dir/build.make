@@ -123,19 +123,19 @@ src/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.s"
 	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/mocs_compilation.cpp -o CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.s
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: /home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -MF CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o.d -o CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -c /home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -MF CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o.d -o CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o -c /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp > CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp > CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.i
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp -o CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp -o CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.s
 
 src/CMakeFiles/chocachoca.dir/specificworker.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
 src/CMakeFiles/chocachoca.dir/specificworker.cpp.o: src/specificworker.cpp
@@ -165,61 +165,61 @@ src/CMakeFiles/chocachoca.dir/specificmonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/specificmonitor.cpp.s"
 	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/specificmonitor.cpp -o CMakeFiles/chocachoca.dir/specificmonitor.cpp.s
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.o: /home/telmo/robocomp/classes/rapplication/rapplication.cpp
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.o"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.o -c /home/telmo/robocomp/classes/rapplication/rapplication.cpp
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -MF CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o.d -o CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o -c /home/robocomp/robocomp/classes/rapplication/rapplication.cpp
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.i"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/telmo/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.i
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/rapplication/rapplication.cpp > CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.i
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.s"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/telmo/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.s
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/rapplication/rapplication.cpp -o CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.s
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o: /home/telmo/robocomp/classes/sigwatch/sigwatch.cpp
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/telmo/robocomp/classes/sigwatch/sigwatch.cpp
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -MF CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o.d -o CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o -c /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.i"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/telmo/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.i
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp > CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.i
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.s"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/telmo/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.s
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp -o CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.s
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.o: /home/telmo/robocomp/classes/qlog/qlog.cpp
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.o"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.o -MF CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.o.d -o CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.o -c /home/telmo/robocomp/classes/qlog/qlog.cpp
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: /home/robocomp/robocomp/classes/qlog/qlog.cpp
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -MF CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o.d -o CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o -c /home/robocomp/robocomp/classes/qlog/qlog.cpp
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.i"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/telmo/robocomp/classes/qlog/qlog.cpp > CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.i
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/qlog/qlog.cpp > CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.i
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.s"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/telmo/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.s
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/qlog/qlog.cpp -o CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.s
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: /home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -MF CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o.d -o CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -c /home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o: src/CMakeFiles/chocachoca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -MF CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o.d -o CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o -c /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp > CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp > CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.i
 
-src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s"
-	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp -o CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
+src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s"
+	cd /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp -o CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.s
 
 src/CMakeFiles/chocachoca.dir/main.cpp.o: src/CMakeFiles/chocachoca.dir/flags.make
 src/CMakeFiles/chocachoca.dir/main.cpp.o: src/main.cpp
@@ -336,13 +336,13 @@ src/CMakeFiles/chocachoca.dir/OmniRobot.cpp.s: cmake_force
 # Object files for target chocachoca
 chocachoca_OBJECTS = \
 "CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o" \
+"CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o" \
 "CMakeFiles/chocachoca.dir/specificworker.cpp.o" \
 "CMakeFiles/chocachoca.dir/specificmonitor.cpp.o" \
-"CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.o" \
-"CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o" \
-"CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.o" \
-"CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o" \
+"CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o" \
+"CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o" \
+"CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o" \
+"CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o" \
 "CMakeFiles/chocachoca.dir/main.cpp.o" \
 "CMakeFiles/chocachoca.dir/genericmonitor.cpp.o" \
 "CMakeFiles/chocachoca.dir/commonbehaviorI.cpp.o" \
@@ -356,13 +356,13 @@ chocachoca_OBJECTS = \
 chocachoca_EXTERNAL_OBJECTS =
 
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/chocachoca_autogen/mocs_compilation.cpp.o
-bin/chocachoca: src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
+bin/chocachoca: src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/specificworker.cpp.o
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/specificmonitor.cpp.o
-bin/chocachoca: src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/rapplication/rapplication.cpp.o
-bin/chocachoca: src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp.o
-bin/chocachoca: src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/qlog/qlog.cpp.o
-bin/chocachoca: src/CMakeFiles/chocachoca.dir/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
+bin/chocachoca: src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/rapplication/rapplication.cpp.o
+bin/chocachoca: src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp.o
+bin/chocachoca: src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o
+bin/chocachoca: src/CMakeFiles/chocachoca.dir/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp.o
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/main.cpp.o
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/genericmonitor.cpp.o
 bin/chocachoca: src/CMakeFiles/chocachoca.dir/commonbehaviorI.cpp.o

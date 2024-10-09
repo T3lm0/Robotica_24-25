@@ -7,8 +7,8 @@
 	"CMAKE_LIST_FILES" : 
 	[
 		"/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/CMakeLists.txt",
-		"/home/telmo/robocomp/cmake/robocomp.cmake",
-		"/home/telmo/robocomp/cmake/modules/qt.cmake",
+		"/home/robocomp/robocomp/cmake/robocomp.cmake",
+		"/home/robocomp/robocomp/cmake/modules/qt.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake",
@@ -220,31 +220,31 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h",
+			"/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h",
 			"MU",
 			"FJSVBVKUX3/moc_abstract_graphic_viewer.cpp",
 			null
 		],
 		[
-			"/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.h",
+			"/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h",
 			"MU",
 			"ZAV7YM6KZS/moc_GRAFCETStep.cpp",
 			null
 		],
 		[
-			"/home/telmo/robocomp/classes/qlog/qlog.h",
+			"/home/robocomp/robocomp/classes/qlog/qlog.h",
 			"MU",
 			"TMDPG3ER6E/moc_qlog.cpp",
 			null
 		],
 		[
-			"/home/telmo/robocomp/classes/rapplication/rapplication.h",
+			"/home/robocomp/robocomp/classes/rapplication/rapplication.h",
 			"MU",
 			"QV56BMCHM5/moc_rapplication.cpp",
 			null
 		],
 		[
-			"/home/telmo/robocomp/classes/sigwatch/sigwatch.h",
+			"/home/robocomp/robocomp/classes/sigwatch/sigwatch.h",
 			"MU",
 			"E63V2YUGZG/moc_sigwatch.cpp",
 			null
@@ -308,9 +308,9 @@
 		"/opt/robocomp/include",
 		"/classes",
 		"/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca",
-		"/home/telmo/robocomp/classes",
-		"/home/telmo/robocomp/libs",
-		"/home/telmo/robocomp/interfaces",
+		"/home/robocomp/robocomp/classes",
+		"/home/robocomp/robocomp/libs",
+		"/home/robocomp/robocomp/interfaces",
 		"/include",
 		"/usr/include/x86_64-linux-gnu/qt6/QtGui",
 		"/usr/include/x86_64-linux-gnu/qt6",
@@ -368,22 +368,22 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp",
+			"/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp",
+			"/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp",
 			"MU",
 			null
 		],
-		[ "/home/telmo/robocomp/classes/qlog/qlog.cpp", "MU", null ],
+		[ "/home/robocomp/robocomp/classes/qlog/qlog.cpp", "MU", null ],
 		[
-			"/home/telmo/robocomp/classes/rapplication/rapplication.cpp",
+			"/home/robocomp/robocomp/classes/rapplication/rapplication.cpp",
 			"MU",
 			null
 		],
-		[ "/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp", "MU", null ],
+		[ "/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp", "MU", null ],
 		[
 			"/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/commonbehaviorI.cpp",
 			"MU",
