@@ -93,6 +93,11 @@ void SpecificWorker::compute()
             ret_val = turn(p_filter);
             break;
         }
+        case STATE::WALL:
+        {
+            ret_val = wall(p_filter);
+            break;
+        }
     }
     /// unpack  the tuple
     auto [st, adv, rot] = ret_val;
@@ -118,12 +123,13 @@ void SpecificWorker::compute()
  */
 SpecificWorker::RetVal SpecificWorker::forward(auto &points)
 {
+    qDebug() << "Forward";
     // check if the central part of the filtered_points vector has a minimum lower than the size of the robot
     int offset = params.LIDAR_OFFSET * (points.size() / 2);
     auto min_point = std::min_element(std::begin(points) + offset, std::end(points) - offset, [](auto &a, auto &b)
         {  return a.distance2d < b.distance2d; });
     if (min_point != points.end() and min_point->distance2d < params.STOP_THRESHOLD)
-            return RetVal(STATE::TURN, 0.f, 0.f);  // stop and change state if obstacle detected
+            return RetVal(STATE::WALL, 0.f, 0.f);  // stop and change state if obstacle detected
     else
         return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
 }
@@ -144,7 +150,9 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     static std::mt19937 gen(rd());
     static std::uniform_int_distribution<int> dist(0, 1);
     static bool first_time = true;
+    static int sign = 1;
 
+    qDebug() << "Turning";
     // check if the central part of the filtered_points vector is free to go. If so stop turning and change state to FORWARD
     int offset = params.LIDAR_OFFSET * (points.size() / 2);
     auto min_point = std::min_element(std::begin(points) + offset, std::end(points) - offset, [](auto &a, auto &b)
@@ -157,7 +165,7 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     else    // Keep doing my business
     {
         // Generate a random sign (-1 or 1) if first_time = true;
-        int sign = 1;
+
         if(first_time)
         {
             sign = dist(gen);
@@ -166,6 +174,51 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
         }
         return RetVal(STATE::TURN, 0.f, sign * params.MAX_ROT_SPEED);
     }
+}
+
+/**
+ * @brief Checks if the robot is close to a wall and determines the next state.
+ *
+ * This method examines the filtered points to determine if the robot is close to a wall. If the minimum distance
+ * point is less than the robot's width, the robot will switch to the WALL state. Otherwise, it will continue to TURN.
+ *
+ * @param filtered_points A vector of filtered points representing the robot's perception of obstacles.
+ * @return A `RetVal` tuple consisting of the state (`WALL` or `TURN`), speed, and rotation.
+ */
+SpecificWorker::RetVal SpecificWorker::wall(auto &points)
+{
+    qDebug() << "Wall";
+    // check if the central part of the filtered_points vector has a minimum lower than the size of the robot
+    int offset = params.LIDAR_OFFSET * (points.size() / 2);
+    auto min_point = std::min_element(std::begin(points) + offset, std::end(points) - offset, [](auto &a, auto &b)
+        { return a.distance2d < b.distance2d; });
+    if(min_point != std::end(points) and min_point->distance2d > params.ADVANCE_THRESHOLD)
+    {
+        return RetVal(STATE::TURN, 0.f, params.MAX_ROT_SPEED);
+    }
+    if(min_point != std::end(points) and min_point->distance2d < params.REFERENCE_DISTANCE)
+    {
+        if (min_point->phi > 0)
+            return RetVal(STATE::WALL, params.MAX_ADV_SPEED, -0.2);
+        else
+            return RetVal(STATE::WALL, params.MAX_ADV_SPEED, 0.2);
+    }
+    if(min_point != std::end(points) and min_point->distance2d > params.REFERENCE_DISTANCE)
+    {
+        if(min_point->phi < 0)
+            return RetVal(STATE::WALL, params.MAX_ADV_SPEED, 0.2);
+        else
+            return RetVal(STATE::WALL, params.MAX_ADV_SPEED, -0.2);
+    }
+    
+    /*
+    * if there is an imminent collision select TURN state,  adv=0, turn=+-0.5 and return tuple
+ if lateral distance to wall < REFERENCE_DISTANCE - delta	rot speed = -0.2
+else if lateral distance to wall > REFERENCE_DISTANCE + delta rot speed = +0.2
+else do nothing  // it is parallel to the wall
+return tuple
+
+     */
 }
 
 /**
@@ -247,7 +300,7 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
  *
  * @param points The collection of lidar points to search through.
  * @param angle The target angle to find the closest matching point.
- * @return std::expected<int, string> containing the index of the closest lidar point if found, 
+ * @return std::expected<int, string> containing the index of the closest lidar point if found,
  * or an error message if no such point exists.
  */
 std::expected<int, string> SpecificWorker::closest_lidar_index_to_given_angle(const auto &points, float angle)

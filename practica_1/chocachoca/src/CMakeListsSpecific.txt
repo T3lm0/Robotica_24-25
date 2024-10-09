@@ -14,5 +14,3 @@ LIST(APPEND HEADERS
 
 add_definitions(-std=c++2b)
 LIST(APPEND LIBS ${LIBS}  )
-
-
