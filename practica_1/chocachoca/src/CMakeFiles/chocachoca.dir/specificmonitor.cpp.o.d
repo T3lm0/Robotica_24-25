@@ -804,7 +804,7 @@ src/CMakeFiles/chocachoca.dir/specificmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreversion.h \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/genericworker.h \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/config.h \
- /home/robocomp/robocomp/classes/qlog/qlog.h \
+ /home/telmo/robocomp/classes/qlog/qlog.h \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends \
@@ -1028,7 +1028,7 @@ src/CMakeFiles/chocachoca.dir/specificmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.h \
- /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \

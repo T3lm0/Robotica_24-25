@@ -1,18 +1,22 @@
 chocachoca_autogen/timestamp: \
-	/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp \
-	/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
-	/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.cpp \
-	/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
-	/home/robocomp/robocomp/classes/qlog/qlog.cpp \
-	/home/robocomp/robocomp/classes/qlog/qlog.h \
-	/home/robocomp/robocomp/classes/rapplication/rapplication.cpp \
-	/home/robocomp/robocomp/classes/rapplication/rapplication.h \
-	/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp \
-	/home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
-	/home/robocomp/robocomp/cmake/modules/qt.cmake \
-	/home/robocomp/robocomp/cmake/robocomp.cmake \
+	/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp \
+	/home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+	/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.cpp \
+	/home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.h \
+	/home/telmo/robocomp/classes/qlog/qlog.cpp \
+	/home/telmo/robocomp/classes/qlog/qlog.h \
+	/home/telmo/robocomp/classes/rapplication/rapplication.cpp \
+	/home/telmo/robocomp/classes/rapplication/rapplication.h \
+	/home/telmo/robocomp/classes/sigwatch/sigwatch.cpp \
+	/home/telmo/robocomp/classes/sigwatch/sigwatch.h \
+	/home/telmo/robocomp/cmake/modules/qt.cmake \
+	/home/telmo/robocomp/cmake/robocomp.cmake \
 	/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/CMakeLists.txt \
 	/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/CMakeListsSpecific.txt \
+	/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.h \
+	/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/GenericBase.h \
+	/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.h \
+	/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.h \
 	/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/moc_predefs.h \
 	/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/commonbehaviorI.cpp \
 	/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/commonbehaviorI.h \
@@ -863,12 +867,20 @@ chocachoca_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qtstatemachine-config.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qtstatemachineexports.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLCDNumber \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
@@ -878,11 +890,15 @@ chocachoca_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlcdnumber.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplitter.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
