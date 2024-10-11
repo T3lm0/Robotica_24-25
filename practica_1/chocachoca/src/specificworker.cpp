@@ -93,7 +93,7 @@ void SpecificWorker::compute()
             ret_val = turn(p_filter);
             break;
         }
-        case STATE::WALL:
+        case STATE::FOLLOW_WALL:
         {
             ret_val = wall(p_filter);
             break;
@@ -131,7 +131,7 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &points)
         auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
         { return a.distance2d < b.distance2d; });
         if (min_point != points.end() and min_point->distance2d < params.STOP_THRESHOLD)
-            return RetVal(STATE::WALL, 0.f, 0.f);  // stop and change state if obstacle detected
+            return RetVal(STATE::FOLLOW_WALL, 0.f, 0.f);  // stop and change state if obstacle detected
         else
             return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
     }
@@ -223,32 +223,13 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &points)
         if(min_point != std::end(points) and (fabs(atan2f(min_point->y,x_robot)) < 1.5 and fabs(atan2f(min_point->y,z_robot) > 1.53)))
         {
             if (min_point->phi > 0)
-                return RetVal(STATE::WALL, 0.f, -0.3);
+                return RetVal(STATE::FOLLOW_WALL, 0.f, -0.3);
             else
-                return RetVal(STATE::WALL, 0.f, 0.3);
+                return RetVal(STATE::FOLLOW_WALL, 0.f, 0.3);
         }else
             return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
-        /*if(min_point != std::end(points) and min_point->distance2d < params.REFERENCE_DISTANCE)
-        {
-            if (min_point->phi > 0)
-                return RetVal(STATE::WALL, 0.f, -0.2);
-            else
-                return RetVal(STATE::WALL, 0.f, 0.2);
-        }
-        if(min_point != std::end(points) and min_point->distance2d > params.REFERENCE_DISTANCE)
-        {
-            return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
-        }*/
     }
-    
-    /*
-    * if there is an imminent collision select TURN state,  adv=0, turn=+-0.5 and return tuple
- if lateral distance to wall < REFERENCE_DISTANCE - delta	rot speed = -0.2
-else if lateral distance to wall > REFERENCE_DISTANCE + delta rot speed = +0.2
-else do nothing  // it is parallel to the wall
-return tuple
 
-     */
 }
 
 /**
