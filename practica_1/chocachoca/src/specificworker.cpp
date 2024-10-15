@@ -178,7 +178,10 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
             return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
         } else    // Keep doing my business
         {
-            if(fabs(min_point_right->distance2d - min_point_left->distance2d) < 20 )
+            auto diff = min_point_right->distance2d - min_point_left->distance2d;
+            if( diff < 20 and diff > 0 )
+                return RetVal(STATE::TURN, 0.f, 1 * params.MAX_ROT_SPEED);
+            else if (diff > -20 and diff < 0)
                 return RetVal(STATE::TURN, 0.f, -1 * params.MAX_ROT_SPEED);
             else if(min_point_right->distance2d < min_point_left->distance2d)
                 return RetVal(STATE::TURN, 0.f, -1 * params.MAX_ROT_SPEED);
