@@ -159,7 +159,6 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     static std::mt19937 gen(rd());
     static std::uniform_int_distribution<int> dist(0, 1);
     static bool first_time = true;
-    static int sign = 1;
 
     // check if the central part of the filtered_points vector is free to go. If so stop turning and change state to FORWARD
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
@@ -168,20 +167,23 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     {
         auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
         { return a.distance2d < b.distance2d; });
+        auto min_point_right = std::min_element(std::begin(points) + (points.size() / 2) , std::end(points) , [](auto &a, auto &b)
+        { return a.distance2d < b.distance2d; });
+        auto min_point_left = std::min_element(std::begin(points), std::end(points) - (points.size() / 2), [](auto &a, auto &b)
+        { return a.distance2d < b.distance2d; });
+        qDebug() << "Min point right: " << min_point_right->distance2d << " Min point left: " << min_point_left->distance2d;
         if (min_point != std::end(points) and min_point->distance2d > params.ADVANCE_THRESHOLD)
         {
             first_time = true;
-            return RetVal(STATE::FORWARD, 0.f, 0.f);
+            return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
         } else    // Keep doing my business
         {
-            // Generate a random sign (-1 or 1) if first_time = true;
-            if (first_time)
-            {
-                sign = dist(gen);
-                if (sign == 0) sign = -1; else sign = 1;
-                first_time = false;
-            }
-            return RetVal(STATE::TURN, 0.f, sign * params.MAX_ROT_SPEED);
+            if(fabs(min_point_right->distance2d - min_point_left->distance2d) < 20 )
+                return RetVal(STATE::TURN, 0.f, -1 * params.MAX_ROT_SPEED);
+            else if(min_point_right->distance2d < min_point_left->distance2d)
+                return RetVal(STATE::TURN, 0.f, -1 * params.MAX_ROT_SPEED);
+            else
+                return RetVal(STATE::TURN, 0.f, 1 * params.MAX_ROT_SPEED);
         }
     }else // no valid readings
     {
@@ -212,7 +214,7 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &points)
             { return a.distance2d < b.distance2d; });
         auto min_point = std::min_element(std::begin(points), std::end(points), [](auto &a, auto &b)
             { return a.distance2d < b.distance2d; });
-        if(min_point != std::end(points) and min_point_fordward->distance2d < params.ADVANCE_THRESHOLD)
+        if(min_point_fordward != std::end(points) and min_point_fordward->distance2d < params.ADVANCE_THRESHOLD)
         {
             return RetVal(STATE::TURN, 0.f, params.MAX_ROT_SPEED);
         }

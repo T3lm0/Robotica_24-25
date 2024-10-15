@@ -58,9 +58,10 @@ class SpecificWorker : public GenericWorker
             float MAX_ADV_SPEED = 1000; // mm/s
             float MAX_ROT_SPEED = 1; // rad/s
             float STOP_THRESHOLD = MAX_ADV_SPEED*0.7; // mm
-            float ADVANCE_THRESHOLD = ROBOT_WIDTH * 1.2; // mm
+            float ADVANCE_THRESHOLD = ROBOT_WIDTH * 1.3; // mm
             float LIDAR_OFFSET = 9.f/10.f; // eight tenths of vector's half size
             float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees
+            float LIDAR_TURN_SECTION = 1.5; // rads, aprox 90 degrees
             std::string LIDAR_NAME_LOW = "bpearl";
             std::string LIDAR_NAME_HIGH = "helios";
             QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
@@ -79,6 +80,7 @@ class SpecificWorker : public GenericWorker
         RetVal forward(auto &filtered_points);
         RetVal turn(auto &filtered_points);
         RetVal wall(auto &filtered_points);
+        //RetVal spiral(auto &filtered_points);
         void draw_lidar(auto &filtered_points, QGraphicsScene *scene);
         QGraphicsPolygonItem* robot_draw;
         std::expected<int, string> closest_lidar_index_to_given_angle(const auto &points, float angle);
