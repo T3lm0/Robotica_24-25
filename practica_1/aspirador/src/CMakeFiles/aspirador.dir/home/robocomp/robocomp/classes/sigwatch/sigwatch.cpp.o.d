@@ -377,5 +377,5 @@ src/CMakeFiles/aspirador.dir/home/robocomp/robocomp/classes/sigwatch/sigwatch.cp
  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/aspirador_autogen/include/moc_sigwatch.cpp \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/aspirador_autogen/include/../../../../../../../../../../../../robocomp/robocomp/classes/sigwatch/sigwatch.h
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/aspirador_autogen/include/moc_sigwatch.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/../../../../../../../../../../robocomp/robocomp/classes/sigwatch/sigwatch.h

@@ -1,10 +1,11 @@
-/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_specificworker.cpp: /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/specificworker.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/aspirador_autogen/moc_predefs.h \
+/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/aspirador_autogen/EWIEGA46WW/moc_specificworker.cpp: /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/specificworker.h \
+  /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/aspirador_autogen/moc_predefs.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/CommonBehavior.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/GenericBase.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/OmniRobot.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/config.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/genericworker.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/ui_mainUI.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grid2d/grid.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h \
@@ -628,6 +629,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractanimation.h \
@@ -955,13 +957,21 @@
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindow.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsRectItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLCDNumber \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
@@ -971,11 +981,15 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlcdnumber.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplitter.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \

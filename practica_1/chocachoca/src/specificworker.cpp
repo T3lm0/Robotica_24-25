@@ -98,6 +98,11 @@ void SpecificWorker::compute()
             ret_val = wall(p_filter);
             break;
         }
+        case STATE::SPIRAL:
+        {
+            ret_val = spiral(p_filter);
+            break;
+        }
     }
     /// unpack  the tuple
     auto [st, adv, rot] = ret_val;
@@ -159,6 +164,7 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     static std::mt19937 gen(rd());
     static std::uniform_int_distribution<int> dist(0, 1);
     static bool first_time = true;
+    static int sign = 1;
 
     // check if the central part of the filtered_points vector is free to go. If so stop turning and change state to FORWARD
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
@@ -167,27 +173,34 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     {
         auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
         { return a.distance2d < b.distance2d; });
-        auto min_point_right = std::min_element(std::begin(points) + (points.size() / 2) , std::end(points) , [](auto &a, auto &b)
+
+        auto max_point = std::max_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
         { return a.distance2d < b.distance2d; });
-        auto min_point_left = std::min_element(std::begin(points), std::end(points) - (points.size() / 2), [](auto &a, auto &b)
-        { return a.distance2d < b.distance2d; });
-        qDebug() << "Min point right: " << min_point_right->distance2d << " Min point left: " << min_point_left->distance2d;
+
         if (min_point != std::end(points) and min_point->distance2d > params.ADVANCE_THRESHOLD)
         {
+
+            // if (max_point->distance2d > params.SPIRAL_THRESHOLD) {
+            //     return RetVal(STATE::SPIRAL, 0.f, 0.f);
+            // }
             first_time = true;
             return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
-        } else    // Keep doing my business
-        {
-            auto diff = min_point_right->distance2d - min_point_left->distance2d;
-            if( diff < 20 and diff > 0 )
-                return RetVal(STATE::TURN, 0.f, 1 * params.MAX_ROT_SPEED);
-            else if (diff > -20 and diff < 0)
-                return RetVal(STATE::TURN, 0.f, -1 * params.MAX_ROT_SPEED);
-            else if(min_point_right->distance2d < min_point_left->distance2d)
-                return RetVal(STATE::TURN, 0.f, -1 * params.MAX_ROT_SPEED);
-            else
-                return RetVal(STATE::TURN, 0.f, 1 * params.MAX_ROT_SPEED);
         }
+
+        auto min_point_all = std::ranges::min_element(points, [](auto &a, auto &b)
+        { return a.distance2d < b.distance2d; });
+        // if min_point_all phi is negative, turn right, otherwise turn left. If it is close to zero, turn randomly
+        if (first_time)
+        {
+            if (min_point_all->phi < 0.1 and min_point_all->phi > -0.1)
+            {
+                sign = dist(gen);
+                if (sign == 0) sign = -1; else sign = 1;
+            } else
+                sign = min_point_all->phi > 0 ? -1 : 1;
+            first_time = false;
+        }
+        return RetVal(STATE::TURN, 0.f, sign * params.MAX_ROT_SPEED);
     }else // no valid readings
     {
         qWarning() << "No valid readings. Stopping";
@@ -219,6 +232,7 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &points)
             { return a.distance2d < b.distance2d; });
         if(min_point_fordward != std::end(points) and min_point_fordward->distance2d < params.ADVANCE_THRESHOLD)
         {
+
             return RetVal(STATE::TURN, 0.f, params.MAX_ROT_SPEED);
         }
         int x_robot, z_robot;
@@ -232,8 +246,29 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &points)
             else
                 return RetVal(STATE::FOLLOW_WALL, 0.f, 0.3);
         }else
+            params.WALL_TRIES++;
+        if(params.WALL_TRIES > 8)
+        {
+            qDebug() << params.WALL_TRIES;
+            params.WALL_TRIES = 0;
+            params.STOP_THRESHOLD = params.STOP_THRESHOLD * 2;
+            //qDebug() << params.ADVANCE_THRESHOLD;
+        }
             return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
     }
+
+}
+
+// Mode “SPIRAL”: when the laser field is mostly full (no obstacles around) start  movement where the
+// advance speed is steadily increased and the rotation speed steadily decreased
+// When close to an obstacle change mode
+//
+// Modo “ESPIRAL”: cuando el campo láser está casi lleno (sin obstáculos alrededor), comienza el movimiento donde
+// la velocidad de avance aumenta de manera constante y la velocidad de rotación disminuye de manera constante
+// Cuando está cerca de un obstáculo, cambia de modo
+SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
+{
+    qDebug() << "Spiral";
 
 }
 

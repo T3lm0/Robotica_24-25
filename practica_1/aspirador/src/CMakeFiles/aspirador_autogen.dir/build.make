@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador
+CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador
+CMAKE_BINARY_DIR = /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador
 
 # Utility rule file for aspirador_autogen.
 
@@ -67,8 +67,8 @@ include src/CMakeFiles/aspirador_autogen.dir/compiler_depend.make
 include src/CMakeFiles/aspirador_autogen.dir/progress.make
 
 src/CMakeFiles/aspirador_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target aspirador"
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src && /usr/bin/cmake -E cmake_autogen /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/CMakeFiles/aspirador_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target aspirador"
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src && /usr/bin/cmake -E cmake_autogen /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/CMakeFiles/aspirador_autogen.dir/AutogenInfo.json ""
 
 aspirador_autogen: src/CMakeFiles/aspirador_autogen
 aspirador_autogen: src/CMakeFiles/aspirador_autogen.dir/build.make
@@ -79,10 +79,10 @@ src/CMakeFiles/aspirador_autogen.dir/build: aspirador_autogen
 .PHONY : src/CMakeFiles/aspirador_autogen.dir/build
 
 src/CMakeFiles/aspirador_autogen.dir/clean:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src && $(CMAKE_COMMAND) -P CMakeFiles/aspirador_autogen.dir/cmake_clean.cmake
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src && $(CMAKE_COMMAND) -P CMakeFiles/aspirador_autogen.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/aspirador_autogen.dir/clean
 
 src/CMakeFiles/aspirador_autogen.dir/depend:
-	cd /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/CMakeFiles/aspirador_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/CMakeFiles/aspirador_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/aspirador_autogen.dir/depend
 

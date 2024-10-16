@@ -1,5 +1,5 @@
 src/CMakeFiles/aspirador.dir/main.cpp.o: \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/main.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/signal.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -1159,12 +1159,12 @@ src/CMakeFiles/aspirador.dir/main.cpp.o: \
  /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/config.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/config.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/genericmonitor.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/genericworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/config.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/config.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/genericmonitor.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/genericworker.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/ui_mainUI.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
@@ -1175,11 +1175,11 @@ src/CMakeFiles/aspirador.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/CommonBehavior.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/GenericBase.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/OmniRobot.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/specificworker.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/genericworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/CommonBehavior.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/GenericBase.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/OmniRobot.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/specificworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/genericworker.h \
  /home/robocomp/robocomp/classes/grid2d/grid.h \
  /usr/include/boost/functional/hash.hpp \
  /usr/include/boost/container_hash/hash.hpp \
@@ -1414,5 +1414,5 @@ src/CMakeFiles/aspirador.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/specificmonitor.h \
- /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/commonbehaviorI.h
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/specificmonitor.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_1/aspirador/src/commonbehaviorI.h
