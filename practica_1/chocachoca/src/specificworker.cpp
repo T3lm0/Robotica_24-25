@@ -134,12 +134,19 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &points)
     {
         auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
         { return a.distance2d < b.distance2d; });
-        if (min_point != points.end() and min_point->distance2d < params.STOP_THRESHOLD)
+        if (min_point != points.end() and min_point->distance2d < params.STOP_THRESHOLD) {
+            qDebug() << min_point->distance2d << params.STOP_THRESHOLD;
             return RetVal(STATE::TURN, 0.f, 0.f);  // stop and change state if obstacle detected
-        if (min_point->distance2d <= params.WALL_DISTANCE_SPIRAL)
+        }
+        if (min_point != points.end() and min_point->distance2d < params.WALL_DISTANCE_SPIRAL) {
             return RetVal(STATE::FOLLOW_WALL, params.MAX_ADV_SPEED, 0.f);
-        if (min_point->distance2d > params.WALL_DISTANCE_SPIRAL)
+        }
+        if (min_point != points.end() and min_point->distance2d > params.WALL_DISTANCE_SPIRAL and !params.HAS_DONE_SPIRAL) {
+            qDebug() << min_point->distance2d << params.WALL_DISTANCE_SPIRAL;
             return RetVal(STATE::SPIRAL, params.MAX_ADV_SPEED, 0.f);
+        }
+
+        return RetVal(STATE::FORWARD,params.MAX_ADV_SPEED, 0.f);
     }
     else// no valid readings
     {
@@ -180,10 +187,6 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
 
         if (min_point != std::end(points) and min_point->distance2d > params.ADVANCE_THRESHOLD)
         {
-
-            // if (max_point->distance2d > params.SPIRAL_THRESHOLD) {
-            //     return RetVal(STATE::SPIRAL, 0.f, 0.f);
-            // }
             first_time = true;
             return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
         }
@@ -231,30 +234,18 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &points)
             { return a.distance2d < b.distance2d; });
         auto min_point = std::min_element(std::begin(points), std::end(points), [](auto &a, auto &b)
             { return a.distance2d < b.distance2d; });
-        if(min_point_fordward != std::end(points) and min_point_fordward->distance2d < params.ADVANCE_THRESHOLD)
-        {
-
-            return RetVal(STATE::TURN, 0.f, params.MAX_ROT_SPEED);
-        }
         int x_robot, z_robot;
         float alpha;
         this->omnirobot_proxy->getBasePose(x_robot, z_robot, alpha);
         qDebug() << x_robot << " " << min_point->y << " " << atan2f(min_point->y,x_robot) << " " << min_point->phi;
-        if(min_point != std::end(points) and (fabs(atan2f(min_point->y,x_robot)) < 1.5 and fabs(atan2f(min_point->y,z_robot) > 1.53)))
+        if(min_point != std::end(points) and (fabs(atan2f(min_point->y,x_robot)) < 1.5 and fabs(atan2f(min_point->y,z_robot) > 1.57)))
         {
             if (min_point->phi > 0)
-                return RetVal(STATE::FOLLOW_WALL, 0.f, -0.3);
+                return RetVal(STATE::FOLLOW_WALL, 100, -0.3);
             else
-                return RetVal(STATE::FOLLOW_WALL, 0.f, 0.3);
+                return RetVal(STATE::FOLLOW_WALL, 100, 0.3);
         }else
-            params.WALL_TRIES++;
-        if(params.WALL_TRIES > 8)
-        {
-            qDebug() << params.WALL_TRIES;
-            params.WALL_TRIES = 0;
-            params.STOP_THRESHOLD = params.STOP_THRESHOLD * 2;
-            //qDebug() << params.ADVANCE_THRESHOLD;
-        }
+
             return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
     }
 
@@ -270,8 +261,10 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &points)
 SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
 {
     qDebug() << "Spiral";
+
     if (!params.HAS_DONE_SPIRAL)
     {
+
         static float velocidad_adv = 10;
         static float velocidad_rotacion = params.MAX_ROT_SPEED;
         auto spiral_point = std::min_element(std::begin(points) , std::end(points), [](auto &a, auto &b)
@@ -279,17 +272,17 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
 
         if(spiral_point->distance2d > params.WALL_DISTANCE_SPIRAL) {
             if(velocidad_adv < params.MAX_ADV_SPEED) {
-                if(velocidad_adv < 400) {
-                    velocidad_adv+=1.36;
+                if(velocidad_adv < 333) {
+                    velocidad_adv+=1.5;
                     velocidad_rotacion-=0.001;
                 }
-                else if(velocidad_adv < 650) {
-                    velocidad_adv+=0.45;
-                    velocidad_rotacion-=0.0003;
+                else if(velocidad_adv < 666) {
+                    velocidad_adv+=0.75;
+                    velocidad_rotacion-=0.0005;
                 }
                 else if (velocidad_adv < 1000) {
-                    velocidad_adv+=0.156;
-                    velocidad_rotacion-=0.000055;
+                    velocidad_adv+=0.375;
+                    velocidad_rotacion-=0.00025;
                 }
             }
             // if(velocidad_rotacion > 0.f)
