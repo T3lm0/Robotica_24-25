@@ -14,7 +14,7 @@
  *    GNU General Public License for more details.
  *
  *    You should have received a copy of the GNU General Public License
- *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
+ *    along with RoboComp.  if not, see <http://www.gnu.org/licenses/>.
  */
 #include <ranges>
 #include "specificworker.h"
@@ -80,7 +80,6 @@ void SpecificWorker::compute()
 
     /// Add State machine with your sweeping logic
     RetVal ret_val;
-
     switch(state)
     {
         case STATE::FORWARD:
@@ -119,7 +118,7 @@ void SpecificWorker::compute()
  * Analyzes the filtered points to determine whether to continue moving forward or to stop and turn.
  *
  * This method examines the central part of the `filtered_points` vector to find the minimum distance
- * point within that range. If the minimum distance is less than the width of the robot, it indicates
+ * point within that range. if the minimum distance is less than the width of the robot, it indicates
  * an obstacle is too close, prompting a state change to `TURN` and stopping motion. Otherwise,
  * the robot continues to move forward.
  *
@@ -136,11 +135,13 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &points)
         auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
         { return a.distance2d < b.distance2d; });
         if (min_point != points.end() and min_point->distance2d < params.STOP_THRESHOLD)
-            return RetVal(STATE::FOLLOW_WALL, 0.f, 0.f);  // stop and change state if obstacle detected
-        else
-            return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
+            return RetVal(STATE::TURN, 0.f, 0.f);  // stop and change state if obstacle detected
+        if (min_point->distance2d <= params.WALL_DISTANCE_SPIRAL)
+            return RetVal(STATE::FOLLOW_WALL, params.MAX_ADV_SPEED, 0.f);
+        if (min_point->distance2d > params.WALL_DISTANCE_SPIRAL)
+            return RetVal(STATE::SPIRAL, params.MAX_ADV_SPEED, 0.f);
     }
-    else // no valid readings
+    else// no valid readings
     {
         qWarning() << "No valid readings. Stopping";
         return RetVal(STATE::FORWARD, 0.f, 0.f);
@@ -151,7 +152,7 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &points)
  * @brief Checks if the central part of the provided filtered points is free to proceed and determines the next state.
  *
  * This function inspects the central third of the filtered points vector to find the point with the minimum distance.
- * If the minimum distance in this central region is greater than twice the robot's width, the robot will switch to
+ * if the minimum distance in this central region is greater than twice the robot's width, the robot will switch to
  * the FORWARD state. Otherwise, it will continue to TURN.
  *
  * @param filtered_points A vector containing points with distance information used for making navigation decisions.
@@ -166,7 +167,7 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     static bool first_time = true;
     static int sign = 1;
 
-    // check if the central part of the filtered_points vector is free to go. If so stop turning and change state to FORWARD
+    // check if the central part of the filtered_points vector is free to go. if so stop turning and change state to FORWARD
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
     auto offset_end = closest_lidar_index_to_given_angle(points, params.LIDAR_FRONT_SECTION);
     if(offset_begin and offset_end)
@@ -189,7 +190,7 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
 
         auto min_point_all = std::ranges::min_element(points, [](auto &a, auto &b)
         { return a.distance2d < b.distance2d; });
-        // if min_point_all phi is negative, turn right, otherwise turn left. If it is close to zero, turn randomly
+        // if min_point_all phi is negative, turn right, otherwise turn left. if it is close to zero, turn randomly
         if (first_time)
         {
             if (min_point_all->phi < 0.1 and min_point_all->phi > -0.1)
@@ -201,7 +202,7 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
             first_time = false;
         }
         return RetVal(STATE::TURN, 0.f, sign * params.MAX_ROT_SPEED);
-    }else // no valid readings
+    }else// no valid readings
     {
         qWarning() << "No valid readings. Stopping";
         return RetVal(STATE::FORWARD, 0.f, 0.f);
@@ -211,7 +212,7 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
 /**
  * @brief Checks if the robot is close to a wall and determines the next state.
  *
- * This method examines the filtered points to determine if the robot is close to a wall. If the minimum distance
+ * This method examines the filtered points to determine if the robot is close to a wall. if the minimum distance
  * point is less than the robot's width, the robot will switch to the WALL state. Otherwise, it will continue to TURN.
  *
  * @param filtered_points A vector of filtered points representing the robot's perception of obstacles.
@@ -269,9 +270,44 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &points)
 SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
 {
     qDebug() << "Spiral";
+    if (!params.HAS_DONE_SPIRAL)
+    {
+        static float velocidad_adv = 10;
+        static float velocidad_rotacion = params.MAX_ROT_SPEED;
+        auto spiral_point = std::min_element(std::begin(points) , std::end(points), [](auto &a, auto &b)
+            { return a.distance2d < b.distance2d; });
 
+        if(spiral_point->distance2d > params.WALL_DISTANCE_SPIRAL) {
+            if(velocidad_adv < params.MAX_ADV_SPEED) {
+                if(velocidad_adv < 400) {
+                    velocidad_adv+=1.36;
+                    velocidad_rotacion-=0.001;
+                }
+                else if(velocidad_adv < 650) {
+                    velocidad_adv+=0.45;
+                    velocidad_rotacion-=0.0003;
+                }
+                else if (velocidad_adv < 1000) {
+                    velocidad_adv+=0.156;
+                    velocidad_rotacion-=0.000055;
+                }
+            }
+            // if(velocidad_rotacion > 0.f)
+            //     velocidad_rotacion-=0.001;
+            // else
+            if (velocidad_adv>=params.MAX_ADV_SPEED && velocidad_rotacion >= params.MAX_ROT_SPEED) {
+                velocidad_adv = 0.f;
+                velocidad_rotacion = params.MAX_ROT_SPEED;
+            }
+            qDebug( ) << velocidad_rotacion << velocidad_adv;
+            return RetVal(STATE::SPIRAL, velocidad_adv, velocidad_rotacion);
+        }
+        velocidad_adv = 0;
+        velocidad_rotacion = 1;
+    }
+    params.HAS_DONE_SPIRAL = true;
+    return SpecificWorker::RetVal(STATE::FOLLOW_WALL, params.MAX_ADV_SPEED, 0.f);
 }
-
 /**
  * Draws LIDAR points onto a QGraphicsScene.
  *
@@ -345,8 +381,8 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
  * @brief Calculates the index of the closest lidar point to the given angle.
  *
  * This method searches through the provided list of lidar points and finds the point
- * whose angle (phi value) is closest to the specified angle. If a matching point is found,
- * the index of the point in the list is returned. If no point is found that matches the condition,
+ * whose angle (phi value) is closest to the specified angle. if a matching point is found,
+ * the index of the point in the list is returned. if no point is found that matches the condition,
  * an error message is returned.
  *
  * @param points The collection of lidar points to search through.

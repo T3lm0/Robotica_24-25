@@ -62,15 +62,15 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "ICES__home_telmo_robocomp_components_Robotica_24-25_practica_1_chocachoca_src::@145eef247bfb46b6828c",
-					"jsonFile" : "target-ICES__home_telmo_robocomp_components_Robotica_24-25_practica_1_chocachoca_src-Debug-da3d3d877adcc5f7d781.json",
-					"name" : "ICES__home_telmo_robocomp_components_Robotica_24-25_practica_1_chocachoca_src",
+					"id" : "ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_1_chocachoca_src::@145eef247bfb46b6828c",
+					"jsonFile" : "target-ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_1_chocachoca_src-Debug-af7c24b504e10728db17.json",
+					"name" : "ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_1_chocachoca_src",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "chocachoca::@145eef247bfb46b6828c",
-					"jsonFile" : "target-chocachoca-Debug-76293f5010bb3460633a.json",
+					"jsonFile" : "target-chocachoca-Debug-ebc1e368572882130293.json",
 					"name" : "chocachoca",
 					"projectIndex" : 0
 				},
@@ -94,8 +94,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug",
-		"source" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca"
+		"build" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/cmake-build-debug",
+		"source" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca"
 	},
 	"version" : 
 	{

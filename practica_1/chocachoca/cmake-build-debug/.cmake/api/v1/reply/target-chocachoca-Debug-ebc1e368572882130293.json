@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/bin/chocachoca"
+			"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/bin/chocachoca"
 		}
 	],
 	"backtrace" : 1,
@@ -15,7 +15,6 @@
 			"set_property",
 			"find_package",
 			"find_dependency",
-			"_qt_internal_find_third_party_dependencies",
 			"include",
 			"INCLUDE",
 			"set_target_properties",
@@ -29,7 +28,6 @@
 			"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/FindOpenGL.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake",
 			"/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake",
-			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake",
 			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake",
@@ -54,122 +52,116 @@
 				"parent" : 0
 			},
 			{
-				"command" : 7,
+				"command" : 6,
 				"file" : 0,
 				"line" : 14,
 				"parent" : 0
 			},
 			{
-				"file" : 8,
+				"file" : 7,
 				"parent" : 3
 			},
 			{
 				"command" : 3,
-				"file" : 8,
+				"file" : 7,
 				"line" : 107,
 				"parent" : 4
 			},
 			{
-				"file" : 7,
+				"file" : 6,
 				"parent" : 5
 			},
 			{
 				"command" : 3,
-				"file" : 7,
-				"line" : 167,
+				"file" : 6,
+				"line" : 219,
 				"parent" : 6
 			},
 			{
-				"file" : 6,
-				"parent" : 7
-			},
-			{
-				"command" : 6,
-				"file" : 6,
-				"line" : 50,
-				"parent" : 8
-			},
-			{
 				"file" : 5,
-				"parent" : 9
+				"parent" : 7
 			},
 			{
 				"command" : 5,
 				"file" : 5,
-				"line" : 30,
-				"parent" : 10
+				"line" : 50,
+				"parent" : 8
+			},
+			{
+				"file" : 4,
+				"parent" : 9
 			},
 			{
 				"command" : 4,
 				"file" : 4,
-				"line" : 33,
-				"parent" : 11
+				"line" : 48,
+				"parent" : 10
 			},
 			{
 				"command" : 3,
 				"file" : 3,
 				"line" : 76,
-				"parent" : 12
+				"parent" : 11
 			},
 			{
 				"file" : 2,
-				"parent" : 13
+				"parent" : 12
 			},
 			{
 				"command" : 3,
 				"file" : 2,
 				"line" : 10,
-				"parent" : 14
+				"parent" : 13
 			},
 			{
 				"file" : 1,
-				"parent" : 15
+				"parent" : 14
 			},
 			{
 				"command" : 2,
 				"file" : 1,
 				"line" : 712,
-				"parent" : 16
+				"parent" : 15
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 710,
+				"parent" : 15
 			},
 			{
 				"command" : 8,
-				"file" : 1,
-				"line" : 710,
-				"parent" : 16
-			},
-			{
-				"command" : 9,
 				"file" : 0,
 				"line" : 31,
 				"parent" : 0
 			},
 			{
-				"command" : 7,
+				"command" : 6,
 				"file" : 0,
 				"line" : 13,
 				"parent" : 0
 			},
 			{
-				"file" : 9,
+				"file" : 8,
+				"parent" : 19
+			},
+			{
+				"command" : 9,
+				"file" : 8,
+				"line" : 165,
 				"parent" : 20
 			},
 			{
 				"command" : 10,
-				"file" : 9,
-				"line" : 165,
-				"parent" : 21
-			},
-			{
-				"command" : 11,
 				"file" : 0,
 				"line" : 36,
 				"parent" : 0
 			},
 			{
-				"command" : 10,
-				"file" : 9,
+				"command" : 9,
+				"file" : 8,
 				"line" : 12,
-				"parent" : 23
+				"parent" : 22
 			}
 		]
 	},
@@ -179,7 +171,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++20 -fdiagnostics-color=always   -I/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/ -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -Wall -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -std=c++2b -fmax-errors=1 -fno-char8_t"
+					"fragment" : "-g -std=gnu++23 -fdiagnostics-color=always   -I/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/ -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -Wall -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -std=c++2b -fmax-errors=1 -fno-char8_t"
 				},
 				{
 					"backtrace" : 2,
@@ -189,7 +181,7 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 19,
+					"backtrace" : 18,
 					"define" : "ICE_CPP11_MAPPING"
 				},
 				{
@@ -221,42 +213,42 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/chocachoca_autogen/include"
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src/chocachoca_autogen/include"
 				},
 				{
-					"backtrace" : 22,
-					"path" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src"
+					"backtrace" : 21,
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/cmake-build-debug/src"
 				},
 				{
-					"backtrace" : 22,
-					"path" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/."
+					"backtrace" : 21,
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/."
 				},
 				{
-					"backtrace" : 22,
+					"backtrace" : 21,
 					"path" : "/opt/robocomp/include"
 				},
 				{
-					"backtrace" : 22,
+					"backtrace" : 21,
 					"path" : "/classes"
 				},
 				{
-					"backtrace" : 22,
-					"path" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/cmake-build-debug"
+					"backtrace" : 21,
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/cmake-build-debug"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 23,
 					"path" : "/home/robocomp/robocomp/classes"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 23,
 					"path" : "/home/robocomp/robocomp/libs"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 23,
 					"path" : "/home/robocomp/robocomp/interfaces"
 				},
 				{
-					"backtrace" : 24,
+					"backtrace" : 23,
 					"path" : "/include"
 				},
 				{
@@ -308,7 +300,7 @@
 					2,
 					2
 				],
-				"standard" : "20"
+				"standard" : "23"
 			},
 			"sourceIndexes" : 
 			[
@@ -334,7 +326,7 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ICES__home_telmo_robocomp_components_Robotica_24-25_practica_1_chocachoca_src::@145eef247bfb46b6828c"
+			"id" : "ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_1_chocachoca_src::@145eef247bfb46b6828c"
 		},
 		{
 			"id" : "chocachoca_autogen_timestamp_deps::@145eef247bfb46b6828c"
@@ -389,22 +381,22 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.2.4",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Xml.so.6.4.2",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Xml.so.6.2.4",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6StateMachine.so.6.4.2",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6StateMachine.so.6.2.4",
 				"role" : "libraries"
 			},
 			{
@@ -439,21 +431,21 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 17,
+				"backtrace" : 16,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libGLX.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 18,
+				"backtrace" : 17,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libOpenGL.so",
 				"role" : "libraries"
 			}

@@ -57,9 +57,11 @@ class SpecificWorker : public GenericWorker
             float ROBOT_LENGTH = 480;  // mm
             float MAX_ADV_SPEED = 1000; // mm/s
             float MAX_ROT_SPEED = 1; // rad/s
-            float STOP_THRESHOLD = ROBOT_WIDTH*1.3; // mm
+            float STOP_THRESHOLD = ROBOT_WIDTH * 1.3; // mm
             // float STOP_TRESHOLD_ORIGINAL = MAX_ADV_SPEED*0.7; // rad
-            float ADVANCE_THRESHOLD = ROBOT_WIDTH * 1.2; // mm
+            float WALL_DISTANCE_SPIRAL = 550;
+            bool HAS_DONE_SPIRAL = false;
+            float ADVANCE_THRESHOLD = ROBOT_WIDTH * 2; // mm
             float SPIRAL_THRESHOLD = ROBOT_WIDTH * 8; // mm
             float LIDAR_OFFSET = 9.f/10.f; // eight tenths of vector's half size
             float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees
