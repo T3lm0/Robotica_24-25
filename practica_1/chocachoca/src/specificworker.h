@@ -58,17 +58,21 @@ class SpecificWorker : public GenericWorker
             float MAX_ADV_SPEED = 1000; // mm/s
             float MAX_ROT_SPEED = 1; // rad/s
             float STOP_THRESHOLD = 480; // mm
-            //float FOLLOW_WALL_DIST = ROBO;
             float WALL_DISTANCE_SPIRAL = 520;
-            bool HAS_DONE_SPIRAL = false;
             float ADVANCE_THRESHOLD = ROBOT_WIDTH * 1.7; // mm
+            float FREE_SPACE = 1500;
             float LIDAR_OFFSET = 9.f/10.f; // eight tenths of vector's half size
             float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees
+            float LIDAR_RIGHT_SECTION = 0.1; // rads, aprox 0 degres
+            float LIDAR_DIVIDE_LR_SECTION = 1; // rads,  aprox 60 degrees
+            float LIDAR_LEFT_SECTION = 1.57; // rads, aprox 90 degrees
             float LIDAR_TURN_SECTION = 1.5; // rads, aprox 90 degrees
+            bool HAS_DONE_SPIRAL = false;
+            bool TURN_FOLLOW_WALL = false;
+            bool TURNED = false;
             std::string LIDAR_NAME_LOW = "bpearl";
             std::string LIDAR_NAME_HIGH = "helios";
             QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
-            int WALL_TRIES = 0;
 
         };
         Params params;
