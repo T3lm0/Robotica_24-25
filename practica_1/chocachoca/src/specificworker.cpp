@@ -142,11 +142,13 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &points)
             qDebug() << min_point->distance2d << params.STOP_THRESHOLD;
             return RetVal(STATE::TURN, 0.f, 0.f);  // stop and change state if obstacle detected
         }
-        // Now, we check if there`s any space free (left or right) and if there is any, we go to sate follow wall and try to turn to that free space
+
         if (min_point != points.end() and min_point->distance2d > params.WALL_DISTANCE_SPIRAL and !params.HAS_DONE_SPIRAL) {
             qDebug() << min_point->distance2d << params.WALL_DISTANCE_SPIRAL;
             return RetVal(STATE::SPIRAL, params.MAX_ADV_SPEED, 0.f);
         }
+        // Now, we check if there`s any space free (left or right) and if there is any, we go to sate follow wall and try to turn to that free space
+        // Now, we check if there`s any space free (left or right) and if there is any, we go to sate follow wall and try to turn to that free space
         if(offset_begin_left and offset_end_left)
         {
             qDebug() << "Voy a medir las distancias minimas izquierda";
@@ -162,11 +164,11 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &points)
             {
                 qDebug() << "Voy a comprobar si hay hueco";
                 qDebug() << max_point_left->distance2d << min_point_left->distance2d;
-                if (fabs(min_point_left->distance2d - max_point_left->distance2d) > params.FREE_SPACE)
+                if (fabs(min_point_left->distance2d - max_point_left->distance2d) > params.FREE_SPACE and (min_point_left->distance2d > params.STOP_THRESHOLD and min_point_left->distance2d < params.ADVANCE_THRESHOLD))
                 {
                     params.TURN_FOLLOW_WALL = true;
                     qDebug() << "Voy a entrar a girar a la izquierda porque he encontrado hueco";
-                    return RetVal(STATE::FOLLOW_WALL, 500, -0.5);
+                    return RetVal(STATE::FOLLOW_WALL, 350, -0.75);
                 }
             }
         }
@@ -180,13 +182,14 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &points)
             auto max_point_right = std::max_element(std::begin(points) + offset_begin_right.value(), std::begin(points) + offset_end_right.value(), [](auto &a, auto &b)
             { return a.distance2d < b.distance2d;});
             qDebug() << "Distancias medidas";
+            qDebug() << max_point_right->distance2d << min_point_right->distance2d;
             if(max_point_right != points.end() and min_point_right != points.end())
             {
-                if(fabs(min_point_right->distance2d - max_point_right->distance2d) > params.FREE_SPACE)
+                if(fabs(min_point_right->distance2d - max_point_right->distance2d) > params.FREE_SPACE and (min_point_right->distance2d > params.STOP_THRESHOLD and min_point_right->distance2d < params.ADVANCE_THRESHOLD))
                 {
                     params.TURN_FOLLOW_WALL = true;
                     qDebug() << "Voy a entrar a girar a la derecha porque he encontrado hueco";
-                    return RetVal(STATE::FOLLOW_WALL, 500, +0.5);
+                    return RetVal(STATE::FOLLOW_WALL, 350, +0.75);
                 }
             }
         }
@@ -302,12 +305,17 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &points)
     }
     else
     {
-        auto offset_begin_right = closest_lidar_index_to_given_angle(points, params.LIDAR_DIVIDE_LR_SECTION);
-        auto offset_end_right = closest_lidar_index_to_given_angle( points, params.LIDAR_RIGHT_SECTION);
+        qDebug() << "Parando 2 s";
+        sleep(2);
+        qDebug() << "Volviendo";
+        return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
+        /*auto offset_begin_right = closest_lidar_index_to_given_angle( points, params.LIDAR_RIGHT_SECTION);
+        auto offset_end_right = closest_lidar_index_to_given_angle(points, params.LIDAR_DIVIDE_LR_SECTION);
         auto offset_begin_left = closest_lidar_index_to_given_angle(points, -params.LIDAR_LEFT_SECTION);
         auto offset_end_left = closest_lidar_index_to_given_angle(points, -params.LIDAR_DIVIDE_LR_SECTION);
         if((offset_begin_left and offset_end_left) or (offset_begin_right and offset_end_right))
         {
+            qDebug() << "Ahora en wall compruebo de nuevo los valores";
             auto max_point_right = std::max_element(std::begin(points) + offset_begin_right.value(), std::begin(points) + offset_end_right.value(), [](auto &a, auto &b)
             { return a.distance2d < b.distance2d;});
             auto min_point_right = std::min_element(std::begin(points) + offset_begin_right.value(), std::begin(points) + offset_end_right.value(), [](auto &a, auto &b)
@@ -316,20 +324,30 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &points)
             { return a.distance2d < b.distance2d;});
             auto min_point_left = std::max_element(std::begin(points) + offset_begin_left.value(), std::begin(points) + offset_end_left.value(), [](auto &a, auto &b)
             { return a.distance2d < b.distance2d;});
+            qDebug() << "Valores comprobados";
             if(max_point_left != points.end() and min_point_left != points.end() and max_point_right != points.end() and min_point_right != points.end())
             {
-                if(fabs(min_point_right->distance2d - max_point_right->distance2d) > params.FREE_SPACE)
+                qDebug() << "Compruebo derecha";
+                if(fabs(min_point_right->distance2d - max_point_right->distance2d) > params.FREE_SPACE  and (min_point_right->distance2d > params.STOP_THRESHOLD and min_point_right->distance2d < params.ADVANCE_THRESHOLD))
                 {
                     qDebug() << "estoy girando a la derecha";
-                    return RetVal(STATE::FOLLOW_WALL, 400, +0.4);
+                    /*return RetVal(STATE::FOLLOW_WALL, 400, +0.4);#1#
+                    //sleep de 2s
+                    sleep(2);
+                    params.TURN_FOLLOW_WALL = false;
+                    return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
                 }
-                if (fabs(min_point_left->distance2d - max_point_left->distance2d) > params.FREE_SPACE)
+                qDebug() << "Compruebo izquierda";
+                if (fabs(min_point_left->distance2d - max_point_left->distance2d) > params.FREE_SPACE  and (min_point_left->distance2d > params.STOP_THRESHOLD and min_point_left->distance2d < params.ADVANCE_THRESHOLD))
                 {
                     qDebug() << "estoy girando a la izquierda";
-                    return RetVal(STATE::FOLLOW_WALL, 400, -0.4);
+                    // return RetVal(STATE::FOLLOW_WALL, 400, -0.4);
+                    sleep(2);
+                    params.TURN_FOLLOW_WALL = false;
+                    return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
                 }
             }
-        }
+        }*/
 
     }
 }
