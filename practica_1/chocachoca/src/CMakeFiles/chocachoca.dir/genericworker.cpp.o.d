@@ -19,7 +19,7 @@ src/CMakeFiles/chocachoca.dir/genericworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /home/robocomp/robocomp/classes/qlog/qlog.h \
+ /home/telmo/robocomp/classes/qlog/qlog.h \
  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
@@ -950,6 +950,9 @@ src/CMakeFiles/chocachoca.dir/genericworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSlider \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
@@ -1000,7 +1003,7 @@ src/CMakeFiles/chocachoca.dir/genericworker.cpp.o: \
  /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
  /usr/include/c++/13/bits/deque.tcc /usr/include/Ice/FactoryTableInit.h \
  /usr/include/Ice/DefaultValueFactory.h \
- /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \

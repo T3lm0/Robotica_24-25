@@ -57,19 +57,18 @@ class SpecificWorker : public GenericWorker
             float ROBOT_LENGTH = 480;  // mm
             float MAX_ADV_SPEED = 1000; // mm/s
             float MAX_ROT_SPEED = 1; // rad/s
-            float STOP_THRESHOLD = ROBOT_WIDTH * 1.3; // mm
+            float STOP_THRESHOLD = 700; // mm
+            float ADVANCE_THRESHOLD = ROBOT_WIDTH * 3; // mm
+            float LIDAR_FRONT_SECTION = 0.2; // rads, aprox 12 degrees
+            // wall
+            float LIDAR_RIGHT_SIDE_SECTION = M_PI/3; // rads, 90 degrees
+            float LIDAR_LEFT_SIDE_SECTION = -M_PI/3; // rads, 90 degrees
+            float WALL_MIN_DISTANCE = ROBOT_WIDTH*1.2;
+            // spiral
             float WALL_DISTANCE_SPIRAL = 520;
-            float ADVANCE_THRESHOLD = ROBOT_WIDTH * 1.7; // mm
-            float FREE_SPACE = 2000;
-            float LIDAR_OFFSET = 9.f/10.f; // eight tenths of vector's half size
-            float LIDAR_FRONT_SECTION = 0.5; // rads, aprox 30 degrees
-            float LIDAR_RIGHT_SECTION = 0.1; // rads, aprox 0 degres
-            float LIDAR_DIVIDE_LR_SECTION = 1; // rads,  aprox 60 degrees
-            float LIDAR_LEFT_SECTION = 1.57; // rads, aprox 90 degrees
-            float LIDAR_TURN_SECTION = 1.5; // rads, aprox 90 degrees
-            bool HAS_DONE_SPIRAL = false;
-            bool TURN_FOLLOW_WALL = false;
-            bool TURNED = false;
+            float SPIRAL_THRESHOLD = 4000;
+            float TURN_COUNTS = 0;
+
             std::string LIDAR_NAME_LOW = "bpearl";
             std::string LIDAR_NAME_HIGH = "helios";
             QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
@@ -81,7 +80,7 @@ class SpecificWorker : public GenericWorker
         AbstractGraphicViewer *viewer;
 
         // state machine
-        enum class STATE {FORWARD, TURN, FOLLOW_WALL, SPIRAL};
+        enum class STATE {FORWARD, TURN, WALL, SPIRAL};
         STATE state = STATE::FORWARD;
 
         using RetVal = std::tuple<STATE, float, float>;
@@ -95,6 +94,10 @@ class SpecificWorker : public GenericWorker
 
         // random number generator
         std::random_device rd;
+
+        // left-right handness
+        enum class HANDNESS {LEFT, RIGHT};
+        HANDNESS handness = HANDNESS::RIGHT;
 };
 
 #endif

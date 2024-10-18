@@ -63,14 +63,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "ICES__home_telmo_robocomp_components_Robotica_24-25_practica_1_chocachoca_src::@145eef247bfb46b6828c",
-					"jsonFile" : "target-ICES__home_telmo_robocomp_components_Robotica_24-25_practica_1_chocachoca_src-Debug-da3d3d877adcc5f7d781.json",
+					"jsonFile" : "target-ICES__home_telmo_robocomp_components_Robotica_24-25_practica_1_chocachoca_src-Debug-15bcb365c68e7d44b608.json",
 					"name" : "ICES__home_telmo_robocomp_components_Robotica_24-25_practica_1_chocachoca_src",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "chocachoca::@145eef247bfb46b6828c",
-					"jsonFile" : "target-chocachoca-Debug-802fec10a374131b0806.json",
+					"jsonFile" : "target-chocachoca-Debug-2bee380cf831b1949824.json",
 					"name" : "chocachoca",
 					"projectIndex" : 0
 				},
@@ -84,7 +84,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "chocachoca_autogen_timestamp_deps::@145eef247bfb46b6828c",
-					"jsonFile" : "target-chocachoca_autogen_timestamp_deps-Debug-16dd0fa134e34fddc213.json",
+					"jsonFile" : "target-chocachoca_autogen_timestamp_deps-Debug-651fc1c2d30bddfb6ef6.json",
 					"name" : "chocachoca_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}
@@ -100,6 +100,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 7
+		"minor" : 6
 	}
 }

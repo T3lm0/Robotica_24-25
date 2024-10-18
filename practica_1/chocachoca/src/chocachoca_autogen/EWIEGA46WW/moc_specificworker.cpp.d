@@ -782,6 +782,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSlider \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
@@ -804,6 +805,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsplitter.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h \
