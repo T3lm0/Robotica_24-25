@@ -1,5 +1,5 @@
-/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/ZAV7YM6KZS/moc_GRAFCETStep.cpp: /home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/moc_predefs.h \
+/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/ZAV7YM6KZS/moc_GRAFCETStep.cpp: /home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.h \
+  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

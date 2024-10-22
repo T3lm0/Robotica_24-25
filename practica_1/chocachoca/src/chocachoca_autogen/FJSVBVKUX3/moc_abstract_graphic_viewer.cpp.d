@@ -1,5 +1,5 @@
-/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/FJSVBVKUX3/moc_abstract_graphic_viewer.cpp: /home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/moc_predefs.h \
+/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/FJSVBVKUX3/moc_abstract_graphic_viewer.cpp: /home/telmo/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

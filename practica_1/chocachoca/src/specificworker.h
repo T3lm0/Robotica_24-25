@@ -33,6 +33,7 @@
 #include "abstract_graphic_viewer/abstract_graphic_viewer.h"
 #include <expected>
 #include <random>
+#include <algorithm>
 
 
 class SpecificWorker : public GenericWorker
@@ -66,8 +67,8 @@ class SpecificWorker : public GenericWorker
             float WALL_MIN_DISTANCE = ROBOT_WIDTH*1.2;
             // spiral
             float WALL_DISTANCE_SPIRAL = 520;
-            float SPIRAL_THRESHOLD = 4000;
-            float TURN_COUNTS = 0;
+            float SPIRAL_THRESHOLD = 3500;
+            int TURN_COUNTER = 0;
 
             std::string LIDAR_NAME_LOW = "bpearl";
             std::string LIDAR_NAME_HIGH = "helios";
@@ -78,7 +79,6 @@ class SpecificWorker : public GenericWorker
 
         bool startup_check_flag;
         AbstractGraphicViewer *viewer;
-
         // state machine
         enum class STATE {FORWARD, TURN, WALL, SPIRAL};
         STATE state = STATE::FORWARD;

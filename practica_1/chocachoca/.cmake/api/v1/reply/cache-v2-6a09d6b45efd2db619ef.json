@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca"
+			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "28"
+			"value" : "29"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "6"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -115,11 +115,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Enable/Disable color output during build."
+					"value" : ""
 				}
 			],
-			"type" : "BOOL",
-			"value" : "ON"
+			"type" : "UNINITIALIZED",
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -131,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/cmake"
+			"value" : "/snap/clion/296/bin/cmake/linux/x64/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -143,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/cpack"
+			"value" : "/snap/clion/296/bin/cmake/linux/x64/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/bin/ctest"
+			"value" : "/snap/clion/296/bin/cmake/linux/x64/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -170,7 +170,7 @@
 					"value" : "CXX compiler"
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/bin/c++"
 		},
 		{
@@ -298,7 +298,7 @@
 					"value" : "C compiler"
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/bin/cc"
 		},
 		{
@@ -559,7 +559,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/CMakeFiles/pkgRedirects"
+			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -631,7 +631,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca"
+			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1175,7 +1175,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/share/cmake-3.28"
+			"value" : "/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -7511,7 +7511,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca"
+			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca"
 		},
 		{
 			"name" : "RC_COMPONENT_INSTALL_PATH",
@@ -7535,7 +7535,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca"
+			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca"
 		},
 		{
 			"name" : "RoboComp_VERSION",
@@ -7747,7 +7747,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca"
+			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca"
 		},
 		{
 			"name" : "chocachoca_IS_TOP_LEVEL",
@@ -7771,7 +7771,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca"
+			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca"
 		},
 		{
 			"name" : "pkgcfg_lib_PKG_XKB_xkbcommon",

@@ -239,6 +239,7 @@ public:
 
         pushButton_stop = new QPushButton(frame_2);
         pushButton_stop->setObjectName("pushButton_stop");
+        pushButton_stop->setCheckable(true);
 
         verticalLayout_4->addWidget(pushButton_stop);
 

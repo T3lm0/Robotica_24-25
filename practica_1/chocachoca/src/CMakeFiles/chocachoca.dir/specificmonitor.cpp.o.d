@@ -1,8 +1,8 @@
 src/CMakeFiles/chocachoca.dir/specificmonitor.cpp.o: \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/specificmonitor.cpp \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/specificmonitor.cpp \
  /usr/include/stdc-predef.h \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/specificmonitor.h \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/genericmonitor.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/specificmonitor.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/genericmonitor.h \
  /usr/include/Ice/Ice.h /usr/include/IceUtil/PushDisableWarnings.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/13/stdlib.h /usr/include/c++/13/cstdlib \
@@ -802,10 +802,10 @@ src/CMakeFiles/chocachoca.dir/specificmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qxpfunctional.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/q23functional.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreversion.h \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/genericworker.h \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/config.h \
- /home/telmo/robocomp/classes/qlog/qlog.h \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/config.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/genericworker.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/config.h \
+ /home/robocomp/robocomp/classes/qlog/qlog.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
@@ -995,7 +995,7 @@ src/CMakeFiles/chocachoca.dir/specificmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/ui_mainUI.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -1030,8 +1030,8 @@ src/CMakeFiles/chocachoca.dir/specificmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.h \
- /home/telmo/robocomp/classes/grafcetStep/GRAFCETStep.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.h \
+ /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
@@ -1045,6 +1045,6 @@ src/CMakeFiles/chocachoca.dir/specificmonitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/GenericBase.h \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.h \
- /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.h
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/GenericBase.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.h

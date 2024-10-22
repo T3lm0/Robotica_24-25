@@ -1,13 +1,13 @@
-/home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/EWIEGA46WW/moc_specificmonitor.cpp: /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/specificmonitor.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/moc_predefs.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/GenericBase.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/config.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/genericmonitor.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/genericworker.h \
-  /home/telmo/robocomp/components/Robotica_24-25/practica_1/chocachoca/src/ui_mainUI.h \
+/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/EWIEGA46WW/moc_specificmonitor.cpp: /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/specificmonitor.h \
+  /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/moc_predefs.h \
+  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.h \
+  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/GenericBase.h \
+  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.h \
+  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.h \
+  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/config.h \
+  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/genericmonitor.h \
+  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/genericworker.h \
+  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/ui_mainUI.h \
   /home/telmo/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
   /home/telmo/robocomp/core/classes/qlog/qlog.h \
   /usr/include/GL/gl.h \

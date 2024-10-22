@@ -163,9 +163,9 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &points)
     // FORWARD
     auto min_point = std::min_element(std::begin(points) + offset_begin.value(), std::begin(points) + offset_end.value(), [](auto &a, auto &b)
     { return a.distance2d < b.distance2d; });
-    auto min_point_spiral = std::min_element(std::begin(points) , std::begin(points), [](auto &a, auto &b)
+    auto min_point_spiral = std::min_element(std::begin(points) , std::end(points), [](auto &a, auto &b)
     { return a.distance2d < b.distance2d; });
-    auto max_point_spiral = std::max_element(std::begin(points) , std::begin(points), [](auto &a, auto &b)
+    auto max_point_spiral = std::max_element(std::begin(points) , std::end(points), [](auto &a, auto &b)
     { return a.distance2d < b.distance2d; });
     qDebug() << "Spiral distances: "<< min_point_spiral->distance2d << max_point_spiral->distance2d;
     if (min_point_spiral->distance2d > params.SPIRAL_THRESHOLD and max_point_spiral->distance2d > params.SPIRAL_THRESHOLD)
@@ -196,7 +196,13 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     /// check if the narrow central part of the filtered_points vector is free to go. If so stop turning and change state to FORWARD
     auto offset_begin = closest_lidar_index_to_given_angle(points, -params.LIDAR_FRONT_SECTION);
     auto offset_end = closest_lidar_index_to_given_angle(points, params.LIDAR_FRONT_SECTION);
-
+    auto min_point_spiral = std::min_element(std::begin(points) , std::end(points), [](auto &a, auto &b)
+    { return a.distance2d < b.distance2d; });
+    auto max_point_spiral = std::max_element(std::begin(points) , std::end(points), [](auto &a, auto &b)
+    { return a.distance2d < b.distance2d; });
+    //qDebug() << "Spiral distances: "<< min_point_spiral->distance2d << max_point_spiral->distance2d;
+    if (min_point_spiral->distance2d > params.SPIRAL_THRESHOLD and max_point_spiral->distance2d > params.SPIRAL_THRESHOLD)
+        return RetVal(STATE::SPIRAL, 0.f, 0.f);
     // exit if no valid readings
     if (not offset_begin or not offset_end)
     {
@@ -211,15 +217,17 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     {
         first_time = true;
         //return RetVal(STATE::FORWARD, 0.f, 0.f);
-        params.TURN_COUNTS++;
-        if(params.TURN_COUNTS == 6)
+        params.TURN_COUNTER++;
+        if(params.TURN_COUNTER == 6)
         {
-            params.TURN_COUNTS = 0;
             params.ADVANCE_THRESHOLD += params.ROBOT_WIDTH;
             params.STOP_THRESHOLD += params.ROBOT_WIDTH;
             params.WALL_MIN_DISTANCE += params.ROBOT_WIDTH;
+            params.TURN_COUNTER = 0;
+            qDebug() << "Va a aumentar la distancia de wall";
+
         }
-        return RetVal(STATE::FORWARD, 0.f, 0.f);
+        return RetVal(STATE::WALL, 0.f, 0.f);
     }
 
     /// Keep doing my business
@@ -239,7 +247,7 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
             sign = left_sum > right_sum ? 1 : -1;
         first_time = false;
     }
-    return RetVal(STATE::TURN, 300, sign * params.MAX_ROT_SPEED);
+    return RetVal(STATE::TURN, 0.f, sign * params.MAX_ROT_SPEED);
 }
 SpecificWorker::RetVal SpecificWorker::wall(auto &filtered_points)
 {
@@ -255,14 +263,7 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &filtered_points)
         first_time = true;
         return RetVal(STATE::TURN, 0.f, 0.f);  // stop and change state if obstacle detected
     }
-    int x_robot, z_robot;
-    float alpha;
-    this->omnirobot_proxy->getBasePose(x_robot, z_robot, alpha);
-    qDebug() << x_robot << " " << min_point->y << " " << atan2f(min_point->y,x_robot) << " " << min_point->phi;
-    if(min_point != std::end(filtered_points) and !(fabs(atan2f(min_point->y,x_robot)) < 1.5 and fabs(atan2f(min_point->y,z_robot) > 1.57)))
-    {
-        return RetVal(STATE::FORWARD, params.MAX_ADV_SPEED, 0.f);
-    }
+
     // get lidar readings in the sides of the robot
     RoboCompLidar3D::TPoint min_obj;
     auto res_right = closest_lidar_index_to_given_angle(filtered_points, params.LIDAR_RIGHT_SIDE_SECTION);
