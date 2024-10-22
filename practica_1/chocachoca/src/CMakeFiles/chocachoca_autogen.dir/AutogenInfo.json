@@ -358,7 +358,7 @@
 		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/ui_mainUI.h"
 	],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 4,
+	"PARALLEL" : 14,
 	"PARSE_CACHE_FILE" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/CMakeFiles/chocachoca_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",

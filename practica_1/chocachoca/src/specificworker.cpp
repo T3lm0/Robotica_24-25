@@ -168,7 +168,7 @@ SpecificWorker::RetVal SpecificWorker::forward(auto &points)
     auto max_point_spiral = std::max_element(std::begin(points) , std::end(points), [](auto &a, auto &b)
     { return a.distance2d < b.distance2d; });
     qDebug() << "Spiral distances: "<< min_point_spiral->distance2d << max_point_spiral->distance2d;
-    if (min_point_spiral->distance2d > params.SPIRAL_THRESHOLD and max_point_spiral->distance2d > params.SPIRAL_THRESHOLD)
+    if (min_point_spiral->distance2d > params.SPIRAL_MIN_THRESHOLD and max_point_spiral->distance2d > params.SPIRAL_THRESHOLD)
         return RetVal(STATE::SPIRAL, 0.f, 0.f);
     if (min_point != points.end() and min_point->distance2d < params.STOP_THRESHOLD)
         return RetVal(STATE::TURN, 0.f, 0.f);  // stop and change state if obstacle detected
@@ -201,7 +201,7 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     auto max_point_spiral = std::max_element(std::begin(points) , std::end(points), [](auto &a, auto &b)
     { return a.distance2d < b.distance2d; });
     //qDebug() << "Spiral distances: "<< min_point_spiral->distance2d << max_point_spiral->distance2d;
-    if (min_point_spiral->distance2d > params.SPIRAL_THRESHOLD and max_point_spiral->distance2d > params.SPIRAL_THRESHOLD)
+    if (min_point_spiral->distance2d > params.SPIRAL_MIN_THRESHOLD and max_point_spiral->distance2d > params.SPIRAL_THRESHOLD)
         return RetVal(STATE::SPIRAL, 0.f, 0.f);
     // exit if no valid readings
     if (not offset_begin or not offset_end)
@@ -218,12 +218,15 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
         first_time = true;
         //return RetVal(STATE::FORWARD, 0.f, 0.f);
         params.TURN_COUNTER++;
-        if(params.TURN_COUNTER == 6)
+        if(params.TURN_COUNTER == params.FIRST_RANDOM)
         {
+            srand(static_cast<unsigned int>(time(0)));
+
             params.ADVANCE_THRESHOLD += params.ROBOT_WIDTH;
             params.STOP_THRESHOLD += params.ROBOT_WIDTH;
             params.WALL_MIN_DISTANCE += params.ROBOT_WIDTH;
             params.TURN_COUNTER = 0;
+            params.FIRST_RANDOM = rand() % 3 + 4;
             qDebug() << "Va a aumentar la distancia de wall";
 
         }

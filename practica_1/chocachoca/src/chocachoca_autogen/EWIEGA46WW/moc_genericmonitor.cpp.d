@@ -1,14 +1,14 @@
 /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/EWIEGA46WW/moc_genericmonitor.cpp: /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/genericmonitor.h \
   /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/chocachoca_autogen/moc_predefs.h \
-  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.h \
-  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/GenericBase.h \
-  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.h \
-  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.h \
-  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/config.h \
-  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/genericworker.h \
-  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/ui_mainUI.h \
-  /home/telmo/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
-  /home/telmo/robocomp/core/classes/qlog/qlog.h \
+  /home/ubuntu/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/CommonBehavior.h \
+  /home/ubuntu/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/GenericBase.h \
+  /home/ubuntu/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.h \
+  /home/ubuntu/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.h \
+  /home/ubuntu/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/config.h \
+  /home/ubuntu/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/genericworker.h \
+  /home/ubuntu/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/ui_mainUI.h \
+  /home/ubuntu/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
+  /home/ubuntu/robocomp/core/classes/qlog/qlog.h \
   /usr/include/GL/gl.h \
   /usr/include/Ice/Application.h \
   /usr/include/Ice/AsyncResult.h \

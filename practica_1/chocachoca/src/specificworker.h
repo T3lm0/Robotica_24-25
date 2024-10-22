@@ -34,6 +34,8 @@
 #include <expected>
 #include <random>
 #include <algorithm>
+#include <ctime>
+#include <cstdlib>
 
 
 class SpecificWorker : public GenericWorker
@@ -54,6 +56,7 @@ class SpecificWorker : public GenericWorker
     private:
         struct Params
         {
+
             float ROBOT_WIDTH = 460;  // mm
             float ROBOT_LENGTH = 480;  // mm
             float MAX_ADV_SPEED = 1000; // mm/s
@@ -66,15 +69,19 @@ class SpecificWorker : public GenericWorker
             float LIDAR_LEFT_SIDE_SECTION = -M_PI/3; // rads, 90 degrees
             float WALL_MIN_DISTANCE = ROBOT_WIDTH*1.2;
             // spiral
+            float SPIRAL_THRESHOLD = 4000;
+            float SPIRAL_MIN_THRESHOLD = 2300;
             float WALL_DISTANCE_SPIRAL = 520;
-            float SPIRAL_THRESHOLD = 3500;
             int TURN_COUNTER = 0;
+            int FIRST_RANDOM = 6;
 
             std::string LIDAR_NAME_LOW = "bpearl";
             std::string LIDAR_NAME_HIGH = "helios";
             QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
 
         };
+
+
         Params params;
 
         bool startup_check_flag;

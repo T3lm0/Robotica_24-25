@@ -59,6 +59,6 @@ CMake Warning at src/CMakeLists.txt:5 (MESSAGE):
 -- BU ice=>h/cpp: Adding rule to generate Lidar3D.h and Lidar3D.cpp from /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/Lidar3D.ice
 -- BU ice=>h/cpp: Adding rule to generate OmniRobot.h and OmniRobot.cpp from /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca/src/OmniRobot.ice
 -- Generating header file from mainUI.ui
--- Configuring done (2.0s)
+-- Configuring done (0.6s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca
