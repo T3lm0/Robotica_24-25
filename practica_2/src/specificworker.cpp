@@ -209,6 +209,8 @@ SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TO
 //        return (float)exp(-x*x/s);
 //    };
 
+    //Check if the person has moved
+
     auto distance = std::hypot(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos")));
     lcdNumber_dist_to_person->display(distance);
 
@@ -217,7 +219,14 @@ SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TO
     {   qWarning() << __FUNCTION__ << "Distance to person lower than threshold"; return RetVal(STATE::WAIT, 0.f, 0.f);}
 
     /// TRACK   PUT YOUR CODE HERE
-
+    if(distance < params.ROBOT_WIDTH)
+    {
+        return RetVal(STATE::WAIT, 0, 0);
+    }
+    if (distance > params.PERSON_MIN_DIST )
+    {
+        return RetVal(STATE::TRACK, params.MAX_ADV_SPEED, 0);
+    }
     return RetVal(STATE::TRACK, 0, 0);
 }
 //
