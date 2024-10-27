@@ -216,16 +216,17 @@ SpecificWorker::RetVal SpecificWorker::turn(auto &points)
     if (min_point != std::end(points) and min_point->distance2d > params.ADVANCE_THRESHOLD)
     {
         first_time = true;
-        //return RetVal(STATE::FORWARD, 0.f, 0.f);
+        // This param is increased in order to cover the middle of the scenario
         params.TURN_COUNTER++;
         if(params.TURN_COUNTER == params.FIRST_RANDOM)
         {
             srand(static_cast<unsigned int>(time(0)));
-
+            // This params are increased in order to cover the middle of the scenario
             params.ADVANCE_THRESHOLD += params.ROBOT_WIDTH;
             params.STOP_THRESHOLD += params.ROBOT_WIDTH;
             params.WALL_MIN_DISTANCE += params.ROBOT_WIDTH;
             params.TURN_COUNTER = 0;
+            // A random integer is generated due to the unknown enviroment
             params.FIRST_RANDOM = rand() % 3 + 4;
             qDebug() << "Va a aumentar la distancia de wall";
 
@@ -308,12 +309,9 @@ SpecificWorker::RetVal SpecificWorker::wall(auto &filtered_points)
 /**
  Mode “SPIRAL”: when the laser field is mostly full (no obstacles around) start  movement where the
  advance speed is steadily increased and the rotation speed steadily decreased
- When close to an obstacle change mode
-
+ When close to an obstacle change mode to WALL
 */
 
-
-// Cuando está cerca de un obstáculo, cambia de modo
 SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
 {
     qDebug() << "Spiral";
@@ -321,11 +319,11 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
     static float velocidad_adv = 10;
     static float velocidad_rotacion = params.MAX_ROT_SPEED;
     auto spiral_point = std::min_element(std::begin(points) , std::end(points), [](auto &a, auto &b)
-        { return a.distance2d < b.distance2d; });
+        { return a.distance2d < b.distance2d; }); //We look up for the min points read
 
     if(spiral_point->distance2d > params.WALL_DISTANCE_SPIRAL) {
         if(velocidad_adv < params.MAX_ADV_SPEED) {
-            if(velocidad_adv < 333) {
+            if(velocidad_adv < 333) { // The rotational and linear speed increases depending on the linear speed
                 velocidad_adv+=1.5;
                 velocidad_rotacion-=0.001;
             }
@@ -338,16 +336,17 @@ SpecificWorker::RetVal SpecificWorker::spiral(auto &points)
                 velocidad_rotacion-=0.00025;
             }
         }
-        if (velocidad_adv>=params.MAX_ADV_SPEED && velocidad_rotacion >= params.MAX_ROT_SPEED) {
+        // This is needed due to not exceed the threshold of the speeds
+        if (velocidad_adv>=params.MAX_ADV_SPEED && velocidad_rotacion >= params.MAX_ROT_SPEED)
+        {
             velocidad_adv = 0.f;
             velocidad_rotacion = params.MAX_ROT_SPEED;
         }
-        qDebug( ) << velocidad_rotacion << velocidad_adv;
         return RetVal(STATE::SPIRAL, velocidad_adv, velocidad_rotacion);
     }
     velocidad_adv = 0;
     velocidad_rotacion = 1;
-
+    //Sate to wall in case min point read is near a wall
     return SpecificWorker::RetVal(STATE::WALL, params.MAX_ADV_SPEED, 0.f);
 }
 
