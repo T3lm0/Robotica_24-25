@@ -24,58 +24,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c3f19ba-357e-476d-8209-936eb390ecd6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/cache-v2-edd8c98842fb6ccfb522.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/cmakeFiles-v1-027be8c389a6f0e2630c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/codemodel-v2-655b2af0f8ff2da84f02.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/directory-.-b193f63b2c5e5209d672.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/directory-src-d6271a7d1fe671397a00.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/index-2024-10-22T15-12-34-0162.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-ICES__home_usuario_robocomp_components_grupo_12_Robotica_24-25_practica_1_chocachoca_src-3f81a49578973d08010d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-chocachoca-44c5a5b0e03f60f9ecb6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/target-chocachoca_autogen-46d4738a9432ec0b3853.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cmake/api/v1/reply/toolchains-v1-6f549a7495c37c099964.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.22.1/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.22.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.22.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.22.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.22.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.22.1/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.22.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.22.1/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/compiler_depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca_autogen.dir/AutogenInfo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca_autogen.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca_autogen.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca_autogen.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca_autogen.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca_autogen.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/chocachoca_autogen.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/chocachoca_autogen.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/src/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/specificworker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/specificworker.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,31 +62,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_1/chocachoca&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="CMake Application.chocachoca">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_1_chocachoca_src" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="chocachoca" TARGET_NAME="ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_1_chocachoca_src" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -173,9 +118,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="CMake Application.ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_1_chocachoca_src" />
       <item itemvalue="CMake Application.ICES__home_telmo_robocomp_components_Robotica_24-25_practica_1_chocachoca_src" />
       <item itemvalue="CMake Application.chocachoca" />
-      <item itemvalue="CMake Application.ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_1_chocachoca_src" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -208,7 +153,9 @@
       <workItem from="1729278202015" duration="3218000" />
       <workItem from="1729588756873" duration="182000" />
       <workItem from="1729589143825" duration="5042000" />
-      <workItem from="1730030300501" duration="476000" />
+      <workItem from="1730030300501" duration="1193000" />
+      <workItem from="1730213210985" duration="3029000" />
+      <workItem from="1730231705450" duration="28000" />
     </task>
     <servers />
   </component>

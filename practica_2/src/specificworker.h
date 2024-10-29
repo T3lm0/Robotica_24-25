@@ -88,7 +88,7 @@ class SpecificWorker : public GenericWorker
         RetVal track(const RoboCompVisualElementsPub::TObject &person);
         RetVal wait(const RoboCompVisualElementsPub::TObject &person);
         RetVal stop();
-        RetVal find();
+        RetVal find(std::expected<RoboCompVisualElementsPub::TObject, std::string> &person);
         RobotSpeed state_machine(std::expected<RoboCompVisualElementsPub::TObject, std::string> &person);
 
         // lidar

@@ -166,7 +166,7 @@ SpecificWorker::RobotSpeed SpecificWorker::state_machine(std::expected<RoboCompV
         state = STATE::STOP;
 
     if (not person.has_value()) {
-        res = find();
+        res = find(person);
         auto &[st, speed, rot] = res;
         state = st;
     }
@@ -263,9 +263,17 @@ SpecificWorker::RetVal SpecificWorker::stop()
     return RetVal (STATE::STOP, 0.f, 0.f);
 }
 
-SpecificWorker::RetVal SpecificWorker::find()
+RetVal find(std::expected<RoboCompVisualElementsPub::TObject, std::string> &person)
 {
-    //qDebug() << __FUNCTION__ ;
+    RoboCompVisualElementsPub::TData data;
+    while(not person.has_value())
+    {
+        try{ omnirobot_proxy->setSpeedBase(0.f, 0.f, -0.5); }
+        auto [data_] = buffer.read_first();
+        if(not data_.has_value()) { qWarning() << __FUNCTION__ << "Empty buffer"; return; }
+        else data = data_.value();
+        auto person = find_person_in_data(data.objects);
+    }
     return RetVal(STATE::TRACK, 0.f, 0.f);
 }
 
