@@ -1,14 +1,14 @@
-/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/person_tracker_autogen/EWIEGA46WW/moc_specificworker.cpp: /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/specificworker.h \
-  /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/person_tracker_autogen/moc_predefs.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/Camera360RGB.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/CommonBehavior.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/GenericBase.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/Lidar3D.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/OmniRobot.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/VisualElementsPub.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/config.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/genericworker.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/ui_mainUI.h \
+/home/usuario/robocomp/components/grupo_12/practica_2/src/person_tracker_autogen/EWIEGA46WW/moc_specificworker.cpp: /home/usuario/robocomp/components/grupo_12/practica_2/src/specificworker.h \
+  /home/usuario/robocomp/components/grupo_12/practica_2/src/person_tracker_autogen/moc_predefs.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_2/src/Camera360RGB.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_2/src/CommonBehavior.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_2/src/GenericBase.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_2/src/Lidar3D.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_2/src/OmniRobot.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_2/src/VisualElementsPub.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_2/src/config.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_2/src/genericworker.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/practica_2/src/ui_mainUI.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/doublebuffer_sync/doublebuffer_sync.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h \
