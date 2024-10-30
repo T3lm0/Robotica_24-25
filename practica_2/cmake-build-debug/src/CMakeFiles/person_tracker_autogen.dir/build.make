@@ -53,10 +53,10 @@ RM = /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robocomp/robocomp/components/grupo_12/practica_2
+CMAKE_SOURCE_DIR = /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug
 
 # Utility rule file for person_tracker_autogen.
 
@@ -71,9 +71,9 @@ src/CMakeFiles/person_tracker_autogen: src/person_tracker_autogen/timestamp
 src/person_tracker_autogen/timestamp: /usr/lib/qt6/libexec/moc
 src/person_tracker_autogen/timestamp: /usr/lib/qt6/libexec/uic
 src/person_tracker_autogen/timestamp: src/CMakeFiles/person_tracker_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target person_tracker"
-	cd /home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug/src && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug/src/CMakeFiles/person_tracker_autogen.dir/AutogenInfo.json Debug
-	cd /home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug/src && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E touch /home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug/src/person_tracker_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target person_tracker"
+	cd /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug/src && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug/src/CMakeFiles/person_tracker_autogen.dir/AutogenInfo.json Debug
+	cd /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug/src && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E touch /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug/src/person_tracker_autogen/timestamp
 
 person_tracker_autogen: src/CMakeFiles/person_tracker_autogen
 person_tracker_autogen: src/person_tracker_autogen/timestamp
@@ -85,10 +85,10 @@ src/CMakeFiles/person_tracker_autogen.dir/build: person_tracker_autogen
 .PHONY : src/CMakeFiles/person_tracker_autogen.dir/build
 
 src/CMakeFiles/person_tracker_autogen.dir/clean:
-	cd /home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug/src && $(CMAKE_COMMAND) -P CMakeFiles/person_tracker_autogen.dir/cmake_clean.cmake
+	cd /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug/src && $(CMAKE_COMMAND) -P CMakeFiles/person_tracker_autogen.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/person_tracker_autogen.dir/clean
 
 src/CMakeFiles/person_tracker_autogen.dir/depend:
-	cd /home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robocomp/robocomp/components/grupo_12/practica_2 /home/robocomp/robocomp/components/grupo_12/practica_2/src /home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug /home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug/src /home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug/src/CMakeFiles/person_tracker_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2 /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/src /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug/src /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug/src/CMakeFiles/person_tracker_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/person_tracker_autogen.dir/depend
 

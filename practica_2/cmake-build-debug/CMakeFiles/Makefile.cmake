@@ -10,12 +10,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/robocomp/robocomp/cmake/modules/opencv4.cmake"
   "/home/robocomp/robocomp/cmake/modules/qt.cmake"
   "/home/robocomp/robocomp/cmake/robocomp.cmake"
-  "/home/robocomp/robocomp/components/grupo_12/practica_2/CMakeLists.txt"
+  "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/CMakeLists.txt"
   "CMakeFiles/3.29.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.6/CMakeSystem.cmake"
-  "/home/robocomp/robocomp/components/grupo_12/practica_2/src/CMakeLists.txt"
-  "/home/robocomp/robocomp/components/grupo_12/practica_2/src/CMakeListsSpecific.txt"
+  "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/CMakeLists.txt"
+  "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/CMakeListsSpecific.txt"
   "/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in"
   "/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCCompilerABI.c"
   "/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake"
@@ -272,7 +272,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/ICES__home_robocomp_robocomp_components_grupo_12_practica_2_src.dir/DependInfo.cmake"
+  "src/CMakeFiles/ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_2_src.dir/DependInfo.cmake"
   "src/CMakeFiles/person_tracker.dir/DependInfo.cmake"
   "src/CMakeFiles/person_tracker_autogen_timestamp_deps.dir/DependInfo.cmake"
   "src/CMakeFiles/person_tracker_autogen.dir/DependInfo.cmake"

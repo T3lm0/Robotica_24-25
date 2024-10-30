@@ -9984,6 +9984,7 @@ src/CMakeFiles/person_tracker.dir/main.cpp.o: src/main.cpp \
   /usr/include/c++/12/queue \
   /usr/include/c++/12/bits/stl_queue.h \
   /usr/include/c++/12/thread \
+  /usr/include/c++/12/math.h \
   src/specificmonitor.h \
   src/commonbehaviorI.h \
   src/visualelementspubI.h
@@ -11170,7 +11171,8 @@ src/CMakeFiles/person_tracker.dir/person_tracker_autogen/mocs_compilation.cpp.o:
   /home/robocomp/robocomp/classes/threadpool/threadpool.h \
   /usr/include/c++/12/queue \
   /usr/include/c++/12/bits/stl_queue.h \
-  /usr/include/c++/12/thread
+  /usr/include/c++/12/thread \
+  /usr/include/c++/12/math.h
 
 src/CMakeFiles/person_tracker.dir/specificmonitor.cpp.o: src/specificmonitor.cpp \
   /usr/include/stdc-predef.h \
@@ -13430,6 +13432,7 @@ src/CMakeFiles/person_tracker.dir/specificworker.cpp.o: src/specificworker.cpp \
   /usr/include/c++/12/queue \
   /usr/include/c++/12/bits/stl_queue.h \
   /usr/include/c++/12/thread \
+  /usr/include/c++/12/math.h \
   /usr/local/include/cppitertools/enumerate.hpp \
   /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
   /usr/local/include/cppitertools/internal/iterbase.hpp \
@@ -14600,6 +14603,8 @@ src/person_tracker_autogen/EWIEGA46WW/moc_genericmonitor.cpp:
 src/person_tracker_autogen/AF5EVGCUJC/moc_abstract_graphic_viewer.cpp:
 
 src/specificmonitor.h:
+
+/usr/include/c++/12/math.h:
 
 /usr/include/c++/12/thread:
 

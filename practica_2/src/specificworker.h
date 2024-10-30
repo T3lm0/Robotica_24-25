@@ -38,6 +38,7 @@
 //#include "dbscan.h"
 //#include "visibility_graph.h"
 #include <locale>
+#include <math.h>
 
 class SpecificWorker : public GenericWorker
 {
@@ -74,6 +75,9 @@ class SpecificWorker : public GenericWorker
             std::string LIDAR_NAME_HIGH = "helios";
             QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
 
+            std::tuple<float, float> PREV_STATE = {0, 0};
+            float PREV_ANGLE = 0;
+            float INTEGRAL_VALUE = 0;
         };
         Params params;
 

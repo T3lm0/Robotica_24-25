@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/robocomp/robocomp/components/grupo_12/practica_2/bin/person_tracker"
+			"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/bin/person_tracker"
 		}
 	],
 	"backtrace" : 1,
@@ -213,15 +213,15 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug/src/person_tracker_autogen/include"
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug/src/person_tracker_autogen/include"
 				},
 				{
 					"backtrace" : 21,
-					"path" : "/home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug/src"
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug/src"
 				},
 				{
 					"backtrace" : 21,
-					"path" : "/home/robocomp/robocomp/components/grupo_12/practica_2/src/."
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/."
 				},
 				{
 					"backtrace" : 21,
@@ -233,7 +233,7 @@
 				},
 				{
 					"backtrace" : 21,
-					"path" : "/home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug"
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug"
 				},
 				{
 					"backtrace" : 23,
@@ -335,7 +335,7 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ICES__home_robocomp_robocomp_components_grupo_12_practica_2_src::@145eef247bfb46b6828c"
+			"id" : "ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_2_src::@145eef247bfb46b6828c"
 		},
 		{
 			"id" : "person_tracker_autogen_timestamp_deps::@145eef247bfb46b6828c"

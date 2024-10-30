@@ -2470,8 +2470,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/robocomp/robocomp/components/grupo_12/practica_2/cmake-build-debug",
-		"source" : "/home/robocomp/robocomp/components/grupo_12/practica_2"
+		"build" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2/cmake-build-debug",
+		"source" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_2"
 	},
 	"version" : 
 	{

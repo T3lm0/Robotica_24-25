@@ -368,5 +368,5 @@ src/CMakeFiles/person_tracker.dir/home/robocomp/robocomp/classes/sigwatch/sigwat
  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
- /home/usuario/robocomp/components/grupo_12/practica_2/src/person_tracker_autogen/include/moc_sigwatch.cpp \
- /home/usuario/robocomp/components/grupo_12/practica_2/src/../../../../../../../../robocomp/robocomp/classes/sigwatch/sigwatch.h
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/person_tracker_autogen/include/moc_sigwatch.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_2/src/../../../../../../../../../robocomp/robocomp/classes/sigwatch/sigwatch.h

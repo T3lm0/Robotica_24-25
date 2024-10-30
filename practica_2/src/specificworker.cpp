@@ -97,9 +97,11 @@ void SpecificWorker::compute()
 
     // call state machine to track person
 
-    const auto &[adv, rot] = state_machine(person);
+     params.PREV_STATE = state_machine(person);
+     //const auto &[adv, rot] = state_machine(person);
+    const auto &[adv, rot] = params.PREV_STATE;
 
-    // move the robot
+     // move the robot
     try{ omnirobot_proxy->setSpeedBase(0.f, adv, rot); }
     catch(const Ice::Exception &e){std::cout << e << std::endl;}
     lcdNumber_adv->display(adv);
@@ -107,7 +109,8 @@ void SpecificWorker::compute()
 }
 
 //////////////////////////////////////////////////////////////////
-/// YOUR CODE HERE
+/// YOUR CODE HERE    catch(const Ice::Exception &e){std::cout << e << std::endl;}
+
 //////////////////////////////////////////////////////////////////
 // Read the BPEARL lidar data and filter the points
 RoboCompLidar3D::TData SpecificWorker::read_lidar_bpearl()
@@ -208,10 +211,10 @@ SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TO
     auto gaussian_brake = [](float x) -> float
     {
         // gaussian function where x is the rotation speed -1 to 1. Returns 1 for x = 0 and 0.4 for x = 0.5
-        const double xset = 0.68;
+        const double xset = 0.6;
         const double yset = 0.74;
         // compute the variance s so the function is yset for x = xset
-        float s = 1.5; // TODO: -xset² / log(yset)
+        float s = -pow(xset, 2)/log(yset);
         return (float)exp(-x*x/s);
     };
 
@@ -224,11 +227,15 @@ SpecificWorker::RetVal SpecificWorker::track(const RoboCompVisualElementsPub::TO
     if(distance < params.PERSON_MIN_DIST)
     {   qWarning() << __FUNCTION__ << "Distance to person lower than threshold"; return RetVal(STATE::WAIT, 0.f, 0.f);}
 
-    /// TRACK   PUT YOUR CODE HERE
     float angle = std::atan2(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos")));
 
+    float error_angle = angle - params.PREV_ANGLE;
+    float dev = error_angle / 0.01;
+    params.INTEGRAL_VALUE += (error_angle / 2) * 0.01;
+    qDebug() << "Angle: " << angle << " Error angle: " << error_angle;
+    params.PREV_ANGLE = angle;
 
-    return RetVal(STATE::TRACK, params.MAX_ADV_SPEED * gaussian_brake(angle), params.MAX_ROT_SPEED * angle);
+    return RetVal(STATE::TRACK, params.MAX_ADV_SPEED * gaussian_brake(angle), params.MAX_ROT_SPEED * angle *0.5 + dev * 0.1 + params.INTEGRAL_VALUE * 3);
 }
 //
 SpecificWorker::RetVal SpecificWorker::wait(const RoboCompVisualElementsPub::TObject &person)
@@ -263,16 +270,28 @@ SpecificWorker::RetVal SpecificWorker::stop()
     return RetVal (STATE::STOP, 0.f, 0.f);
 }
 
-RetVal find(std::expected<RoboCompVisualElementsPub::TObject, std::string> &person)
+SpecificWorker::RetVal SpecificWorker::find(std::expected<RoboCompVisualElementsPub::TObject, std::string> &person)
 {
     RoboCompVisualElementsPub::TData data;
     while(not person.has_value())
     {
-        try{ omnirobot_proxy->setSpeedBase(0.f, 0.f, -0.5); }
+        if (std::get<0>(params.PREV_STATE) == 0 && std::get<1>(params.PREV_STATE) == 0)
+        {
+            try{ omnirobot_proxy->setSpeedBase(0.f, 0.f, params.MAX_ROT_SPEED); }
+            catch(const Ice::Exception &e){std::cout << e << std::endl;}
+        }
+        else {
+            float sign = std::get<1>(params.PREV_STATE) > 0 ? 1 : -1;
+            try{ omnirobot_proxy->setSpeedBase(0.f, 0.f, sign * params.MAX_ROT_SPEED); }
+            catch(const Ice::Exception &e){std::cout << e << std::endl;}
+        }
+
         auto [data_] = buffer.read_first();
-        if(not data_.has_value()) { qWarning() << __FUNCTION__ << "Empty buffer"; return; }
-        else data = data_.value();
-        auto person = find_person_in_data(data.objects);
+        if(not data_.has_value()) { qWarning() << __FUNCTION__ << "Empty buffer"; }
+        else {
+            data = data_.value();
+            person = find_person_in_data(data.objects);
+        }
     }
     return RetVal(STATE::TRACK, 0.f, 0.f);
 }
