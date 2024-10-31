@@ -93,7 +93,7 @@ void SpecificWorker::compute()
     // get person and draw on viewer
     auto person = find_person_in_data(data.objects);
     if(not person.has_value())
-    { qWarning() << __FUNCTION__ << QString::fromStdString(person.error()); state_machine(person); }   // STOP THE ROBOT
+    { qWarning() << __FUNCTION__ << QString::fromStdString(person.error()); state = STATE::FIND; }   // STOP THE ROBOT
 
     // call state machine to track person
 
@@ -168,11 +168,6 @@ SpecificWorker::RobotSpeed SpecificWorker::state_machine(std::expected<RoboCompV
     if(pushButton_stop->isChecked())    // stop if buttom is pressed
         state = STATE::STOP;
 
-    if (not person.has_value()) {
-        res = find(person);
-        auto &[st, speed, rot] = res;
-        state = st;
-    }
     switch(state)
     {
         case STATE::TRACK:
@@ -186,6 +181,10 @@ SpecificWorker::RobotSpeed SpecificWorker::state_machine(std::expected<RoboCompV
         case STATE::STOP:
             res = stop();
             label_state->setText("STOP");
+            break;
+        case STATE::FIND:
+            res = find(person);
+            label_state->setText("FIND");
             break;
     }
     auto &[st, speed, rot] = res;
@@ -272,28 +271,20 @@ SpecificWorker::RetVal SpecificWorker::stop()
 
 SpecificWorker::RetVal SpecificWorker::find(std::expected<RoboCompVisualElementsPub::TObject, std::string> &person)
 {
-    RoboCompVisualElementsPub::TData data;
-    while(not person.has_value())
+    int sign;
+    if (std::get<0>(params.PREV_STATE) == 0 && std::get<1>(params.PREV_STATE) == 0)
     {
-        if (std::get<0>(params.PREV_STATE) == 0 && std::get<1>(params.PREV_STATE) == 0)
-        {
-            try{ omnirobot_proxy->setSpeedBase(0.f, 0.f, params.MAX_ROT_SPEED); }
-            catch(const Ice::Exception &e){std::cout << e << std::endl;}
-        }
-        else {
-            float sign = std::get<1>(params.PREV_STATE) > 0 ? 1 : -1;
-            try{ omnirobot_proxy->setSpeedBase(0.f, 0.f, sign * params.MAX_ROT_SPEED); }
-            catch(const Ice::Exception &e){std::cout << e << std::endl;}
-        }
+        srand(time(NULL));
 
-        auto [data_] = buffer.read_first();
-        if(not data_.has_value()) { qWarning() << __FUNCTION__ << "Empty buffer"; }
-        else {
-            data = data_.value();
-            person = find_person_in_data(data.objects);
-        }
+        sign = (rand() % 2) * 2 - 1;
     }
-    return RetVal(STATE::TRACK, 0.f, 0.f);
+    else {
+        sign = std::get<1>(params.PREV_STATE) > 0 ? 1 : -1;
+    }
+    if(person.has_value())
+        return RetVal(STATE::TRACK, 0.f, 0.f);
+
+    return RetVal(STATE::FIND, 0.f, params.MAX_ROT_SPEED * sign);
 }
 
 /**

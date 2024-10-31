@@ -39,6 +39,8 @@
 //#include "visibility_graph.h"
 #include <locale>
 #include <math.h>
+#include <stdlib.h>
+#include <time.h>
 
 class SpecificWorker : public GenericWorker
 {
@@ -84,7 +86,7 @@ class SpecificWorker : public GenericWorker
         // state machine
         enum class STATE
         {
-            TRACK, STOP, WAIT
+            TRACK, STOP, WAIT, FIND
         };
         STATE state = STATE::TRACK;
         using RetVal = std::tuple<STATE, float, float>;
