@@ -131,7 +131,7 @@ class SpecificWorker : public GenericWorker
         std::vector<QPolygonF> get_walls_as_polygons(const std::vector<QLineF> &lines, float robot_width);
 
         //
-        std::vector<QLine> get_lines(const auto &helios);
+        std::vector<QLineF> detect_wall_lines(const std::vector<Eigen::Vector2f> &helios, QGraphicsScene *scene);
 
     void stop_robot();
 };

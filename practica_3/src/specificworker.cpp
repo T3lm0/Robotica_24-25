@@ -81,10 +81,10 @@ void SpecificWorker::compute()
 
     auto helios_points = read_lidar_helios();
     if(helios_points.empty()) { qWarning() << __FUNCTION__ << "Empty helios lidar data"; return; };
-    //draw_lidar(ldata.points, &viewer->scene);
+    draw_lidar(helios_points, &viewer->scene);
 
     //detect wall lines
-    get_lines(&bpearl_points);
+    detect_wall_lines(helios_points, &viewer->scene);
 
     /*/// remove wall lines
     auto new_data = remove_wall_points(helios_points, bpearl_points);
@@ -135,12 +135,12 @@ void SpecificWorker::compute()
     qWarning() << __FUNCTION__ << "No person found";
 }
 
-std::vector<QLine> SpecificWorker::get_lines(const auto &helios)
+std::vector<QLineF> SpecificWorker::detect_wall_lines(const std::vector<Eigen::Vector2f> &helios, QGraphicsScene *scene)
 {
-    std::vector<QLine> lines;
-    for(const auto &a: helios.begin())
-        lines.emplace_back(QLine(a.x, a.y, a.x +1, a.y +1 ));
-    draw_lidar(lines, &viewer->scene);
+    std::vector<QLineF> lines;
+    const auto &[line, _, __, ___] = room_detector.compute_features(helios, scene);
+    for (const auto &l: line)
+        lines.emplace_back(l.second);
     return lines;
 }
 
