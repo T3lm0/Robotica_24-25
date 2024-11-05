@@ -83,7 +83,10 @@ void SpecificWorker::compute()
     if(helios_points.empty()) { qWarning() << __FUNCTION__ << "Empty helios lidar data"; return; };
     //draw_lidar(ldata.points, &viewer->scene);
 
-    /// remove wall lines
+    //detect wall lines
+    get_lines(&bpearl_points);
+
+    /*/// remove wall lines
     auto new_data = remove_wall_points(helios_points, bpearl_points);
     auto &[filtered_points, walls_polys] = new_data;
 
@@ -127,9 +130,18 @@ void SpecificWorker::compute()
     //    { std::cout << e << std::endl; }
     //
     //    lcdNumber_adv->display(adv);
-    //    lcdNumber_rot->display(rot);
+    //    lcdNumber_rot->display(rot)*/;
 
     qWarning() << __FUNCTION__ << "No person found";
+}
+
+std::vector<QLine> SpecificWorker::get_lines(const auto &helios)
+{
+    std::vector<QLine> lines;
+    for(const auto &a: helios.begin())
+        lines.emplace_back(QLine(a.x, a.y, a.x +1, a.y +1 ));
+    draw_lidar(lines, &viewer->scene);
+    return lines;
 }
 
 //////////////////////////////////////////////////////////////////
@@ -212,7 +224,9 @@ std::tuple<std::vector<Eigen::Vector2f>, std::vector<QLineF>>
     std::vector<Eigen::Vector2f> points_inside;
     std::vector<QLineF> ls;
 
-    // your code here
+    // Transform points to Eigen vectors
+    std::ranges::transform(helios, std::back_inserter(points_inside), [](auto &a){ return Eigen::Vector2f(a.x, a.y); });
+    std::ranges::transform(bpearl, std::back_inserter(points_inside), [](auto &a){ return Eigen::Vector2f(a.x, a.y); });
 
     return std::make_tuple(points_inside, ls);
 }

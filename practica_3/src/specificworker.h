@@ -130,6 +130,8 @@ class SpecificWorker : public GenericWorker
         std::tuple<std::vector<Eigen::Vector2f>, std::vector<QLineF>> remove_wall_points(const auto &helios, const auto &bpearl);
         std::vector<QPolygonF> get_walls_as_polygons(const std::vector<QLineF> &lines, float robot_width);
 
+        //
+        std::vector<QLine> get_lines(const auto &helios);
 
     void stop_robot();
 };
