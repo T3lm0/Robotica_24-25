@@ -81,22 +81,25 @@ void SpecificWorker::compute()
 
     auto helios_points = read_lidar_helios();
     if(helios_points.empty()) { qWarning() << __FUNCTION__ << "Empty helios lidar data"; return; };
-    draw_lidar(helios_points, &viewer->scene);
 
     //detect wall lines
-    detect_wall_lines(helios_points, &viewer->scene);
+    auto lines = detect_wall_lines(helios_points, &viewer->scene);
 
-    /*/// remove wall lines
-    auto new_data = remove_wall_points(helios_points, bpearl_points);
-    auto &[filtered_points, walls_polys] = new_data;
+    // remove wall lines
+    auto new_data = remove_wall_points(lines, bpearl_points);
 
+    //draw_lidar(helios_points, &viewer->scene);
     /// get walls as polygons
-    std::vector<QPolygonF> obstacles = get_walls_as_polygons(walls_polys, params.ROBOT_WIDTH/2);
+    std::vector<QPolygonF> obstacles = get_walls_as_polygons(lines, params.ROBOT_WIDTH/2);
+
+
 
     /// get obstacles as polygons using DBSCAN
-    auto obs = rc::dbscan(filtered_points, params.ROBOT_WIDTH, 2, params.ROBOT_WIDTH);
+    auto obs = rc::dbscan(new_data, params.ROBOT_WIDTH, 2, params.ROBOT_WIDTH);
     obstacles.insert(obstacles.end(), obs.begin(), obs.end());
-    draw_lidar(filtered_points, &viewer->scene);
+
+    draw_lidar(new_data, &viewer->scene);
+    draw_obstacles(obstacles, &viewer->scene);
 
     /// check if there is new YOLO data in buffer
     std::expected<RoboCompVisualElementsPub::TObject, std::string> tp_person = std::unexpected("No person found");
@@ -119,7 +122,7 @@ void SpecificWorker::compute()
     if (dist < params.PERSON_MIN_DIST)
     { qWarning() << __FUNCTION__ << "Path length: " << " Close to person. Stopping"; stop_robot(); return; }
 
-
+/*
     // call state machine to track the first point of the path
     //const auto &[adv, rot] = state_machine(, ldata.points, room_model, obstacles);
 
@@ -143,6 +146,32 @@ std::vector<QLineF> SpecificWorker::detect_wall_lines(const std::vector<Eigen::V
         lines.emplace_back(l.second);
     return lines;
 }
+
+std::vector<Eigen::Vector2f> SpecificWorker::remove_wall_points(const std::vector<QLineF> &lines,
+                                                                const std::vector<Eigen::Vector2f> &bpearl_points)
+{
+    std::vector<Eigen::Vector2f> distances;
+    for (const auto &point: bpearl_points)
+    {
+        bool exito = true;
+        for (const auto &l: lines)
+        {
+            auto p1 = Eigen::Vector2f{l.p1().x(), l.p1().y()};
+            auto p2 = Eigen::Vector2f{l.p2().x(), l.p2().y()};
+            Eigen::ParametrizedLine<float, 2> ln = Eigen::ParametrizedLine<float, 2>::Through(p1, p2);
+            if (ln.distance(point) < params.ROBOT_WIDTH/2 )
+            {
+                exito = false;
+                break;
+            }
+        }
+        if (exito)
+            distances.push_back(point);
+    }
+
+    return distances;
+}
+
 
 //////////////////////////////////////////////////////////////////
 /// YOUR CODE HERE
@@ -218,7 +247,7 @@ void SpecificWorker::update_room_model(const auto &points, QGraphicsScene *scene
  * param points The set of points to be filtered.
  * return A vector of polygons representing the filtered points.
  */
-std::tuple<std::vector<Eigen::Vector2f>, std::vector<QLineF>>
+/*std::tuple<std::vector<Eigen::Vector2f>, std::vector<QLineF>>
         SpecificWorker::remove_wall_points(const auto &helios, const auto &bpearl)
 {
     std::vector<Eigen::Vector2f> points_inside;
@@ -229,7 +258,7 @@ std::tuple<std::vector<Eigen::Vector2f>, std::vector<QLineF>>
     std::ranges::transform(bpearl, std::back_inserter(points_inside), [](auto &a){ return Eigen::Vector2f(a.x, a.y); });
 
     return std::make_tuple(points_inside, ls);
-}
+}*/
 std::expected<RoboCompVisualElementsPub::TObject, std::string>
 SpecificWorker::find_person_in_data(const std::vector<RoboCompVisualElementsPub::TObject> &objects)
 {

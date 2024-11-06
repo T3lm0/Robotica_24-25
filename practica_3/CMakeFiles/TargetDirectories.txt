@@ -12,5 +12,4 @@
 /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/CMakeFiles/install.dir
 /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/CMakeFiles/install/local.dir
 /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/CMakeFiles/install/strip.dir
-/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir
 /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/CMakeFiles/obs_person_tracker_autogen.dir
