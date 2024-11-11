@@ -18907,6 +18907,8 @@ src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o
  /usr/local/include/cppitertools/internal/iterbase.hpp
  /usr/local/include/cppitertools/internal/iterbase.hpp
  /usr/local/include/cppitertools/range.hpp
+ /usr/local/include/cppitertools/sliding_window.hpp
+ /usr/local/include/cppitertools/internal/iteratoriterator.hpp
 
 src/CMakeFiles/obs_person_tracker.dir/visualelementspubI.cpp.o
  /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/visualelementspubI.cpp

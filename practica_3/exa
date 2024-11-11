@@ -1,0 +1,2 @@
+Initial enlarged polygon: QPolygonF(QPointF(-3601.15,-7715.5)QPointF(-2206.66,8223.62)QPointF(-1977.54,8203.57)QPointF(-3372.03,-7735.54)QPointF(-3601.15,-7715.5)QPointF(-2206.66,8223.62))
+Enlarged polygon after processing: QPolygonF(QPointF(-3601.15,-7715.5)QPointF(-2133.83,9220.96)QPointF(-1874.16,9198.21)QPointF(-3446.66,-8732.76)QPointF(-3704.41,-8710.15)QPointF(-2206.66,8223.62))

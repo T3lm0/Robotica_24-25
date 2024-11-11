@@ -19,6 +19,7 @@
 #include "specificworker.h"
 #include <cppitertools/enumerate.hpp>
 #include <cppitertools/range.hpp>
+#include <cppitertools/sliding_window.hpp>
 
 /**
 * \brief Default constructor
@@ -92,14 +93,14 @@ void SpecificWorker::compute()
     /// get walls as polygons
     std::vector<QPolygonF> obstacles = get_walls_as_polygons(lines, params.ROBOT_WIDTH/2);
 
-
-
     /// get obstacles as polygons using DBSCAN
     auto obs = rc::dbscan(new_data, params.ROBOT_WIDTH, 2, params.ROBOT_WIDTH);
     obstacles.insert(obstacles.end(), obs.begin(), obs.end());
 
+    std::vector<QPolygonF> vec_pol = enlarge_polygons(obs, 1);
+
     draw_lidar(new_data, &viewer->scene);
-    draw_obstacles(obstacles, &viewer->scene);
+    draw_obstacles(vec_pol, &viewer->scene);
 
     /// check if there is new YOLO data in buffer
     std::expected<RoboCompVisualElementsPub::TObject, std::string> tp_person = std::unexpected("No person found");
@@ -170,6 +171,29 @@ std::vector<Eigen::Vector2f> SpecificWorker::remove_wall_points(const std::vecto
     }
 
     return distances;
+}
+
+std::vector<QPolygonF> SpecificWorker::enlarge_polygons(const std::vector<QPolygonF> &polygons, float amount) {
+    std::vector<QPolygonF> enlargedPolygons;
+
+    for (const auto &polygon : polygons)
+    {
+        QPolygonF enlargedPolygon(polygon);
+        enlargedPolygon << polygon[0] << polygon[1]; // Close the polygon
+        for (auto &p: iter::sliding_window(enlargedPolygon, 3))
+        {
+            // Cálculo de la bisectriz del ángulo
+            QPointF bisectrix = (p[0] - p[1]) + (p[2] - p[1]);
+
+            // Normalización de la bisectriz (normal)
+            QPointF normal = bisectrix / sqrt(bisectrix.x() * bisectrix.x() + bisectrix.y() * bisectrix.y());
+
+            // Desplazamiento de los puntos
+            p[1] -= amount * normal;
+        }
+        enlargedPolygons.push_back(enlargedPolygon);
+    }
+    return enlargedPolygons;
 }
 
 

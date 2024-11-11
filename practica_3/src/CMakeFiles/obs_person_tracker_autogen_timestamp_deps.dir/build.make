@@ -53,10 +53,10 @@ RM = /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3
+CMAKE_SOURCE_DIR = /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3
+CMAKE_BINARY_DIR = /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3
 
 # Utility rule file for obs_person_tracker_autogen_timestamp_deps.
 
@@ -74,10 +74,10 @@ src/CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir/build: obs_person_t
 .PHONY : src/CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir/build
 
 src/CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir/clean:
-	cd /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3/src && $(CMAKE_COMMAND) -P CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir/cmake_clean.cmake
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src && $(CMAKE_COMMAND) -P CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir/clean
 
 src/CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir/depend:
-	cd /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3 /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3/src /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3 /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3/src /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3 /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3 /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/obs_person_tracker_autogen_timestamp_deps.dir/depend
 

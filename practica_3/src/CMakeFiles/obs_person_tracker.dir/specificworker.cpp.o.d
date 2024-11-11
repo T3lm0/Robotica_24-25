@@ -1302,4 +1302,6 @@ src/CMakeFiles/obs_person_tracker.dir/specificworker.cpp.o: \
  /usr/local/include/cppitertools/internal/iterator_wrapper.hpp \
  /usr/local/include/cppitertools/internal/iterbase.hpp \
  /usr/local/include/cppitertools/internal/iterbase.hpp \
- /usr/local/include/cppitertools/range.hpp
+ /usr/local/include/cppitertools/range.hpp \
+ /usr/local/include/cppitertools/sliding_window.hpp \
+ /usr/local/include/cppitertools/internal/iteratoriterator.hpp

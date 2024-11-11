@@ -133,6 +133,8 @@ class SpecificWorker : public GenericWorker
         //
         std::vector<QLineF> detect_wall_lines(const std::vector<Eigen::Vector2f> &helios, QGraphicsScene *scene);
         std::vector<Eigen::Vector2f> remove_wall_points(const std::vector<QLineF> &lines, const std::vector<Eigen::Vector2f> &bpearl_points);
+        std::vector<QPolygonF> enlarge_polygons(const std::vector<QPolygonF> &polygons, float amount);
+
 
     void stop_robot();
 };
