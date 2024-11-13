@@ -90,11 +90,11 @@ class SpecificWorker : public GenericWorker
         using RetVal = std::tuple<STATE, float, float>;
         using RobotSpeed = std::tuple<float, float>;
         using TPerson = std::expected<RoboCompVisualElementsPub::TObject, std::string>;
-        RetVal track(const TPerson &person);
-        RetVal wait(const TPerson &person);
-        RetVal search(const TPerson &person);
+        RetVal track(const vector<Eigen::Vector2f> &path);
+        RetVal wait(const vector<Eigen::Vector2f> &path);
+        RetVal search(const vector<Eigen::Vector2f> &path);
         RetVal stop();
-        RobotSpeed state_machine(const TPerson &person);
+        RobotSpeed state_machine(const vector<Eigen::Vector2f> &path);
 
         // lidar
         std::vector<Eigen::Vector2f> read_lidar_bpearl();
