@@ -14,10 +14,8 @@
 
 namespace rc
 {
-
     std::vector<QPolygonF> dbscan(const std::vector<Eigen::Vector2f> &points,
-                                  float eps, int min_points,
-                                  float robot_width)
+                                  float eps, int min_points)
     {
         if(points.empty()) {std::cout << __FUNCTION__ << " No points" << std::endl; return {};}
         arma::mat arma_data(2, points.size());
@@ -50,9 +48,10 @@ namespace rc
             QPolygonF poly;
             for (const auto &p: hull)
                 poly << QPointF(p.x, p.y);
-
             list_poly.emplace_back(poly);
         }
         return list_poly;
     };
 }
+
+
