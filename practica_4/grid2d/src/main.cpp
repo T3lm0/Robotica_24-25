@@ -129,8 +129,8 @@ int ::grid2d::run(int argc, char* argv[])
 
 	int status=EXIT_SUCCESS;
 
-	RoboCompGrid2D::Grid2DPrxPtr grid2d_proxy;
 	RoboCompLidar3D::Lidar3DPrxPtr lidar3d_proxy;
+	RoboCompGrid2D::Grid2DPrxPtr grid2d_proxy;
 
 	string proxy, tmp;
 	initialize();

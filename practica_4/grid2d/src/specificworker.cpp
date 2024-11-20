@@ -63,10 +63,39 @@ void SpecificWorker::initialize()
 	}
 	else
 	{
+		// Viewer
+		viewer = new AbstractGraphicViewer(this->frame, params.GRID_MAX_DIM);
+		auto [r, e] = viewer->add_robot(params.ROBOT_WIDTH, params.ROBOT_LENGTH, 0, 100, QColor("Blue"));
+		robot_draw = r;
+		viewer->setStyleSheet("background-color: lightGray;");
+		this->resize(800, 700);
+
 
 		#ifdef HIBERNATION_ENABLED
 			hibernationChecker.start(500);
 		#endif
+
+
+		// FUNCIONA A MEDIAS
+		// grid
+		/*int i = 0, j = 0;
+		for (auto &fila :grid)
+		{
+			for (auto &celda : fila)
+			{
+				celda.state = CELL_STATE::UNKNOWN;
+				celda.x = i;
+				celda.y = j;
+				// Obtener la posición de la celda en el mundo
+				auto tuple_x_y = getPosInWorld(i, j);
+				// Dibujar la celda
+				celda.rect = viewer->scene.addRect(tuple_x_y, -50, params.TILE_SIZE, params.TILE_SIZE, QPen(Qt::red), QBrush(Qt::white));
+				celda.rect->setPos(celda.x, celda.y);
+				j++;
+			}
+			i++;
+		}*/
+
 
 		this->setPeriod(STATES::Compute, 100);
 		//this->setPeriod(STATES::Emergency, 500);
@@ -77,22 +106,10 @@ void SpecificWorker::initialize()
 
 void SpecificWorker::compute()
 {
-    std::cout << "Compute worker" << std::endl;
-	//computeCODE
-	//QMutexLocker locker(mutex);
-	//try
-	//{
-	//  camera_proxy->getYImage(0,img, cState, bState);
-    //    if (img.empty())
-    //        emit goToEmergency()
-	//  memcpy(image_gray.data, &img[0], m_width*m_height*sizeof(uchar));
-	//  searchTags(image_gray);
-	//}
-	//catch(const Ice::Exception &e)
-	//{
-	//  std::cout << "Error reading from Camera" << e << std::endl;
-	//}
-	
+	//read bpearl (lower) lidar and draw
+	auto ldata_bpearl = read_lidar_bpearl();
+	if(ldata_bpearl.empty()) { qWarning() << __FUNCTION__ << "Empty bpearl lidar data"; return; };
+	draw_lidar(ldata_bpearl, &viewer->scene);
 	
 }
 
@@ -121,7 +138,58 @@ int SpecificWorker::startup_check()
 	return 0;
 }
 
+//YOUR CODE HERE
 
+std::vector<Eigen::Vector2f> SpecificWorker::read_lidar_bpearl()
+{
+	try
+	{
+		auto ldata =  lidar3d_proxy->getLidarData("bpearl", 0, 2*M_PI, 1);
+		// filter points according to height and distance
+		std::vector<Eigen::Vector2f>  p_filter;
+		for(const auto &a: ldata.points)
+		{
+			if(a.z < 500 and a.distance2d > 200)
+				p_filter.emplace_back(a.x, a.y);
+		}
+		return p_filter;
+	}
+	catch(const Ice::Exception &e){std::cout << e << std::endl;}
+	return {};
+}
+
+/**
+ * Draws LIDAR points onto a QGraphicsScene.
+ *
+ * This method clears any existing graphical items from the scene, then iterates over the filtered
+ * LIDAR points to add new items. Each LIDAR point is represented as a colored rectangle. The point
+ * with the minimum distance is highlighted in red, while the other points are drawn in green.
+ *
+ * @param filtered_points A collection of filtered points to be drawn, each containing the coordinates
+ *                        and distance.
+ * @param scene A pointer to the QGraphicsScene where the points will be drawn.
+ */
+void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
+{
+	static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
+
+	// remove all items drawn in the previous iteration
+	for(auto i: items)
+	{
+		scene->removeItem(i);
+		delete i;
+	}
+	items.clear();
+
+	auto color = QColor(Qt::darkGreen);
+	auto brush = QBrush(QColor(Qt::darkGreen));
+	for(const auto &p : filtered_points)
+	{
+		auto item = scene->addRect(-50, -50, 100, 100, color, brush);
+		item->setPos(p.x(), p.y());
+		items.push_back(item);
+	}
+}
 
 
 /**************************************/
