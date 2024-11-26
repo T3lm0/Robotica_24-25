@@ -34,8 +34,7 @@
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
@@ -53,8 +52,7 @@
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
@@ -62,30 +60,23 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "ICES__home_usuario_robocomp_ws_src_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src::@145eef247bfb46b6828c",
-					"jsonFile" : "target-ICES__home_usuario_robocomp_ws_src_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src-06f26d1b45773ba5efff.json",
-					"name" : "ICES__home_usuario_robocomp_ws_src_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src",
+					"id" : "ICES__home_usuario_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src::@145eef247bfb46b6828c",
+					"jsonFile" : "target-ICES__home_usuario_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src-5ee79623ae90f8811b0a.json",
+					"name" : "ICES__home_usuario_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "grid2d::@145eef247bfb46b6828c",
-					"jsonFile" : "target-grid2d-eec27c2d5ede7bbb366a.json",
+					"jsonFile" : "target-grid2d-9ad2c541a20c07fd5a0e.json",
 					"name" : "grid2d",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "grid2d_autogen::@145eef247bfb46b6828c",
-					"jsonFile" : "target-grid2d_autogen-1f90e4aec52d6730b5a7.json",
+					"jsonFile" : "target-grid2d_autogen-2cb0046b25e787b06b38.json",
 					"name" : "grid2d_autogen",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "grid2d_autogen_timestamp_deps::@145eef247bfb46b6828c",
-					"jsonFile" : "target-grid2d_autogen_timestamp_deps-09d4d99e710c434d34c8.json",
-					"name" : "grid2d_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}
 			]
@@ -94,12 +85,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d",
-		"source" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
+		"build" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d",
+		"source" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 7
+		"minor" : 3
 	}
 }

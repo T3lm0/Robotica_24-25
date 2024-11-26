@@ -60,7 +60,7 @@ private:
 	struct Params
 	{
 		float ROBOT_WIDTH = 460;  // mm
-		int DIMMENSION = 5000; // Dimmension(mm)
+		int DIMMENSION = 10000; // Dimmension(mm)
 		float ROBOT_LENGTH = 480;  // mm
 		float MAX_ADV_SPEED = 1900; // mm/s
 		float MAX_ROT_SPEED = 2; // rad/s
@@ -86,11 +86,19 @@ private:
 	QGraphicsPolygonItem *robot_draw;
 
     // grid
-    static constexpr int GRID_SIZE = 50;
+    static constexpr int GRID_SIZE = 100;
     std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
+	void changeState(auto &filtered_points);
 
     // Coordinates
-	getCoordinatesFromCell(int x, int y);
+	void transformToGRID();
+
+    // Transformations
+    std::pair<float, float> getPosInWorld(float i, float j);
+    std::pair<float, float> fromWorldToPos(float x, float y);
+
+	//Dijkstra
+    std::vector<int> dijkstra(std::vector<int> graph, int src);
 };
 
 #endif

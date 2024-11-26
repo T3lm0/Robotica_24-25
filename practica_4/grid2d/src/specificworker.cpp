@@ -78,23 +78,8 @@ void SpecificWorker::initialize()
 
 		// FUNCIONA A MEDIAS
 		// grid
-		/*int i = 0, j = 0;
-		for (auto &fila :grid)
-		{
-			for (auto &celda : fila)
-			{
-				celda.state = CELL_STATE::UNKNOWN;
-				celda.x = i;
-				celda.y = j;
-				// Obtener la posición de la celda en el mundo
-				auto tuple_x_y = getPosInWorld(i, j);
-				// Dibujar la celda
-				celda.rect = viewer->scene.addRect(tuple_x_y, -50, params.TILE_SIZE, params.TILE_SIZE, QPen(Qt::red), QBrush(Qt::white));
-				celda.rect->setPos(celda.x, celda.y);
-				j++;
-			}
-			i++;
-		}*/
+		transformToGRID();
+		//draw_lidar(, &viewer->scene);
 
 
 		this->setPeriod(STATES::Compute, 100);
@@ -188,6 +173,58 @@ void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
 		auto item = scene->addRect(-50, -50, 100, 100, color, brush);
 		item->setPos(p.x(), p.y());
 		items.push_back(item);
+	}
+}
+
+void SpecificWorker::transformToGRID()
+{
+	std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> _grid;
+	int i = 0, j = 0;
+	QPen pen_e(Qt::blue, 5);
+	QBrush brush(Qt::lightGray);
+	for (auto &fila :grid)
+	{
+		j = 0;
+		for (auto &celda : fila)
+		{
+			celda.state = CELL_STATE::UNKNOWN;
+			celda.x = i;
+			celda.y = j;
+			// Obtener la posición de la celda en el mundo
+			auto tuple_x_y = getPosInWorld(i, j);
+			// Dibujar la celda
+			celda.rect = viewer->scene.addRect(tuple_x_y.first, tuple_x_y.second, params.TILE_SIZE, params.TILE_SIZE, pen_e, brush);
+			//celda.rect->setPos(celda.x, celda.y);
+			j++;
+		}
+		i++;
+	}
+}
+
+std::pair<float, float> SpecificWorker::getPosInWorld(float i, float j)
+{
+	float x, y;
+
+	x = params.DIMMENSION / GRID_SIZE * i - params.DIMMENSION / 2;
+	y = params.DIMMENSION / GRID_SIZE * j - params.DIMMENSION / 2;
+
+	return std::make_pair(x, y);
+}
+
+std::pair<float, float> SpecificWorker::fromWorldToPos(float x, float y){
+	int i, j;
+	i = (x * params.DIMMENSION/2) * GRID_SIZE / params.DIMMENSION;
+	j = (y * params.DIMMENSION/2) * GRID_SIZE / params.DIMMENSION;
+	return std::make_pair(i, j);
+}
+
+void SpecificWorker::changeState(auto &filtered_points)
+{
+	for (const auto &point: filtered_points)
+	{
+		float S = sqrt(pow(point.x,2) + pow(point.y, 2)) / 100;
+		float k = 1/S;
+		float R = k * point;
 	}
 }
 

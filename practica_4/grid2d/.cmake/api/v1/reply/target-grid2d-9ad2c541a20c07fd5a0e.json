@@ -12,26 +12,14 @@
 		[
 			"ADD_EXECUTABLE",
 			"TARGET_LINK_LIBRARIES",
-			"set_property",
-			"find_package",
-			"find_dependency",
-			"include",
-			"INCLUDE",
-			"set_target_properties",
 			"ADD_DEFINITIONS",
 			"INCLUDE_DIRECTORIES",
+			"INCLUDE",
 			"ROBOCOMP_INITIALIZE"
 		],
 		"files" : 
 		[
 			"src/CMakeLists.txt",
-			"/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindOpenGL.cmake",
-			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
-			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
-			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake",
-			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake",
-			"/home/robocomp/robocomp/cmake/modules/qt.cmake",
 			"/home/robocomp/robocomp/cmake/robocomp.cmake"
 		],
 		"nodes" : 
@@ -52,116 +40,38 @@
 				"parent" : 0
 			},
 			{
-				"command" : 6,
-				"file" : 0,
-				"line" : 14,
-				"parent" : 0
-			},
-			{
-				"file" : 7,
-				"parent" : 3
-			},
-			{
-				"command" : 3,
-				"file" : 7,
-				"line" : 107,
-				"parent" : 4
-			},
-			{
-				"file" : 6,
-				"parent" : 5
-			},
-			{
-				"command" : 3,
-				"file" : 6,
-				"line" : 219,
-				"parent" : 6
-			},
-			{
-				"file" : 5,
-				"parent" : 7
-			},
-			{
-				"command" : 5,
-				"file" : 5,
-				"line" : 50,
-				"parent" : 8
-			},
-			{
-				"file" : 4,
-				"parent" : 9
-			},
-			{
-				"command" : 4,
-				"file" : 4,
-				"line" : 48,
-				"parent" : 10
-			},
-			{
-				"command" : 3,
-				"file" : 3,
-				"line" : 76,
-				"parent" : 11
-			},
-			{
-				"file" : 2,
-				"parent" : 12
-			},
-			{
-				"command" : 3,
-				"file" : 2,
-				"line" : 10,
-				"parent" : 13
-			},
-			{
-				"file" : 1,
-				"parent" : 14
-			},
-			{
 				"command" : 2,
-				"file" : 1,
-				"line" : 712,
-				"parent" : 15
-			},
-			{
-				"command" : 7,
-				"file" : 1,
-				"line" : 710,
-				"parent" : 15
-			},
-			{
-				"command" : 8,
 				"file" : 0,
 				"line" : 31,
 				"parent" : 0
 			},
 			{
-				"command" : 6,
+				"command" : 4,
 				"file" : 0,
 				"line" : 13,
 				"parent" : 0
 			},
 			{
-				"file" : 8,
-				"parent" : 19
+				"file" : 1,
+				"parent" : 4
 			},
 			{
-				"command" : 9,
-				"file" : 8,
+				"command" : 3,
+				"file" : 1,
 				"line" : 165,
-				"parent" : 20
+				"parent" : 5
 			},
 			{
-				"command" : 10,
+				"command" : 5,
 				"file" : 0,
 				"line" : 36,
 				"parent" : 0
 			},
 			{
-				"command" : 9,
-				"file" : 8,
+				"command" : 3,
+				"file" : 1,
 				"line" : 12,
-				"parent" : 22
+				"parent" : 7
 			}
 		]
 	},
@@ -171,17 +81,20 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-std=gnu++20 -fdiagnostics-color=always   -I/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/ -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -Wall -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -fmax-errors=1 -fno-char8_t"
+					"fragment" : "  -I/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/ -DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED -Wall -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -fmax-errors=1 -fno-char8_t"
 				},
 				{
 					"backtrace" : 2,
 					"fragment" : "-fPIC"
+				},
+				{
+					"fragment" : "-std=gnu++20"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 18,
+					"backtrace" : 3,
 					"define" : "ICE_CPP11_MAPPING"
 				},
 				{
@@ -217,42 +130,42 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/include"
+					"path" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/include"
 				},
 				{
-					"backtrace" : 21,
-					"path" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src"
+					"backtrace" : 6,
+					"path" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src"
 				},
 				{
-					"backtrace" : 21,
-					"path" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/."
+					"backtrace" : 6,
+					"path" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/."
 				},
 				{
-					"backtrace" : 21,
+					"backtrace" : 6,
 					"path" : "/opt/robocomp/include"
 				},
 				{
-					"backtrace" : 21,
+					"backtrace" : 6,
 					"path" : "/classes"
 				},
 				{
-					"backtrace" : 21,
-					"path" : "/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
+					"backtrace" : 6,
+					"path" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
 				},
 				{
-					"backtrace" : 23,
+					"backtrace" : 8,
 					"path" : "/home/robocomp/robocomp/classes"
 				},
 				{
-					"backtrace" : 23,
+					"backtrace" : 8,
 					"path" : "/home/robocomp/robocomp/libs"
 				},
 				{
-					"backtrace" : 23,
+					"backtrace" : 8,
 					"path" : "/home/robocomp/robocomp/interfaces"
 				},
 				{
-					"backtrace" : 23,
+					"backtrace" : 8,
 					"path" : "/include"
 				},
 				{
@@ -329,10 +242,7 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ICES__home_usuario_robocomp_ws_src_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src::@145eef247bfb46b6828c"
-		},
-		{
-			"id" : "grid2d_autogen_timestamp_deps::@145eef247bfb46b6828c"
+			"id" : "ICES__home_usuario_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src::@145eef247bfb46b6828c"
 		},
 		{
 			"backtrace" : 0,
@@ -375,7 +285,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-L/home/robocomp/robocomp///classes",
+				"fragment" : "-L/home/robocomp/robocomp//classes",
 				"role" : "libraries"
 			},
 			{
@@ -439,12 +349,10 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 16,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libGLX.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 17,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libOpenGL.so",
 				"role" : "libraries"
 			}
@@ -489,21 +397,19 @@
 			]
 		},
 		{
-			"name" : "",
-			"sourceIndexes" : 
-			[
-				16,
-				20
-			]
-		},
-		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
+				16,
 				17,
-				18,
-				19,
-				21
+				18
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				19
 			]
 		}
 	],
@@ -612,36 +518,24 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "src/grid2d_autogen/timestamp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
 			"path" : "src/CommonBehavior.cpp.rule",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "src/Grid2D.cpp.rule",
-			"sourceGroupIndex" : 3
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "src/Lidar3D.cpp.rule",
-			"sourceGroupIndex" : 3
-		},
-		{
-			"backtrace" : 0,
-			"path" : "src/mainUI.ui",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "src/grid2d_autogen/timestamp.rule",
+			"path" : "src/Lidar3D.cpp.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"path" : "src/mainUI.ui",
 			"sourceGroupIndex" : 3
 		}
 	],
