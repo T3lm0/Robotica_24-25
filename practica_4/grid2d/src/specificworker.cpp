@@ -17,6 +17,7 @@
  *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "specificworker.h"
+#include <cppitertools/range.hpp>
 
 /**
 * \brief Default constructor
@@ -95,7 +96,9 @@ void SpecificWorker::compute()
 	auto ldata_bpearl = read_lidar_bpearl();
 	if(ldata_bpearl.empty()) { qWarning() << __FUNCTION__ << "Empty bpearl lidar data"; return; };
 	draw_lidar(ldata_bpearl, &viewer->scene);
-	
+
+	changeState(ldata_bpearl);
+	//draw_lidar(ldata_bpearl, &viewer->scene);
 }
 
 void SpecificWorker::emergency()
@@ -213,18 +216,39 @@ std::pair<float, float> SpecificWorker::getPosInWorld(float i, float j)
 
 std::pair<float, float> SpecificWorker::fromWorldToPos(float x, float y){
 	int i, j;
-	i = (x * params.DIMMENSION/2) * GRID_SIZE / params.DIMMENSION;
-	j = (y * params.DIMMENSION/2) * GRID_SIZE / params.DIMMENSION;
+	i = (GRID_SIZE/params.DIMMENSION) * x + GRID_SIZE/2;
+	j = (GRID_SIZE/params.DIMMENSION) * y + GRID_SIZE/2;
+	qDebug() << i << " <------------------> " << j;
+	qDebug() << "x : " << x << " <------------------> y : " << y;
 	return std::make_pair(i, j);
 }
 
 void SpecificWorker::changeState(auto &filtered_points)
 {
+	QPen pen_e(Qt::blue, 5);
+	QBrush brush_in(Qt::white);
+	QBrush brush_out(Qt::red);
 	for (const auto &point: filtered_points)
 	{
-		float S = sqrt(pow(point.x,2) + pow(point.y, 2)) / 100;
-		float k = 1/S;
-		float R = k * point;
+		qDebug() << "1";
+		float S = std::hypot(point.x(), point.y()) / params.TILE_SIZE;
+		Eigen::Vector2f p = {0.f, 0.f};
+		//auto d = point.normalized();
+		for (const auto o: iter::range(0.f, 1.f, 1/S)) {
+			qDebug() << "2";
+			p = point * o;
+			auto [i, j] = fromWorldToPos(p.x(), p.y());
+			qDebug() << "3";
+			grid[i][j].state = CELL_STATE::OCCUPIED;
+			qDebug() << "4";
+			grid[i][j].rect = viewer->scene.addRect(i, j, params.TILE_SIZE, params.TILE_SIZE, pen_e, brush_in);
+			qDebug() << "8";
+		}
+		qDebug() << "5";
+		qDebug() << p.x() << " " << p.y();
+		auto [i, j] = fromWorldToPos(p.x(), p.y());
+		qDebug() << "6";
+		grid[i][j].rect = viewer->scene.addRect(i, j, params.TILE_SIZE, params.TILE_SIZE, pen_e, brush_out);
 	}
 }
 
