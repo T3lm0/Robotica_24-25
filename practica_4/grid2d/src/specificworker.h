@@ -37,6 +37,7 @@
 #include <doublebuffer_sync/doublebuffer_sync.h>
 #include <locale>
 #include <Eigen/Dense>
+#include <timer/timer.h>
 #include <qcustomplot/qcustomplot.h>
 
 class SpecificWorker : public GenericWorker
@@ -50,7 +51,10 @@ public:
 public slots:
 	void initialize();
 	void compute();
-	void emergency();
+
+void reset_grid();
+
+void emergency();
 	void restore();
 	int startup_check();
 
@@ -60,7 +64,7 @@ private:
 	struct Params
 	{
 		float ROBOT_WIDTH = 460;  // mm
-		float DIMMENSION = 5000; // Dimmension(mm)
+		float DIMMENSION = 10000; // Dimmension(mm)
 		float ROBOT_LENGTH = 480;  // mm
 		float MAX_ADV_SPEED = 1900; // mm/s
 		float MAX_ROT_SPEED = 2; // rad/s
@@ -86,7 +90,7 @@ private:
 	QGraphicsPolygonItem *robot_draw;
 
     // grid
-    static constexpr int GRID_SIZE = 50;
+    static constexpr int GRID_SIZE = 100;
     std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
 	void changeState(auto &filtered_points);
 
@@ -95,7 +99,8 @@ private:
 
     // Transformations
     std::pair<float, float> getPosInWorld(float i, float j);
-    std::pair<float, float> fromWorldToPos(float x, float y);
+
+std::pair<int, int> fromWorldToPos(float x, float y);
 
 	//Dijkstra
     std::vector<int> dijkstra(std::vector<int> graph, int src);

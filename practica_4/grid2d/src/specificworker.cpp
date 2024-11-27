@@ -70,7 +70,7 @@ void SpecificWorker::initialize()
 		robot_draw = r;
 		viewer->setStyleSheet("background-color: lightGray;");
 		this->resize(800, 700);
-
+		viewer->show();
 
 		#ifdef HIBERNATION_ENABLED
 			hibernationChecker.start(500);
@@ -79,15 +79,11 @@ void SpecificWorker::initialize()
 
 		// FUNCIONA A MEDIAS
 		// grid
-
-		//draw_lidar(, &viewer->scene);
-
+		transformToGRID();
 
 		this->setPeriod(STATES::Compute, 100);
 		//this->setPeriod(STATES::Emergency, 500);
-
 	}
-
 }
 
 void SpecificWorker::compute()
@@ -97,37 +93,21 @@ void SpecificWorker::compute()
 	if(ldata_bpearl.empty()) { qWarning() << __FUNCTION__ << "Empty bpearl lidar data"; return; };
 	draw_lidar(ldata_bpearl, &viewer->scene);
 
-	transformToGRID();
+	reset_grid();
 	changeState(ldata_bpearl);
-	//draw_lidar(ldata_bpearl, &viewer->scene);
-}
 
-void SpecificWorker::emergency()
-{
-    std::cout << "Emergency worker" << std::endl;
-	//computeCODE
-	//
-	//if (SUCCESSFUL)
-    //  emmit goToRestore()
-}
-
-//Execute one when exiting to emergencyState
-void SpecificWorker::restore()
-{
-    std::cout << "Restore worker" << std::endl;
-	//computeCODE
-	//Restore emergency component
-
-}
-
-int SpecificWorker::startup_check()
-{
-	std::cout << "Startup check" << std::endl;
-	QTimer::singleShot(200, qApp, SLOT(quit()));
-	return 0;
 }
 
 //YOUR CODE HERE
+void SpecificWorker::reset_grid()
+{
+	for (auto &fila : grid)
+		for (auto &celda : fila)
+		{
+			celda.state = CELL_STATE::UNKNOWN;
+			celda.rect->setBrush(QBrush(Qt::lightGray));
+		}
+}
 
 std::vector<Eigen::Vector2f> SpecificWorker::read_lidar_bpearl()
 {
@@ -207,18 +187,14 @@ void SpecificWorker::transformToGRID()
 
 std::pair<float, float> SpecificWorker::getPosInWorld(float i, float j)
 {
-	float x, y;
-
-	x = params.DIMMENSION / GRID_SIZE * i - params.DIMMENSION / 2;
-	y = params.DIMMENSION / GRID_SIZE * j - params.DIMMENSION / 2;
-
+	float x = params.DIMMENSION / GRID_SIZE * i - params.DIMMENSION / 2;
+	float y = params.DIMMENSION / GRID_SIZE * j - params.DIMMENSION / 2;
 	return std::make_pair(x, y);
 }
 
-std::pair<float, float> SpecificWorker::fromWorldToPos(float x, float y){
-	int i = (GRID_SIZE/params.DIMMENSION) * x + GRID_SIZE/2;
-	int j = (GRID_SIZE/params.DIMMENSION) * y + GRID_SIZE/2;
-
+std::pair<int, int> SpecificWorker::fromWorldToPos(float x, float y){
+	int i = std::clamp(static_cast<int>((GRID_SIZE/params.DIMMENSION) * x + GRID_SIZE/2), 0, GRID_SIZE-1);
+	int j = std::clamp(static_cast<int>((GRID_SIZE/params.DIMMENSION) * y + GRID_SIZE/2), 0, GRID_SIZE-1);
 	return std::make_pair(i, j);
 }
 
@@ -229,23 +205,44 @@ void SpecificWorker::changeState(auto &filtered_points)
 	QBrush brush_out(Qt::red);
 	for (const auto &point: filtered_points)
 	{
-		float S = std::hypot(point.x(), point.y()) / params.TILE_SIZE;
+		const float S = std::hypot(point.x(), point.y()) / params.TILE_SIZE;
 		Eigen::Vector2f p = {0.f, 0.f};
-		//auto d = point.normalized();
-		for (const auto o: iter::range(0.f, 1.f, 1/S)) {
+		for (const auto o: iter::range(0.f, 1.f, 1/S))
+		{
 			p = point * o;
 			auto [i, j] = fromWorldToPos(p.x(), p.y());
-			auto tuple_x_y = getPosInWorld(i, j);
 			grid[i][j].state = CELL_STATE::OCCUPIED;
-			grid[i][j].rect = viewer->scene.addRect(tuple_x_y.first, tuple_x_y.second, params.TILE_SIZE, params.TILE_SIZE, pen, brush_in);
+			grid[i][j].rect->setBrush(brush_in);
 		}
-		auto [i, j] = fromWorldToPos(p.x(), p.y());
-		auto tuple_x_y = getPosInWorld(i, j);
-		grid[i][j].rect = viewer->scene.addRect(tuple_x_y.first, tuple_x_y.second, params.TILE_SIZE, params.TILE_SIZE, pen, brush_out);
+		auto [i, j] = fromWorldToPos(point.x(), point.y());
+		grid[i][j].rect->setBrush(brush_out);
 	}
 }
 
+void SpecificWorker::emergency()
+{
+	std::cout << "Emergency worker" << std::endl;
+	//computeCODE
+	//
+	//if (SUCCESSFUL)
+	//  emmit goToRestore()
+}
 
+//Execute one when exiting to emergencyState
+void SpecificWorker::restore()
+{
+	std::cout << "Restore worker" << std::endl;
+	//computeCODE
+	//Restore emergency component
+
+}
+
+int SpecificWorker::startup_check()
+{
+	std::cout << "Startup check" << std::endl;
+	QTimer::singleShot(200, qApp, SLOT(quit()));
+	return 0;
+}
 /**************************************/
 // From the RoboCompGrid2D you can call this methods:
 // this->grid2d_proxy->getPaths(...)
