@@ -79,7 +79,7 @@ void SpecificWorker::initialize()
 
 		// FUNCIONA A MEDIAS
 		// grid
-		transformToGRID();
+
 		//draw_lidar(, &viewer->scene);
 
 
@@ -97,6 +97,7 @@ void SpecificWorker::compute()
 	if(ldata_bpearl.empty()) { qWarning() << __FUNCTION__ << "Empty bpearl lidar data"; return; };
 	draw_lidar(ldata_bpearl, &viewer->scene);
 
+	transformToGRID();
 	changeState(ldata_bpearl);
 	//draw_lidar(ldata_bpearl, &viewer->scene);
 }
@@ -215,40 +216,32 @@ std::pair<float, float> SpecificWorker::getPosInWorld(float i, float j)
 }
 
 std::pair<float, float> SpecificWorker::fromWorldToPos(float x, float y){
-	int i, j;
-	i = (GRID_SIZE/params.DIMMENSION) * x + GRID_SIZE/2;
-	j = (GRID_SIZE/params.DIMMENSION) * y + GRID_SIZE/2;
-	qDebug() << i << " <------------------> " << j;
-	qDebug() << "x : " << x << " <------------------> y : " << y;
+	int i = (GRID_SIZE/params.DIMMENSION) * x + GRID_SIZE/2;
+	int j = (GRID_SIZE/params.DIMMENSION) * y + GRID_SIZE/2;
+
 	return std::make_pair(i, j);
 }
 
 void SpecificWorker::changeState(auto &filtered_points)
 {
-	QPen pen_e(Qt::blue, 5);
+	QPen pen(Qt::blue, 5);
 	QBrush brush_in(Qt::white);
 	QBrush brush_out(Qt::red);
 	for (const auto &point: filtered_points)
 	{
-		qDebug() << "1";
 		float S = std::hypot(point.x(), point.y()) / params.TILE_SIZE;
 		Eigen::Vector2f p = {0.f, 0.f};
 		//auto d = point.normalized();
 		for (const auto o: iter::range(0.f, 1.f, 1/S)) {
-			qDebug() << "2";
 			p = point * o;
 			auto [i, j] = fromWorldToPos(p.x(), p.y());
-			qDebug() << "3";
+			auto tuple_x_y = getPosInWorld(i, j);
 			grid[i][j].state = CELL_STATE::OCCUPIED;
-			qDebug() << "4";
-			grid[i][j].rect = viewer->scene.addRect(i, j, params.TILE_SIZE, params.TILE_SIZE, pen_e, brush_in);
-			qDebug() << "8";
+			grid[i][j].rect = viewer->scene.addRect(tuple_x_y.first, tuple_x_y.second, params.TILE_SIZE, params.TILE_SIZE, pen, brush_in);
 		}
-		qDebug() << "5";
-		qDebug() << p.x() << " " << p.y();
 		auto [i, j] = fromWorldToPos(p.x(), p.y());
-		qDebug() << "6";
-		grid[i][j].rect = viewer->scene.addRect(i, j, params.TILE_SIZE, params.TILE_SIZE, pen_e, brush_out);
+		auto tuple_x_y = getPosInWorld(i, j);
+		grid[i][j].rect = viewer->scene.addRect(tuple_x_y.first, tuple_x_y.second, params.TILE_SIZE, params.TILE_SIZE, pen, brush_out);
 	}
 }
 

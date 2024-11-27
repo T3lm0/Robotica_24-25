@@ -60,7 +60,7 @@ private:
 	struct Params
 	{
 		float ROBOT_WIDTH = 460;  // mm
-		int DIMMENSION = 10000; // Dimmension(mm)
+		float DIMMENSION = 5000; // Dimmension(mm)
 		float ROBOT_LENGTH = 480;  // mm
 		float MAX_ADV_SPEED = 1900; // mm/s
 		float MAX_ROT_SPEED = 2; // rad/s
@@ -86,7 +86,7 @@ private:
 	QGraphicsPolygonItem *robot_draw;
 
     // grid
-    static constexpr int GRID_SIZE = 100;
+    static constexpr int GRID_SIZE = 50;
     std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
 	void changeState(auto &filtered_points);
 
