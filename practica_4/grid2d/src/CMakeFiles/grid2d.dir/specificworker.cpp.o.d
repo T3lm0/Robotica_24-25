@@ -1,9 +1,9 @@
 src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificworker.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificworker.cpp \
  /usr/include/stdc-predef.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificworker.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -20,7 +20,7 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
@@ -83,13 +83,16 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/12/bits/std_abs.h \
  /usr/include/c++/12/bits/ranges_algo.h \
  /usr/include/c++/12/bits/ranges_algobase.h \
@@ -152,6 +155,7 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h /usr/include/syscall.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
@@ -169,6 +173,7 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/12/stdexcept /usr/include/c++/12/string \
  /usr/include/c++/12/bits/char_traits.h \
  /usr/include/c++/12/bits/allocator.h \
@@ -194,6 +199,8 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobalstatic.h \
@@ -248,6 +255,8 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h /usr/include/string.h \
  /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h \
@@ -879,7 +888,7 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/ui_mainUI.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
@@ -897,7 +906,7 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.h \
  /usr/include/IceUtil/PushDisableWarnings.h /usr/include/Ice/ProxyF.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/12/cassert /usr/include/Ice/ProxyHandle.h \
@@ -953,8 +962,8 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
  /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
@@ -978,7 +987,7 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
  /usr/include/c++/12/expected \
  /home/robocomp/robocomp/classes/doublebuffer_sync/doublebuffer_sync.h \
  /usr/include/c++/12/ranges /usr/include/c++/12/span \
@@ -1167,6 +1176,7 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: \
  /usr/include/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/Eigen/src/Eigenvalues/./RealQZ.h \
  /usr/include/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+ /home/robocomp/robocomp/classes/timer/timer.h \
  /home/robocomp/robocomp/classes/qcustomplot/qcustomplot.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedPointer \

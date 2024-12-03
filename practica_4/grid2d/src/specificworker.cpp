@@ -76,13 +76,15 @@ void SpecificWorker::initialize()
 			hibernationChecker.start(500);
 		#endif
 
-
+		connect(viewer, &AbstractGraphicViewer::new_mouse_coordinates, this, &SpecificWorker::new_mouse_coordinates);
 		// FUNCIONA A MEDIAS
 		// grid
 		transformToGRID();
 
 		this->setPeriod(STATES::Compute, 100);
 		//this->setPeriod(STATES::Emergency, 500);
+
+
 	}
 }
 
@@ -96,6 +98,17 @@ void SpecificWorker::compute()
 	reset_grid();
 	changeState(ldata_bpearl);
 
+	//const TCell &ini, const TCell &end, const std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> &grid
+	//const auto graph = createGraph(grid[GRID_SIZE/2][GRID_SIZE/2], grid[24][8], grid);
+    //const auto path = dijkstra(grid[GRID_SIZE/2][GRID_SIZE/2], grid[24][8], graph);
+
+
+}
+
+void SpecificWorker::new_mouse_coordinates(){
+//	std::cout << "Mouse coordinates" << std::endl;
+//    QEvent *event = QEvent::QEvent(QEvent::Type::MouseButtonPress);
+//    viewer->new_mouse_coordinates(QPointF(event->pos));
 }
 
 //YOUR CODE HERE
@@ -242,6 +255,77 @@ int SpecificWorker::startup_check()
 	std::cout << "Startup check" << std::endl;
 	QTimer::singleShot(200, qApp, SLOT(quit()));
 	return 0;
+}
+
+std::vector<SpecificWorker::TCell> SpecificWorker::get_neighbors(TCell& current, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE>& grid)
+{
+	std::vector<TCell> neighbors;
+    int directions[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}}; // Movimientos: arriba, abajo, izquierda, derecha
+
+    for (auto& dir : directions) {
+        int new_x = current.x + dir[0];
+        int new_y = current.y + dir[1];
+
+        if (new_x >= 0 && new_x < GRID_SIZE && new_y >= 0 && new_y < GRID_SIZE) {
+            TCell& neighbor = grid[new_x][new_y];
+            if (neighbor.state != CELL_STATE::OCCUPIED) {  // Sólo agregar celdas transitables
+                neighbors.push_back(neighbor);
+            }
+        }
+    }
+    return neighbors;
+}
+
+std::vector<Eigen::Vector2f> SpecificWorker::dijkstra(TCell ini, TCell end, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid)
+{
+	std::vector<Eigen::Vector2f> path;
+
+    // Mapa de distancias mínimas desde el nodo inicial
+    std::vector<std::vector<float>> dist(GRID_SIZE, std::vector<float>(GRID_SIZE, std::numeric_limits<float>::infinity()));
+    dist[ini.x][ini.y] = 0;
+
+    // Mapa de predecesores para reconstruir el camino
+    std::vector<std::vector<TCell>> prev(GRID_SIZE, std::vector<TCell>(GRID_SIZE));
+
+    // Priority queue para los nodos a explorar (distancia, TCell)
+    std::priority_queue<std::pair<float, TCell>, std::vector<std::pair<float, TCell>>, std::greater<>> pq;
+    pq.push({0.0f, ini});
+
+    while (!pq.empty()) {
+        auto current = pq.top();
+        pq.pop();
+        float current_dist = current.first;
+        TCell current_cell = current.second;
+
+        // Si llegamos al nodo final, reconstruimos el camino
+        if (current_cell == end) {
+            TCell path_cell = end;
+            while (!(path_cell == ini)) {
+                path.push_back(Eigen::Vector2f(path_cell.x, path_cell.y));
+                path_cell = prev[path_cell.x][path_cell.y];
+            }
+            path.push_back(Eigen::Vector2f(ini.x, ini.y));
+            std::reverse(path.begin(), path.end());
+            return path;
+        }
+
+        // Explorar los vecinos
+        for (TCell& neighbor : get_neighbors(current_cell, grid)) {
+            float alt = current_dist + 1.0f; // Asumimos un costo uniforme de 1 para cada movimiento
+
+            // Si encontramos una ruta más corta hacia el vecino
+            int neighbor_x = neighbor.x;
+            int neighbor_y = neighbor.y;
+            if (alt < dist[neighbor_x][neighbor_y]) {
+                dist[neighbor_x][neighbor_y] = alt;
+                prev[neighbor_x][neighbor_y] = current_cell;
+                pq.push({alt, neighbor});
+            }
+        }
+    }
+
+    // Si no se encuentra el camino, retornar un vector vacío
+    return path;
 }
 /**************************************/
 // From the RoboCompGrid2D you can call this methods:

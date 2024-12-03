@@ -1,5 +1,5 @@
 src/CMakeFiles/grid2d.dir/main.cpp.o: \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/main.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/signal.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -40,6 +40,7 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
@@ -112,7 +113,10 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/select.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
- /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/12/bits/std_abs.h \
  /usr/include/c++/12/bits/ranges_algo.h \
  /usr/include/c++/12/bits/ranges_algobase.h \
@@ -185,6 +189,7 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/12/stdexcept /usr/include/c++/12/string \
  /usr/include/c++/12/bits/char_traits.h \
  /usr/include/c++/12/bits/allocator.h \
@@ -210,6 +215,8 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobalstatic.h \
@@ -264,6 +271,8 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h /usr/include/string.h \
  /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h \
@@ -1150,17 +1159,17 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: \
  /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericmonitor.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericmonitor.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/ui_mainUI.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.h \
  /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
@@ -1173,10 +1182,10 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificworker.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.h \
  /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
@@ -1190,7 +1199,7 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
  /usr/include/c++/12/expected \
  /home/robocomp/robocomp/classes/doublebuffer_sync/doublebuffer_sync.h \
  /usr/include/c++/12/ranges /usr/include/c++/12/span \
@@ -1379,6 +1388,7 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: \
  /usr/include/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/Eigen/src/Eigenvalues/./RealQZ.h \
  /usr/include/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+ /home/robocomp/robocomp/classes/timer/timer.h \
  /home/robocomp/robocomp/classes/qcustomplot/qcustomplot.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedPointer \
@@ -1419,5 +1429,5 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificmonitor.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/commonbehaviorI.h
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificmonitor.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/commonbehaviorI.h

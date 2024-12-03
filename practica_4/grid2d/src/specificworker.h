@@ -27,7 +27,7 @@
 #ifndef SPECIFICWORKER_H
 #define SPECIFICWORKER_H
 
-#define HIBERNATION_ENABLED
+//#define HIBERNATION_ENABLED
 
 #include <genericworker.h>
 #include "abstract_graphic_viewer/abstract_graphic_viewer.h"
@@ -51,6 +51,7 @@ public:
 public slots:
 	void initialize();
 	void compute();
+	void new_mouse_coordinates();
 
 void reset_grid();
 
@@ -74,12 +75,25 @@ private:
 	Params params;
 	enum class CELL_STATE { EMPTY, OCCUPIED, UNKNOWN };
 
-	struct TCell
+	typedef struct TCell
 	{
 		CELL_STATE state = CELL_STATE::UNKNOWN;
-		float x, y;
+		int x, y;
 		QGraphicsRectItem *rect;
-	};
+
+		// Operador == para comparar dos objetos TCell
+		bool operator==(const TCell& other) const {
+			return (x == other.x && y == other.y && state == other.state);
+		}
+
+		// Operador < para permitir que TCell sea usado en std::map
+		bool operator<(const TCell& other) const {
+			if (x == other.x)
+				return y < other.y;
+			return x < other.x;
+		}
+
+	} TCell;
 
 	// lidar
 	std::vector<Eigen::Vector2f> read_lidar_bpearl();
@@ -100,10 +114,11 @@ private:
     // Transformations
     std::pair<float, float> getPosInWorld(float i, float j);
 
-std::pair<int, int> fromWorldToPos(float x, float y);
+	std::pair<int, int> fromWorldToPos(float x, float y);
 
 	//Dijkstra
-    std::vector<int> dijkstra(std::vector<int> graph, int src);
+	std::vector<TCell> get_neighbors(TCell& current, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE>& grid);
+	std::vector<Eigen::Vector2f> dijkstra(TCell ini, TCell end, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid);
 };
 
 #endif

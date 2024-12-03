@@ -1,7 +1,7 @@
 src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/mocs_compilation.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/AF5EVGCUJC/moc_abstract_graphic_viewer.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/AF5EVGCUJC/moc_abstract_graphic_viewer.cpp \
  /usr/include/c++/12/memory /usr/include/c++/12/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
  /usr/include/c++/12/bits/new_allocator.h \
@@ -72,6 +72,7 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/12/exception /usr/include/c++/12/bits/exception_ptr.h \
  /usr/include/c++/12/bits/cxxabi_init_exception.h \
  /usr/include/c++/12/typeinfo /usr/include/c++/12/bits/nested_exception.h \
@@ -130,16 +131,20 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/select.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/12/bits/std_abs.h /usr/include/c++/12/cstdio \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/c++/12/cerrno /usr/include/errno.h \
- /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/12/cerrno \
+ /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
@@ -180,6 +185,7 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h /usr/include/syscall.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
@@ -193,7 +199,7 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/12/bits/uses_allocator_args.h \
  /usr/include/c++/12/pstl/glue_memory_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/AF5EVGCUJC/../../../../../../../../classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/../../../../../../../../../../robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -277,6 +283,8 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h /usr/include/string.h \
  /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h \
@@ -426,8 +434,8 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
  /usr/include/c++/12/iostream \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/WJD4WNSKOL/moc_GRAFCETStep.cpp \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/WJD4WNSKOL/../../../../../../../../classes/grafcetStep/GRAFCETStep.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/WJD4WNSKOL/moc_GRAFCETStep.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/../../../../../../../../../../robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
@@ -438,8 +446,8 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
  /usr/include/c++/12/mutex /usr/include/c++/12/bits/unique_lock.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/moc_genericmonitor.cpp \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../genericmonitor.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/moc_genericmonitor.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../genericmonitor.h \
  /usr/include/Ice/Ice.h /usr/include/IceUtil/PushDisableWarnings.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/12/cassert /usr/include/c++/12/future \
@@ -848,10 +856,10 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qwineventnotifier.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qxmlstream.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreversion.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../genericworker.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../config.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../genericworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../config.h \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGuiDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
@@ -993,32 +1001,32 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/ui_mainUI.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.h \
  /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QStateMachine \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstatemachine.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QScreen \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/moc_genericworker.cpp \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../genericworker.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/moc_specificmonitor.cpp \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../specificmonitor.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../genericmonitor.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/moc_specificworker.cpp \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../specificworker.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/moc_genericworker.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../genericworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/moc_specificmonitor.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../specificmonitor.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../genericmonitor.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/moc_specificworker.cpp \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../specificworker.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.h \
  /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
- /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../Lidar3D.h \
+ /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/EWIEGA46WW/../../Lidar3D.h \
  /usr/include/c++/12/expected \
  /home/robocomp/robocomp/classes/doublebuffer_sync/doublebuffer_sync.h \
  /usr/include/c++/12/ranges /usr/include/c++/12/span \
@@ -1207,6 +1215,7 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: \
  /usr/include/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/Eigen/src/Eigenvalues/./RealQZ.h \
  /usr/include/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+ /home/robocomp/robocomp/classes/timer/timer.h \
  /home/robocomp/robocomp/classes/qcustomplot/qcustomplot.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPointer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedPointer \

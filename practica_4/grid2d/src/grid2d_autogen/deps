@@ -35,6 +35,7 @@ grid2d_autogen/timestamp: \
 	/home/robocomp/robocomp/robocomp_core/classes/qcustomplot/qcustomplot.h \
 	/home/robocomp/robocomp/robocomp_core/classes/qlog/qlog.h \
 	/home/robocomp/robocomp/robocomp_core/classes/threadpool/threadpool.h \
+	/home/robocomp/robocomp/robocomp_core/classes/timer/timer.h \
 	/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake \
 	/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
@@ -303,6 +304,7 @@ grid2d_autogen/timestamp: \
 	/usr/include/c++/12/cassert \
 	/usr/include/c++/12/cctype \
 	/usr/include/c++/12/cerrno \
+	/usr/include/c++/12/chrono \
 	/usr/include/c++/12/climits \
 	/usr/include/c++/12/clocale \
 	/usr/include/c++/12/cmath \

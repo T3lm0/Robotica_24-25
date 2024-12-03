@@ -128,13 +128,18 @@ void SpecificWorker::compute()
     /// compute an obstacle free path
     if(tp_person)
     {
-        Eigen::Vector2f goal{std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos"))};
-         path = rc::VisibilityGraph().generate_path(Eigen::Vector2f::Zero(),
-                                                                                goal,
-                                                                                obstacles,
-                                                                                params.ROBOT_WIDTH / 2,
-                                                                                &viewer->scene);
-        draw_path_to_person(path, &viewer->scene);
+        // Eigen::Vector2f goal{std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos"))};
+        //  path = rc::VisibilityGraph().generate_path(Eigen::Vector2f::Zero(),
+        //                                                                         goal,
+        //                                                                         obstacles,
+        //                                                                         params.ROBOT_WIDTH / 2,
+        //                                                                         &viewer->scene);
+        // draw_path_to_person(path, &viewer->scene);
+
+        try{
+
+        }catch(const std::exception &e) { qFatal("Error calculating dijkstra"); }
+            
     }
 
     // call state machine to track person

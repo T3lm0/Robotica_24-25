@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
+			"value" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "30"
+			"value" : "22"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "5"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -119,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/305/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/usr/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -131,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/305/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/usr/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -143,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/305/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/usr/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -418,6 +418,18 @@
 			"value" : "CMAKE_DLLTOOL-NOTFOUND"
 		},
 		{
+			"name" : "CMAKE_EDIT_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to cache edit program executable."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/bin/cmake-gui"
+		},
+		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
 			"properties" : 
 			[
@@ -538,18 +550,6 @@
 			"value" : ""
 		},
 		{
-			"name" : "CMAKE_FIND_PACKAGE_REDIRECTS_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake."
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/CMakeFiles/pkgRedirects"
-		},
-		{
 			"name" : "CMAKE_GENERATOR",
 			"properties" : 
 			[
@@ -610,6 +610,18 @@
 			"value" : "1"
 		},
 		{
+			"name" : "CMAKE_HAVE_PTHREAD_H",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have include pthread.h"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
 			"name" : "CMAKE_HOME_DIRECTORY",
 			"properties" : 
 			[
@@ -619,7 +631,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
+			"value" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -907,7 +919,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30"
+			"value" : "/usr/share/cmake-3.22"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1118,22 +1130,6 @@
 			"value" : "/usr/bin/strip"
 		},
 		{
-			"name" : "CMAKE_TAPI",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a program."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "CMAKE_TAPI-NOTFOUND"
-		},
-		{
 			"name" : "CMAKE_UNAME",
 			"properties" : 
 			[
@@ -1267,7 +1263,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : ""
+					"value" : "(This variable does not exist and should not be used)"
 				}
 			],
 			"type" : "UNINITIALIZED",
@@ -1283,7 +1279,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : ""
+					"value" : "(This variable does not exist and should not be used)"
 				}
 			],
 			"type" : "UNINITIALIZED",
@@ -1299,7 +1295,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : ""
+					"value" : "(This variable does not exist and should not be used)"
 				}
 			],
 			"type" : "UNINITIALIZED",
@@ -1315,7 +1311,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : ""
+					"value" : "(This variable does not exist and should not be used)"
 				}
 			],
 			"type" : "UNINITIALIZED",
@@ -1331,7 +1327,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : ""
+					"value" : "(This variable does not exist and should not be used)"
 				}
 			],
 			"type" : "UNINITIALIZED",
@@ -2114,54 +2110,6 @@
 			"value" : "/usr/include"
 		},
 		{
-			"name" : "OPENGL_GLES2_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a file."
-				}
-			],
-			"type" : "PATH",
-			"value" : "/usr/include"
-		},
-		{
-			"name" : "OPENGL_GLES3_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a file."
-				}
-			],
-			"type" : "PATH",
-			"value" : "/usr/include"
-		},
-		{
-			"name" : "OPENGL_GLU_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a file."
-				}
-			],
-			"type" : "PATH",
-			"value" : "/usr/include"
-		},
-		{
 			"name" : "OPENGL_GLX_INCLUDE_DIR",
 			"properties" : 
 			[
@@ -2208,38 +2156,6 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "/usr/lib/x86_64-linux-gnu/libEGL.so"
-		},
-		{
-			"name" : "OPENGL_gles2_LIBRARY",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libGLESv2.so"
-		},
-		{
-			"name" : "OPENGL_gles3_LIBRARY",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libGLESv2.so"
 		},
 		{
 			"name" : "OPENGL_glu_LIBRARY",
@@ -7027,7 +6943,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
+			"value" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
 		},
 		{
 			"name" : "RC_COMPONENT_INSTALL_PATH",
@@ -7051,7 +6967,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
+			"value" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
 		},
 		{
 			"name" : "RoboComp_VERSION",
@@ -7190,18 +7106,6 @@
 			"value" : "XKB_LIBRARY-NOTFOUND"
 		},
 		{
-			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
-		},
-		{
 			"name" : "__pkg_config_checked_PKG_XKB",
 			"properties" : 
 			[
@@ -7223,7 +7127,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : ""
+					"value" : "(This variable does not exist and should not be used)"
 				}
 			],
 			"type" : "UNINITIALIZED",
@@ -7239,7 +7143,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
+			"value" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
 		},
 		{
 			"name" : "grid2d_IS_TOP_LEVEL",
@@ -7263,7 +7167,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
+			"value" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d"
 		}
 	],
 	"kind" : "cache",
