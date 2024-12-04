@@ -39,6 +39,7 @@
 #include <Eigen/Dense>
 #include <timer/timer.h>
 #include <qcustomplot/qcustomplot.h>
+#include <boost/container_hash/hash.hpp>
 
 class SpecificWorker : public GenericWorker
 {
@@ -51,7 +52,7 @@ public:
 public slots:
 	void initialize();
 	void compute();
-	void new_mouse_coordinates();
+	void new_mouse_coordinates(QPointF);
 
 void reset_grid();
 
@@ -93,6 +94,14 @@ private:
 			return x < other.x;
 		}
 
+		bool has_value() const {
+			return (x >= 0 && x <= 100) && (y >= 0 && y <= 100);
+		}
+
+		std::pair<float, float> value() const {
+			return {x, y};
+		}
+
 	} TCell;
 
 	// lidar
@@ -118,7 +127,10 @@ private:
 
 	//Dijkstra
 	std::vector<TCell> get_neighbors(TCell& current, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE>& grid);
-	std::vector<Eigen::Vector2f> dijkstra(TCell ini, TCell end, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid);
+	std::vector<QPointF> dijkstra(TCell ini, TCell end, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid);
+	void draw_target(QPointF goal);
+	void draw_path(std::vector<QPointF> path);
+	float euclideanDistance(const TCell& a, const TCell& b);
 };
 
 #endif

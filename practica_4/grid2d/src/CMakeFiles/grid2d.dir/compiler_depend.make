@@ -6051,7 +6051,44 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o: src/grid2d_auto
   /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintpreviewwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
-  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone \
+  /usr/include/boost/container_hash/hash.hpp \
+  /usr/include/boost/container_hash/hash_fwd.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/c++/12/version \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/container_hash/detail/hash_float.hpp \
+  /usr/include/boost/container_hash/detail/float_functions.hpp \
+  /usr/include/boost/config/no_tr1/cmath.hpp \
+  /usr/include/boost/container_hash/detail/limits.hpp \
+  /usr/include/boost/limits.hpp \
+  /usr/include/boost/core/enable_if.hpp \
+  /usr/include/boost/integer/static_log2.hpp \
+  /usr/include/boost/integer_fwd.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/assert.hpp \
+  /usr/include/boost/type_traits/is_enum.hpp \
+  /usr/include/boost/type_traits/intrinsics.hpp \
+  /usr/include/boost/type_traits/detail/config.hpp \
+  /usr/include/boost/version.hpp \
+  /usr/include/boost/type_traits/integral_constant.hpp \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/type_traits/is_integral.hpp \
+  /usr/include/c++/12/typeindex \
+  /usr/include/boost/container_hash/extensions.hpp \
+  /usr/include/boost/detail/container_fwd.hpp \
+  /usr/include/c++/12/bitset \
+  /usr/include/boost/static_assert.hpp
 
 src/CMakeFiles/grid2d.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp \
   /usr/include/stdc-predef.h \
@@ -10667,6 +10704,43 @@ src/CMakeFiles/grid2d.dir/main.cpp.o: src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone \
+  /usr/include/boost/container_hash/hash.hpp \
+  /usr/include/boost/container_hash/hash_fwd.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/c++/12/version \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/container_hash/detail/hash_float.hpp \
+  /usr/include/boost/container_hash/detail/float_functions.hpp \
+  /usr/include/boost/config/no_tr1/cmath.hpp \
+  /usr/include/boost/container_hash/detail/limits.hpp \
+  /usr/include/boost/limits.hpp \
+  /usr/include/boost/core/enable_if.hpp \
+  /usr/include/boost/integer/static_log2.hpp \
+  /usr/include/boost/integer_fwd.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/assert.hpp \
+  /usr/include/boost/type_traits/is_enum.hpp \
+  /usr/include/boost/type_traits/intrinsics.hpp \
+  /usr/include/boost/type_traits/detail/config.hpp \
+  /usr/include/boost/version.hpp \
+  /usr/include/boost/type_traits/integral_constant.hpp \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/type_traits/is_integral.hpp \
+  /usr/include/c++/12/typeindex \
+  /usr/include/boost/container_hash/extensions.hpp \
+  /usr/include/boost/detail/container_fwd.hpp \
+  /usr/include/c++/12/bitset \
+  /usr/include/boost/static_assert.hpp \
   src/specificmonitor.h \
   src/commonbehaviorI.h
 
@@ -13297,6 +13371,43 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o: src/specificworker.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone \
+  /usr/include/boost/container_hash/hash.hpp \
+  /usr/include/boost/container_hash/hash_fwd.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/c++/12/version \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/container_hash/detail/hash_float.hpp \
+  /usr/include/boost/container_hash/detail/float_functions.hpp \
+  /usr/include/boost/config/no_tr1/cmath.hpp \
+  /usr/include/boost/container_hash/detail/limits.hpp \
+  /usr/include/boost/limits.hpp \
+  /usr/include/boost/core/enable_if.hpp \
+  /usr/include/boost/integer/static_log2.hpp \
+  /usr/include/boost/integer_fwd.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/assert.hpp \
+  /usr/include/boost/type_traits/is_enum.hpp \
+  /usr/include/boost/type_traits/intrinsics.hpp \
+  /usr/include/boost/type_traits/detail/config.hpp \
+  /usr/include/boost/version.hpp \
+  /usr/include/boost/type_traits/integral_constant.hpp \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/type_traits/is_integral.hpp \
+  /usr/include/c++/12/typeindex \
+  /usr/include/boost/container_hash/extensions.hpp \
+  /usr/include/boost/detail/container_fwd.hpp \
+  /usr/include/c++/12/bitset \
+  /usr/include/boost/static_assert.hpp \
   /usr/local/include/cppitertools/range.hpp \
   /usr/local/include/cppitertools/internal/iterbase.hpp
 
@@ -13385,6 +13496,44 @@ src/grid2d_autogen/include/moc_sigwatch.cpp:
 
 /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp:
 
+/usr/include/c++/12/bitset:
+
+/usr/include/boost/container_hash/extensions.hpp:
+
+/usr/include/boost/detail/workaround.hpp:
+
+/usr/include/boost/version.hpp:
+
+/usr/include/boost/type_traits/intrinsics.hpp:
+
+/usr/include/boost/cstdint.hpp:
+
+/usr/include/boost/core/enable_if.hpp:
+
+/usr/include/boost/config/no_tr1/cmath.hpp:
+
+/usr/include/boost/container_hash/detail/float_functions.hpp:
+
+/usr/include/boost/container_hash/detail/hash_float.hpp:
+
+/usr/include/boost/config/detail/suffix.hpp:
+
+/usr/include/boost/config/detail/posix_features.hpp:
+
+/usr/include/boost/config/platform/linux.hpp:
+
+/usr/include/boost/config/detail/select_platform_config.hpp:
+
+/usr/include/boost/config/detail/select_stdlib_config.hpp:
+
+/usr/include/boost/config/compiler/gcc.hpp:
+
+/usr/include/boost/config/detail/select_compiler_config.hpp:
+
+/usr/include/boost/config/workaround.hpp:
+
+/usr/include/boost/container_hash/hash_fwd.hpp:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer:
 
 /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qprintpreviewwidget.h:
@@ -13422,6 +13571,8 @@ src/grid2d_autogen/include/moc_sigwatch.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstylepainter.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleditemdelegate.h:
+
+/usr/include/c++/12/typeindex:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstatusbar.h:
 
@@ -13612,6 +13763,8 @@ src/grid2d_autogen/include/moc_sigwatch.cpp:
 /usr/include/Eigen/src/Geometry/Homogeneous.h:
 
 /usr/include/Eigen/src/Geometry/EulerAngles.h:
+
+/usr/include/boost/assert.hpp:
 
 /usr/include/Eigen/src/SVD/BDCSVD.h:
 
@@ -13893,6 +14046,8 @@ src/Lidar3D.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512vpopcntdqvlintrin.h:
 
+/usr/include/boost/config.hpp:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringtokenizer.h:
 
 /usr/include/Ice/DefaultValueFactory.h:
@@ -14161,6 +14316,8 @@ src/grid2d_autogen/EWIEGA46WW/moc_genericmonitor.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
+/usr/include/boost/config/user.hpp:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcache.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_base.h:
@@ -14168,6 +14325,8 @@ src/grid2d_autogen/EWIEGA46WW/moc_genericmonitor.cpp:
 /usr/include/semaphore.h:
 
 /usr/include/c++/12/iosfwd:
+
+/usr/include/boost/limits.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/time.h:
 
@@ -14184,6 +14343,8 @@ src/grid2d_autogen/EWIEGA46WW/moc_genericmonitor.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetacontainer.h:
 
 /usr/include/Eigen/src/Core/MapBase.h:
+
+/usr/include/boost/integer/static_log2.hpp:
 
 /usr/include/c++/12/semaphore:
 
@@ -14335,6 +14496,8 @@ src/specificmonitor.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
+/usr/include/boost/detail/container_fwd.hpp:
+
 /usr/lib/gcc/x86_64-linux-gnu/12/include/cldemoteintrin.h:
 
 /usr/include/stdc-predef.h:
@@ -14424,6 +14587,8 @@ src/commonbehaviorI.cpp:
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/boost/config/stdlib/libstdcpp3.hpp:
 
 /usr/include/c++/12/bits/algorithmfwd.h:
 
@@ -14569,6 +14734,8 @@ src/CommonBehavior.h:
 
 /usr/include/Ice/RegisterPlugins.h:
 
+/usr/include/boost/static_assert.hpp:
+
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtexttable.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
@@ -14580,6 +14747,8 @@ src/CommonBehavior.h:
 /usr/include/IceUtil/CtrlCHandler.h:
 
 /usr/include/Eigen/src/Core/DenseStorage.h:
+
+/usr/include/boost/integer_fwd.hpp:
 
 /usr/include/c++/12/bits/stringfwd.h:
 
@@ -15313,6 +15482,10 @@ src/Lidar3D.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QScopedPointer:
 
+/usr/include/boost/type_traits/detail/config.hpp:
+
+/usr/include/boost/type_traits/is_enum.hpp:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qjniobject.h:
 
 /usr/include/Eigen/src/Core/products/GeneralMatrixVector.h:
@@ -15347,6 +15520,8 @@ src/Lidar3D.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmessageauthenticationcode.h:
 
+/usr/include/boost/container_hash/detail/limits.hpp:
+
 /usr/include/c++/12/bits/std_mutex.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qkeysequence.h:
@@ -15376,6 +15551,8 @@ src/Lidar3D.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h:
 
 /usr/include/c++/12/random:
+
+/usr/include/boost/config/helper_macros.hpp:
 
 /usr/include/c++/12/bits/random.tcc:
 
@@ -15837,6 +16014,8 @@ src/ui_mainUI.h:
 
 src/genericmonitor.h:
 
+/usr/include/boost/type_traits/is_integral.hpp:
+
 src/genericmonitor.cpp:
 
 /usr/include/Eigen/src/Geometry/Rotation2D.h:
@@ -15902,6 +16081,8 @@ src/specificworker.h:
 /usr/include/Eigen/Dense:
 
 /usr/include/Eigen/src/Core/util/DisableStupidWarnings.h:
+
+/usr/include/boost/container_hash/hash.hpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem:
 
@@ -15976,6 +16157,8 @@ src/specificworker.h:
 /usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h:
 
 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
+
+/usr/include/c++/12/version:
 
 /usr/include/Eigen/src/Core/Select.h:
 
@@ -16062,6 +16245,8 @@ src/specificworker.h:
 /usr/include/Eigen/src/Core/products/TriangularSolverVector.h:
 
 /usr/include/Eigen/src/Core/CoreIterators.h:
+
+/usr/include/boost/type_traits/integral_constant.hpp:
 
 /usr/include/Eigen/src/Core/BooleanRedux.h:
 

@@ -91,6 +91,35 @@
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
+  /usr/include/boost/assert.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/config/no_tr1/cmath.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/container_hash/detail/float_functions.hpp \
+  /usr/include/boost/container_hash/detail/hash_float.hpp \
+  /usr/include/boost/container_hash/detail/limits.hpp \
+  /usr/include/boost/container_hash/extensions.hpp \
+  /usr/include/boost/container_hash/hash.hpp \
+  /usr/include/boost/container_hash/hash_fwd.hpp \
+  /usr/include/boost/core/enable_if.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/detail/container_fwd.hpp \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/integer/static_log2.hpp \
+  /usr/include/boost/integer_fwd.hpp \
+  /usr/include/boost/limits.hpp \
+  /usr/include/boost/static_assert.hpp \
+  /usr/include/boost/type_traits/detail/config.hpp \
+  /usr/include/boost/type_traits/integral_constant.hpp \
+  /usr/include/boost/type_traits/intrinsics.hpp \
+  /usr/include/boost/type_traits/is_enum.hpp \
+  /usr/include/boost/type_traits/is_integral.hpp \
+  /usr/include/boost/version.hpp \
   /usr/include/c++/12/algorithm \
   /usr/include/c++/12/array \
   /usr/include/c++/12/atomic \
@@ -210,6 +239,7 @@
   /usr/include/c++/12/bits/uses_allocator_args.h \
   /usr/include/c++/12/bits/utility.h \
   /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/bitset \
   /usr/include/c++/12/cassert \
   /usr/include/c++/12/cctype \
   /usr/include/c++/12/cerrno \
@@ -295,6 +325,7 @@
   /usr/include/c++/12/tr1/special_function_util.h \
   /usr/include/c++/12/tuple \
   /usr/include/c++/12/type_traits \
+  /usr/include/c++/12/typeindex \
   /usr/include/c++/12/typeinfo \
   /usr/include/c++/12/unordered_map \
   /usr/include/c++/12/utility \

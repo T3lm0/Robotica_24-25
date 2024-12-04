@@ -13,6 +13,7 @@
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qcustomplot/qcustomplot.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/threadpool/threadpool.h \
+  /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/timer/timer.h \
   /usr/include/GL/gl.h \
   /usr/include/Ice/AsyncResult.h \
   /usr/include/Ice/BatchRequestQueueF.h \
@@ -213,6 +214,7 @@
   /usr/include/c++/12/cassert \
   /usr/include/c++/12/cctype \
   /usr/include/c++/12/cerrno \
+  /usr/include/c++/12/chrono \
   /usr/include/c++/12/climits \
   /usr/include/c++/12/clocale \
   /usr/include/c++/12/cmath \

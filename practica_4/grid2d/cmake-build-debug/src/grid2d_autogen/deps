@@ -17,8 +17,6 @@ grid2d_autogen/timestamp: \
 	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/cmake-build-debug/src/grid2d_autogen/moc_predefs.h \
 	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CMakeLists.txt \
 	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CMakeListsSpecific.txt \
-	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.h \
-	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.h \
 	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
 	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/commonbehaviorI.cpp \
 	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/commonbehaviorI.h \
@@ -32,13 +30,13 @@ grid2d_autogen/timestamp: \
 	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificmonitor.h \
 	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificworker.cpp \
 	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificworker.h \
-	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/ui_mainUI.h \
 	/home/robocomp/robocomp/robocomp_core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
 	/home/robocomp/robocomp/robocomp_core/classes/doublebuffer_sync/doublebuffer_sync.h \
 	/home/robocomp/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h \
 	/home/robocomp/robocomp/robocomp_core/classes/qcustomplot/qcustomplot.h \
 	/home/robocomp/robocomp/robocomp_core/classes/qlog/qlog.h \
 	/home/robocomp/robocomp/robocomp_core/classes/threadpool/threadpool.h \
+	/home/robocomp/robocomp/robocomp_core/classes/timer/timer.h \
 	/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake \
 	/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeParseArguments.cmake \
@@ -307,6 +305,7 @@ grid2d_autogen/timestamp: \
 	/usr/include/c++/12/cassert \
 	/usr/include/c++/12/cctype \
 	/usr/include/c++/12/cerrno \
+	/usr/include/c++/12/chrono \
 	/usr/include/c++/12/climits \
 	/usr/include/c++/12/clocale \
 	/usr/include/c++/12/cmath \

@@ -1,12 +1,12 @@
 /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/cmake-build-debug/src/grid2d_autogen/EWIEGA46WW/moc_specificmonitor.cpp: /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificmonitor.h \
   /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/cmake-build-debug/src/grid2d_autogen/moc_predefs.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/cmake-build-debug/src/CommonBehavior.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/cmake-build-debug/src/Grid2D.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/cmake-build-debug/src/Lidar3D.h \
+  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/cmake-build-debug/src/ui_mainUI.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/config.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericmonitor.h \
   /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/ui_mainUI.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/qlog/qlog.h \
   /usr/include/GL/gl.h \

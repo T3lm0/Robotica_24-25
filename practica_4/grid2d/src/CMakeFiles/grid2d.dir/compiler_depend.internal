@@ -6059,6 +6059,43 @@ src/CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone
+ /usr/include/boost/container_hash/hash.hpp
+ /usr/include/boost/container_hash/hash_fwd.hpp
+ /usr/include/boost/config/workaround.hpp
+ /usr/include/boost/config.hpp
+ /usr/include/boost/config/user.hpp
+ /usr/include/boost/config/detail/select_compiler_config.hpp
+ /usr/include/boost/config/compiler/gcc.hpp
+ /usr/include/boost/config/detail/select_stdlib_config.hpp
+ /usr/include/c++/12/version
+ /usr/include/boost/config/stdlib/libstdcpp3.hpp
+ /usr/include/boost/config/detail/select_platform_config.hpp
+ /usr/include/boost/config/platform/linux.hpp
+ /usr/include/boost/config/detail/posix_features.hpp
+ /usr/include/boost/config/detail/suffix.hpp
+ /usr/include/boost/config/helper_macros.hpp
+ /usr/include/boost/container_hash/detail/hash_float.hpp
+ /usr/include/boost/container_hash/detail/float_functions.hpp
+ /usr/include/boost/config/no_tr1/cmath.hpp
+ /usr/include/boost/container_hash/detail/limits.hpp
+ /usr/include/boost/limits.hpp
+ /usr/include/boost/core/enable_if.hpp
+ /usr/include/boost/integer/static_log2.hpp
+ /usr/include/boost/integer_fwd.hpp
+ /usr/include/boost/cstdint.hpp
+ /usr/include/boost/assert.hpp
+ /usr/include/boost/type_traits/is_enum.hpp
+ /usr/include/boost/type_traits/intrinsics.hpp
+ /usr/include/boost/type_traits/detail/config.hpp
+ /usr/include/boost/version.hpp
+ /usr/include/boost/type_traits/integral_constant.hpp
+ /usr/include/boost/detail/workaround.hpp
+ /usr/include/boost/type_traits/is_integral.hpp
+ /usr/include/c++/12/typeindex
+ /usr/include/boost/container_hash/extensions.hpp
+ /usr/include/boost/detail/container_fwd.hpp
+ /usr/include/c++/12/bitset
+ /usr/include/boost/static_assert.hpp
 
 src/CMakeFiles/grid2d.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o
  /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp
@@ -10680,6 +10717,43 @@ src/CMakeFiles/grid2d.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone
+ /usr/include/boost/container_hash/hash.hpp
+ /usr/include/boost/container_hash/hash_fwd.hpp
+ /usr/include/boost/config/workaround.hpp
+ /usr/include/boost/config.hpp
+ /usr/include/boost/config/user.hpp
+ /usr/include/boost/config/detail/select_compiler_config.hpp
+ /usr/include/boost/config/compiler/gcc.hpp
+ /usr/include/boost/config/detail/select_stdlib_config.hpp
+ /usr/include/c++/12/version
+ /usr/include/boost/config/stdlib/libstdcpp3.hpp
+ /usr/include/boost/config/detail/select_platform_config.hpp
+ /usr/include/boost/config/platform/linux.hpp
+ /usr/include/boost/config/detail/posix_features.hpp
+ /usr/include/boost/config/detail/suffix.hpp
+ /usr/include/boost/config/helper_macros.hpp
+ /usr/include/boost/container_hash/detail/hash_float.hpp
+ /usr/include/boost/container_hash/detail/float_functions.hpp
+ /usr/include/boost/config/no_tr1/cmath.hpp
+ /usr/include/boost/container_hash/detail/limits.hpp
+ /usr/include/boost/limits.hpp
+ /usr/include/boost/core/enable_if.hpp
+ /usr/include/boost/integer/static_log2.hpp
+ /usr/include/boost/integer_fwd.hpp
+ /usr/include/boost/cstdint.hpp
+ /usr/include/boost/assert.hpp
+ /usr/include/boost/type_traits/is_enum.hpp
+ /usr/include/boost/type_traits/intrinsics.hpp
+ /usr/include/boost/type_traits/detail/config.hpp
+ /usr/include/boost/version.hpp
+ /usr/include/boost/type_traits/integral_constant.hpp
+ /usr/include/boost/detail/workaround.hpp
+ /usr/include/boost/type_traits/is_integral.hpp
+ /usr/include/c++/12/typeindex
+ /usr/include/boost/container_hash/extensions.hpp
+ /usr/include/boost/detail/container_fwd.hpp
+ /usr/include/c++/12/bitset
+ /usr/include/boost/static_assert.hpp
  /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificmonitor.h
  /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/commonbehaviorI.h
 
@@ -13312,6 +13386,43 @@ src/CMakeFiles/grid2d.dir/specificworker.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtPrintSupport/qtprintsupportversion.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QElapsedTimer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimeZone
+ /usr/include/boost/container_hash/hash.hpp
+ /usr/include/boost/container_hash/hash_fwd.hpp
+ /usr/include/boost/config/workaround.hpp
+ /usr/include/boost/config.hpp
+ /usr/include/boost/config/user.hpp
+ /usr/include/boost/config/detail/select_compiler_config.hpp
+ /usr/include/boost/config/compiler/gcc.hpp
+ /usr/include/boost/config/detail/select_stdlib_config.hpp
+ /usr/include/c++/12/version
+ /usr/include/boost/config/stdlib/libstdcpp3.hpp
+ /usr/include/boost/config/detail/select_platform_config.hpp
+ /usr/include/boost/config/platform/linux.hpp
+ /usr/include/boost/config/detail/posix_features.hpp
+ /usr/include/boost/config/detail/suffix.hpp
+ /usr/include/boost/config/helper_macros.hpp
+ /usr/include/boost/container_hash/detail/hash_float.hpp
+ /usr/include/boost/container_hash/detail/float_functions.hpp
+ /usr/include/boost/config/no_tr1/cmath.hpp
+ /usr/include/boost/container_hash/detail/limits.hpp
+ /usr/include/boost/limits.hpp
+ /usr/include/boost/core/enable_if.hpp
+ /usr/include/boost/integer/static_log2.hpp
+ /usr/include/boost/integer_fwd.hpp
+ /usr/include/boost/cstdint.hpp
+ /usr/include/boost/assert.hpp
+ /usr/include/boost/type_traits/is_enum.hpp
+ /usr/include/boost/type_traits/intrinsics.hpp
+ /usr/include/boost/type_traits/detail/config.hpp
+ /usr/include/boost/version.hpp
+ /usr/include/boost/type_traits/integral_constant.hpp
+ /usr/include/boost/detail/workaround.hpp
+ /usr/include/boost/type_traits/is_integral.hpp
+ /usr/include/c++/12/typeindex
+ /usr/include/boost/container_hash/extensions.hpp
+ /usr/include/boost/detail/container_fwd.hpp
+ /usr/include/c++/12/bitset
+ /usr/include/boost/static_assert.hpp
  /usr/local/include/cppitertools/range.hpp
  /usr/local/include/cppitertools/internal/iterbase.hpp
 
