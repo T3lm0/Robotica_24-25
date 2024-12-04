@@ -281,126 +281,121 @@ float SpecificWorker::euclideanDistance(const TCell& a, const TCell& b) {
 
 std::vector<QPointF> SpecificWorker::dijkstra(TCell ini, TCell end, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid)
 {
-   // Verificar que las posiciones de inicio y objetivo son válidas
-   if (!ini.has_value() || !end.has_value())
-   {
-   	qDebug() << (ini.has_value() ? "true" : "false");
-   	qDebug() << (end.has_value() ? "true" : "false");
-   	qDebug() << ini.x << " " << ini.y;
-   	qDebug() << end.x << " " << end.y;
-       qWarning() << "Posición de inicio o objetivo no válida.";
-       return {};
-   }
-   // Desempaquetar las posiciones
-   auto [start_x, start_y] = ini.value();
-   auto [target_x, target_y] = end.value();
+	// Verificar que las posiciones de inicio y objetivo son válidas
+	if (!ini.has_value() || !end.has_value())
+	{
+		qWarning() << "Posición de inicio o objetivo no válida.";
+		return {};
+	}
+	// Desempaquetar las posiciones
+	auto [start_x, start_y] = ini.value();
+	auto [target_x, target_y] = end.value();
 
-   // Direcciones de movimiento (arriba, abajo, izquierda, derecha)
-   const std::vector<std::tuple<int, int>> directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+	// Direcciones de movimiento (arriba, abajo, izquierda, derecha)
+	const std::vector<std::tuple<int, int>> directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 
-   // Mapa de distancias mínimas desde el inicio
-   std::unordered_map<std::tuple<int, int>, int, boost::hash<std::tuple<int, int>>> min_distance;
+	// Mapa de distancias mínimas desde el inicio
+	std::unordered_map<std::tuple<int, int>, int, boost::hash<std::tuple<int, int>>> min_distance;
 
-   // Map para reconstruir el camino
-   std::unordered_map<std::tuple<int, int>, std::tuple<int, int>, boost::hash<std::tuple<int, int>>> previous;
+	// Map para reconstruir el camino
+	std::unordered_map<std::tuple<int, int>, std::tuple<int, int>, boost::hash<std::tuple<int, int>>> previous;
 
-   // Inicializar distancias
-   for (int i = 0; i < GRID_SIZE; ++i)
-   {
-       for (int j = 0; j < GRID_SIZE; ++j)
-       {
-           std::tuple<int, int> pos = {i, j};
-           if (grid[i][j].state == SpecificWorker::CELL_STATE::OCCUPIED)
-               min_distance[pos] = std::numeric_limits<int>::max(); // Obstáculo
-           else
-               min_distance[pos] = std::numeric_limits<int>::max();
-       }
-   }
+	// Inicializar distancias
+	for (int i = 0; i < GRID_SIZE; ++i)
+	{
+		for (int j = 0; j < GRID_SIZE; ++j)
+		{
+			std::tuple<int, int> pos = {i, j};
+			if (grid[i][j].state == SpecificWorker::CELL_STATE::OCCUPIED)
+				min_distance[pos] = std::numeric_limits<int>::max(); // Obstáculo
+			else
+				min_distance[pos] = std::numeric_limits<int>::max();
+		}
+	}
 
-   // Distacia al punto inicial es 0
-   std::tuple<int, int> start_pos = {start_x, start_y};
-   min_distance[start_pos] = 0;
+	// Distacia al punto inicial es 0
+	std::tuple<int, int> start_pos = {start_x, start_y};
+	min_distance[start_pos] = 0;
 
-   // Crear la cola de prioridad (min heap)
-   std::priority_queue<std::pair<int, std::tuple<int, int>>,
-                       std::vector<std::pair<int, std::tuple<int, int>>>,
-                       std::greater<>> pq;
-   pq.push({0, start_pos});
+	// Crear la cola de prioridad (min heap)
+	std::priority_queue<std::pair<int, std::tuple<int, int>>,
+	std::vector<std::pair<int, std::tuple<int, int>>>,
+	std::greater<>> pq;
+	pq.push({0, start_pos});
 
-   // Algortmo de Dijkstra
-   while (!pq.empty())
-   {
-       auto [current_dist, current] = pq.top();
-       pq.pop();
+	// Algortmo de Dijkstra
+	while (!pq.empty())
+	{
+		auto [current_dist, current] = pq.top();
+		pq.pop();
 
-       // Si llegamos al objetivo, detener
-       if (current == std::make_tuple(target_x, target_y))
-           break;
+		// Si llegamos al objetivo, detener
+		if (current == std::make_tuple(target_x, target_y))
+			break;
 
 
-       // Obener coordenadas del nodo actual
-       auto [cx, cy] = current;
+		// Obener coordenadas del nodo actual
+		auto [cx, cy] = current;
 
 
-       // Explorar vecinos
-       for (const auto &[dx, dy] : directions)
-       {
-           int nx = cx + dx;
-           int ny = cy + dy;
+		// Explorar vecinos
+		for (const auto &[dx, dy] : directions)
+		{
+			int nx = cx + dx;
+			int ny = cy + dy;
 
 
-           // Verificar límites de la cuadrícula
-           if (nx < 0 || ny < 0 || nx >= GRID_SIZE || ny >= GRID_SIZE)
-               continue;
+			// Verificar límites de la cuadrícula
+			if (nx < 0 || ny < 0 || nx >= GRID_SIZE || ny >= GRID_SIZE)
+			continue;
 
 
-           // Verificar si la celda es transitable
-           if (grid[nx][ny].state == CELL_STATE::OCCUPIED)
-               continue;
+			// Verificar si la celda es transitable
+			if (grid[nx][ny].state == CELL_STATE::OCCUPIED)
+			continue;
 
 
-           std::tuple<int, int> neighbor = {nx, ny};
-           int new_dist = current_dist + 1; // Coste uniforme de 1 para cada movimiento
+			std::tuple<int, int> neighbor = {nx, ny};
+			int new_dist = current_dist + 1; // Coste uniforme de 1 para cada movimiento
 
 
-           // Actualizar si se encuentra un camino más corto
-           if (new_dist < min_distance[neighbor])
-           {
-               min_distance[neighbor] = new_dist;
-               previous[neighbor] = current;
-               pq.push({new_dist, neighbor});
-           }
-       }
-   }
+			// Actualizar si se encuentra un camino más corto
+			if (new_dist < min_distance[neighbor])
+			{
+				min_distance[neighbor] = new_dist;
+				previous[neighbor] = current;
+				pq.push({new_dist, neighbor});
+			}
+		}
+	}
 
+	// Reconstruir el camino desde el objetivo al inicio
+	std::vector<std::tuple<int, int>> path;
+	std::tuple<int, int> current = {target_x, target_y};
 
-   // Reconstruir el camino desde el objetivo al inicio
-   std::vector<std::tuple<int, int>> path;
-   std::tuple<int, int> current = {target_x, target_y};
+	while (current != start_pos)
+	{
+		path.push_back(current);
+		if (previous.find(current) == previous.end())
+		{
+			qWarning() << "No se encontró un camino válido.";
+			return {};
+		}
+		current = previous[current];
+	}
+	path.push_back(start_pos);
+	std::reverse(path.begin(), path.end());
 
-
-   while (current != start_pos)
-   {
-       path.push_back(current);
-       if (previous.find(current) == previous.end())
-       {
-           qWarning() << "No se encontró un camino válido.";
-           return {};
-       }
-       current = previous[current];
-   }
-   path.push_back(start_pos);
-   std::reverse(path.begin(), path.end());
-
-   // Pintar el camino en la cuadrícula
-   std::vector<QPointF> path_points;
-   path_points.reserve(path.size());
-   for (const auto &[x, y] : path) {
+	// Pintar el camino en la cuadrícula
+	std::vector<QPointF> path_points;
+	path_points.reserve(path.size());
+	for (const auto &[x, y] : path)
+	{
 		auto [i, j] = getPosInWorld(x, y);
 		path_points.emplace_back(QPointF{i,j});
-   }
+	}
 
-   return path_points;
+	return path_points;
 }
 
 void SpecificWorker::draw_target(QPointF goal)
