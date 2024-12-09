@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'specificmonitor.h'
+** Meta object code from reading C++ file 'GRAFCETStep.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
@@ -7,12 +7,10 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../specificmonitor.h"
-#include <QtGui/qtextcursor.h>
-#include <QScreen>
+#include "../../../../../../../../classes/grafcetStep/GRAFCETStep.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'specificmonitor.h' doesn't include <QObject>."
+#error "The header file 'GRAFCETStep.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
 #error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -27,22 +25,22 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
-struct qt_meta_stringdata_SpecificMonitor_t {
+struct qt_meta_stringdata_GRAFCETStep_t {
     uint offsetsAndSizes[2];
-    char stringdata0[16];
+    char stringdata0[12];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(sizeof(qt_meta_stringdata_SpecificMonitor_t::offsetsAndSizes) + ofs), len 
-Q_CONSTINIT static const qt_meta_stringdata_SpecificMonitor_t qt_meta_stringdata_SpecificMonitor = {
+    uint(sizeof(qt_meta_stringdata_GRAFCETStep_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_GRAFCETStep_t qt_meta_stringdata_GRAFCETStep = {
     {
-        QT_MOC_LITERAL(0, 15)   // "SpecificMonitor"
+        QT_MOC_LITERAL(0, 11)   // "GRAFCETStep"
     },
-    "SpecificMonitor"
+    "GRAFCETStep"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
 
-Q_CONSTINIT static const uint qt_meta_data_SpecificMonitor[] = {
+Q_CONSTINIT static const uint qt_meta_data_GRAFCETStep[] = {
 
  // content:
       10,       // revision
@@ -58,20 +56,20 @@ Q_CONSTINIT static const uint qt_meta_data_SpecificMonitor[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject SpecificMonitor::staticMetaObject = { {
-    QMetaObject::SuperData::link<GenericMonitor::staticMetaObject>(),
-    qt_meta_stringdata_SpecificMonitor.offsetsAndSizes,
-    qt_meta_data_SpecificMonitor,
+Q_CONSTINIT const QMetaObject GRAFCETStep::staticMetaObject = { {
+    QMetaObject::SuperData::link<QState::staticMetaObject>(),
+    qt_meta_stringdata_GRAFCETStep.offsetsAndSizes,
+    qt_meta_data_GRAFCETStep,
     qt_static_metacall,
     nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_stringdata_SpecificMonitor_t,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_GRAFCETStep_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<SpecificMonitor, std::true_type>
+        QtPrivate::TypeAndForceComplete<GRAFCETStep, std::true_type>
     >,
     nullptr
 } };
 
-void SpecificMonitor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void GRAFCETStep::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     (void)_o;
     (void)_id;
@@ -79,22 +77,22 @@ void SpecificMonitor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
     (void)_a;
 }
 
-const QMetaObject *SpecificMonitor::metaObject() const
+const QMetaObject *GRAFCETStep::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *SpecificMonitor::qt_metacast(const char *_clname)
+void *GRAFCETStep::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_SpecificMonitor.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_GRAFCETStep.stringdata0))
         return static_cast<void*>(this);
-    return GenericMonitor::qt_metacast(_clname);
+    return QState::qt_metacast(_clname);
 }
 
-int SpecificMonitor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int GRAFCETStep::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = GenericMonitor::qt_metacall(_c, _id, _a);
+    _id = QState::qt_metacall(_c, _id, _a);
     return _id;
 }
 QT_WARNING_POP

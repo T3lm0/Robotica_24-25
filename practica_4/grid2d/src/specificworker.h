@@ -116,21 +116,19 @@ private:
     static constexpr int GRID_SIZE = 100;
     std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
 	void changeState(auto &filtered_points);
-
+	using GridPOS = std::optional<std::tuple<int, int>>;
     // Coordinates
 	void transformToGRID();
 
     // Transformations
-    std::pair<float, float> getPosInWorld(float i, float j);
-
-	std::pair<int, int> fromWorldToPos(float x, float y);
+    std::optional<std::pair<int, int>> grid_to_lidar(float i, float j);
+	std::optional<std::pair<float, float>> lidar_to_grid(float x, float y);
 
 	//Dijkstra
 	std::vector<TCell> get_neighbors(TCell& current, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE>& grid);
-	std::vector<QPointF> dijkstra(TCell ini, TCell end, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid);
+	std::vector<QPointF> dijkstra(GridPOS start, GridPOS target);
 	void draw_target(QPointF goal);
-	void draw_path(std::vector<QPointF> path);
-	float euclideanDistance(const TCell& a, const TCell& b);
+	void draw_path(std::vector<QPointF> path, QGraphicsScene *scene);
 };
 
 #endif

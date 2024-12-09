@@ -101,12 +101,12 @@ void SpecificWorker::new_mouse_coordinates(QPointF goal)
 {
 	qDebug() << "New mouse coordinates: " << goal;
 	draw_target(goal);
-	auto [i, j] = fromWorldToPos(goal.x(), goal.y());
-	qDebug() << "Goal: " << i << " " << j;
-	auto path = dijkstra(grid[GRID_SIZE/2][GRID_SIZE/2],grid[i][j], grid);
+	const auto target= lidar_to_grid(goal.x(), goal.y());
+	const GridPOS start {{0, 0}};
+	auto path = dijkstra(start,target);
 	qDebug() << "Path size: " << path.size();
 	//qDebug() << "Path: " << path[path.size()-1].x() << " " << path[path.size()-1].y();
-	//draw_path(path);
+	draw_path(path, &viewer->scene);
 }
 
 //YOUR CODE HERE
@@ -186,9 +186,10 @@ void SpecificWorker::transformToGRID()
 			celda.x = i;
 			celda.y = j;
 			// Obtener la posición de la celda en el mundo
-			auto tuple_x_y = getPosInWorld(i, j);
+			auto result = grid_to_lidar(i, j);
+			auto &[x,y] = *result;
 			// Dibujar la celda
-			celda.rect = viewer->scene.addRect(tuple_x_y.first, tuple_x_y.second, params.TILE_SIZE, params.TILE_SIZE, pen_e, brush);
+			celda.rect = viewer->scene.addRect(x,y, params.TILE_SIZE, params.TILE_SIZE, pen_e, brush);
 			//celda.rect->setPos(celda.x, celda.y);
 			j++;
 		}
@@ -196,16 +197,18 @@ void SpecificWorker::transformToGRID()
 	}
 }
 
-std::pair<float, float> SpecificWorker::getPosInWorld(float i, float j)
+std::optional<std::pair<int, int>> SpecificWorker::grid_to_lidar(float i, float j)
 {
 	float x = params.DIMMENSION / GRID_SIZE * i - params.DIMMENSION / 2;
 	float y = params.DIMMENSION / GRID_SIZE * j - params.DIMMENSION / 2;
 	return std::make_pair(x, y);
 }
 
-std::pair<int, int> SpecificWorker::fromWorldToPos(float x, float y){
+std::optional<std::pair<float, float>> SpecificWorker::lidar_to_grid(float x, float y){
 	int i = std::clamp(static_cast<int>((GRID_SIZE/params.DIMMENSION) * x + GRID_SIZE/2), 0, GRID_SIZE-1);
 	int j = std::clamp(static_cast<int>((GRID_SIZE/params.DIMMENSION) * y + GRID_SIZE/2), 0, GRID_SIZE-1);
+	if (i < 0 or j < 0 or i >= GRID_SIZE or j >= GRID_SIZE)
+		return {};
 	return std::make_pair(i, j);
 }
 
@@ -221,12 +224,20 @@ void SpecificWorker::changeState(auto &filtered_points)
 		for (const auto o: iter::range(0.f, 1.f, 1/S))
 		{
 			p = point * o;
-			auto [i, j] = fromWorldToPos(p.x(), p.y());
-			grid[i][j].state = CELL_STATE::OCCUPIED;
-			grid[i][j].rect->setBrush(brush_in);
+			 const auto result = lidar_to_grid(p.x(), p.y());
+			if (result)
+			{
+				const auto &[i, j] = *result;
+				grid[i][j].rect->setBrush(brush_in);
+			}
 		}
-		auto [i, j] = fromWorldToPos(point.x(), point.y());
-		grid[i][j].rect->setBrush(brush_out);
+		const auto result = lidar_to_grid(p.x(), p.y());
+		if (result)
+		{
+			const auto &[i, j] = *result;
+			grid[i][j].rect->setBrush(brush_out);
+			grid[i][j].state = CELL_STATE::OCCUPIED;
+		}
 	}
 }
 
@@ -274,128 +285,129 @@ std::vector<SpecificWorker::TCell> SpecificWorker::get_neighbors(TCell& current,
     return neighbors;
 }
 
-float SpecificWorker::euclideanDistance(const TCell& a, const TCell& b) {
-	return std::sqrt(std::pow(b.x - a.x, 2) + std::pow(b.y - a.y, 2));
-}
 
 
-std::vector<QPointF> SpecificWorker::dijkstra(TCell ini, TCell end, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid)
+std::vector<QPointF> SpecificWorker::dijkstra(GridPOS start, GridPOS target)
 {
-	// Verificar que las posiciones de inicio y objetivo son válidas
-	if (!ini.has_value() || !end.has_value())
-	{
-		qWarning() << "Posición de inicio o objetivo no válida.";
-		return {};
-	}
-	// Desempaquetar las posiciones
-	auto [start_x, start_y] = ini.value();
-	auto [target_x, target_y] = end.value();
+	 // Verificar que las posiciones de inicio y objetivo son válidas
+    if (!start.has_value() || !target.has_value())
+    {
+        qWarning() << "Posicin de inicio o objetivo no válida.";
+        return {};
+    }
 
-	// Direcciones de movimiento (arriba, abajo, izquierda, derecha)
-	const std::vector<std::tuple<int, int>> directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+    // Desempaquetar las posiciones
+    auto [start_x, start_y] = start.value();
+    auto [target_x, target_y] = target.value();
 
-	// Mapa de distancias mínimas desde el inicio
-	std::unordered_map<std::tuple<int, int>, int, boost::hash<std::tuple<int, int>>> min_distance;
+    // Direcciones de movimiento (arriba, abajo, izquierda, derecha)
+    const std::vector<std::tuple<int, int>> directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 
-	// Map para reconstruir el camino
-	std::unordered_map<std::tuple<int, int>, std::tuple<int, int>, boost::hash<std::tuple<int, int>>> previous;
+    // Mapa de distancias mínimas desde el inicio
+    std::unordered_map<std::tuple<int, int>, int, boost::hash<std::tuple<int, int>>> min_distance;
 
-	// Inicializar distancias
-	for (int i = 0; i < GRID_SIZE; ++i)
-	{
-		for (int j = 0; j < GRID_SIZE; ++j)
-		{
-			std::tuple<int, int> pos = {i, j};
-			if (grid[i][j].state == SpecificWorker::CELL_STATE::OCCUPIED)
-				min_distance[pos] = std::numeric_limits<int>::max(); // Obstáculo
-			else
-				min_distance[pos] = std::numeric_limits<int>::max();
-		}
-	}
+    // Mapa para reconstruir el camino
+    std::unordered_map<std::tuple<int, int>, std::tuple<int, int>, boost::hash<std::tuple<int, int>>> previous;
 
-	// Distacia al punto inicial es 0
-	std::tuple<int, int> start_pos = {start_x, start_y};
-	min_distance[start_pos] = 0;
+    // Inicializar distancias
+    for (int i = 0; i < GRID_SIZE ; ++i)
+    {
+        for (int j = 0; j < GRID_SIZE; ++j)
+        {
+            std::tuple<int, int> pos = {i, j};
+            if (grid[i][j].state == CELL_STATE::OCCUPIED or grid[i][j].state == CELL_STATE::UNKNOWN)
+                min_distance[pos] = std::numeric_limits<int>::max(); // Obstáculo
+            else
+                min_distance[pos] = std::numeric_limits<int>::max();
+        }
+    }
 
-	// Crear la cola de prioridad (min heap)
-	std::priority_queue<std::pair<int, std::tuple<int, int>>,
-	std::vector<std::pair<int, std::tuple<int, int>>>,
-	std::greater<>> pq;
-	pq.push({0, start_pos});
+    // Distancia al punto inicial es 0
+    std::tuple<int, int> start_pos = {start_x, start_y};
+    min_distance[start_pos] = 0;
 
-	// Algortmo de Dijkstra
-	while (!pq.empty())
-	{
-		auto [current_dist, current] = pq.top();
-		pq.pop();
+    // Crear la cola de prioridad (min heap)
+    std::priority_queue<std::pair<int, std::tuple<int, int>>,
+                        std::vector<std::pair<int, std::tuple<int, int>>>,
+                        std::greater<>> pq;
+    pq.push({0, start_pos});
 
-		// Si llegamos al objetivo, detener
-		if (current == std::make_tuple(target_x, target_y))
-			break;
+    // Algoritmo de Dijkstra
+    while (!pq.empty())
+    {
+        auto [current_dist, current] = pq.top();
+        pq.pop();
+
+        // Si llegamos al objetivo, detener
+        if (current == std::make_tuple(target_x, target_y))
+            break;
+
+        // Obtener coordenadas del nodo actual
+        auto [cx, cy] = current;
+
+        // Explorar vecinos
+        for (const auto &[dx, dy] : directions)
+        {
+            int nx = cx + dx;
+            int ny = cy + dy;
+
+            // Verificar límites de la cuadrícula
+            if (nx < 0 ||  ny < 0 || nx >= GRID_SIZE || ny >= GRID_SIZE)
+                continue;
+
+            // Verificar si la celda es transitable
+            if (grid[nx][ny].state == CELL_STATE::OCCUPIED)
+                continue;
+
+            std::tuple<int, int> neighbor = {nx, ny};
+            int new_dist = current_dist + 1; // Coste uniforme de 1 para cada movimiento
+
+            // Actualizar si se encuentra un camino más corto
+            if (new_dist < min_distance[neighbor])
+            {
+                min_distance[neighbor] = new_dist;
+                previous[neighbor] = current;
+                pq.push({new_dist, neighbor});
+            }
+        }
+    }
+
+    // Reconstruir el camino desde el objetivo al inicio
+    std::vector<std::tuple<int, int>> path;
+    std::tuple<int, int> current = {target_x, target_y};
+
+    while (current != start_pos)
+    {
+        path.push_back(current);
+        if (previous.find(current) == previous.end())
+        {
+            qWarning() << "No se encontró un camino válido.";
+            return {};
+        }
+        current = previous[current];
+    }
+    path.push_back(start_pos);
+    std::reverse(path.begin(), path.end());
 
 
-		// Obener coordenadas del nodo actual
-		auto [cx, cy] = current;
 
 
-		// Explorar vecinos
-		for (const auto &[dx, dy] : directions)
-		{
-			int nx = cx + dx;
-			int ny = cy + dy;
+    // Pintar el camino en la cuadrícula
+ std::vector<QPointF> path_points;
+ path_points.reserve(path.size());
+    for (const auto &[x, y] : path)
+    {
+    	const auto result = lidar_to_grid(x, y);
+    	if (result)
+    	{
+    		const auto &[i, j] = *result;
+    		path_points.emplace_back(QPoint(i,j));
+    	}
+
+    }
 
 
-			// Verificar límites de la cuadrícula
-			if (nx < 0 || ny < 0 || nx >= GRID_SIZE || ny >= GRID_SIZE)
-			continue;
-
-
-			// Verificar si la celda es transitable
-			if (grid[nx][ny].state == CELL_STATE::OCCUPIED)
-			continue;
-
-
-			std::tuple<int, int> neighbor = {nx, ny};
-			int new_dist = current_dist + 1; // Coste uniforme de 1 para cada movimiento
-
-
-			// Actualizar si se encuentra un camino más corto
-			if (new_dist < min_distance[neighbor])
-			{
-				min_distance[neighbor] = new_dist;
-				previous[neighbor] = current;
-				pq.push({new_dist, neighbor});
-			}
-		}
-	}
-
-	// Reconstruir el camino desde el objetivo al inicio
-	std::vector<std::tuple<int, int>> path;
-	std::tuple<int, int> current = {target_x, target_y};
-
-	while (current != start_pos)
-	{
-		path.push_back(current);
-		if (previous.find(current) == previous.end())
-		{
-			qWarning() << "No se encontró un camino válido.";
-			return {};
-		}
-		current = previous[current];
-	}
-	path.push_back(start_pos);
-	std::reverse(path.begin(), path.end());
-
-	// Pintar el camino en la cuadrícula
-	std::vector<QPointF> path_points;
-	path_points.reserve(path.size());
-	for (const auto &[x, y] : path)
-	{
-		auto [i, j] = getPosInWorld(x, y);
-		path_points.emplace_back(QPointF{i,j});
-	}
-
-	return path_points;
+ return path_points;
 }
 
 void SpecificWorker::draw_target(QPointF goal)
@@ -403,7 +415,7 @@ void SpecificWorker::draw_target(QPointF goal)
 	viewer->scene.addRect(goal.x(), goal.y(), params.TILE_SIZE, params.TILE_SIZE, QPen(Qt::red), QBrush(Qt::red));;
 }
 
-void SpecificWorker::draw_path(std::vector<QPointF> path)
+void SpecificWorker::draw_path(std::vector<QPointF> path, QGraphicsScene *scene)
 {
 	static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
 
@@ -415,11 +427,11 @@ void SpecificWorker::draw_path(std::vector<QPointF> path)
 	}
 	items.clear();
 
-	auto color = QColor(Qt::darkGreen);
-	auto brush = QBrush(QColor(Qt::darkGreen));
+	auto color = QColor(Qt::darkBlue);
+	auto brush = QBrush(QColor(Qt::darkBlue));
 	for(const auto &p : path)
 	{
-		auto item = viewer->scene.addRect(-50, -50, 100, 100, color, brush);
+		auto item = scene->addRect(p.x(), p.y(), 100, 100, color, brush);
 		item->setPos(p.x(), p.y());
 		items.push_back(item);
 	}
