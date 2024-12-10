@@ -1,7 +1,7 @@
 src/CMakeFiles/obs_person_tracker.dir/dbscan.cpp.o: \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/dbscan.cpp \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/dbscan.cpp \
  /usr/include/stdc-predef.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/dbscan.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/dbscan.h \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \

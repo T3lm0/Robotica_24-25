@@ -1,4 +1,4 @@
-# Install script for directory: /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3
+# Install script for directory: /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -51,12 +51,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/robocomp/robocomp/etc-default" TYPE FILE RENAME "obs_person_tracker.conf" FILES "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/etc/config")
+  file(INSTALL DESTINATION "/home/robocomp/robocomp/etc-default" TYPE FILE RENAME "obs_person_tracker.conf" FILES "/home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/etc/config")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/cmake_install.cmake")
+  include("/home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/cmake_install.cmake")
 
 endif()
 
@@ -68,5 +68,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

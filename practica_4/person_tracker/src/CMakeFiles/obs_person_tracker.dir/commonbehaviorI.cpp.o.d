@@ -1,7 +1,7 @@
 src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/commonbehaviorI.cpp \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.cpp \
  /usr/include/stdc-predef.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/commonbehaviorI.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.h \
  /usr/include/Ice/Ice.h /usr/include/IceUtil/PushDisableWarnings.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/12/stdlib.h /usr/include/c++/12/cstdlib \
@@ -306,10 +306,10 @@ src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: \
  /usr/include/IceUtil/StringUtil.h /usr/include/iconv.h \
  /usr/include/langinfo.h /usr/include/nl_types.h /usr/include/Ice/UUID.h \
  /usr/include/IceUtil/UUID.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/CommonBehavior.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/config.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/genericworker.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/config.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/config.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/genericworker.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/config.h \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
@@ -950,7 +950,7 @@ src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiversion.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/ui_mainUI.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qapplication.h \
@@ -995,9 +995,9 @@ src/CMakeFiles/obs_person_tracker.dir/commonbehaviorI.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/Camera360RGB.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/GenericBase.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/Lidar3D.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/OmniRobot.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/VisualElementsPub.h \
- /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/genericmonitor.h
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/GenericBase.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/VisualElementsPub.h \
+ /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.h

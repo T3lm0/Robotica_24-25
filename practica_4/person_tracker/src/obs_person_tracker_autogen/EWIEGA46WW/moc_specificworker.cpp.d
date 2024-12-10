@@ -1,18 +1,17 @@
-/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/obs_person_tracker_autogen/EWIEGA46WW/moc_specificworker.cpp: /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/specificworker.h \
-  /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/obs_person_tracker_autogen/moc_predefs.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/Camera360RGB.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/CommonBehavior.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/GenericBase.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/Lidar3D.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/OmniRobot.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/VisualElementsPub.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/config.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/dbscan.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/genericworker.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/room.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/room_detector.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/ui_mainUI.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/visibility_graph.h \
+/home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/EWIEGA46WW/moc_specificworker.cpp: /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/specificworker.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/moc_predefs.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/GenericBase.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/VisualElementsPub.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/config.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/dbscan.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/genericworker.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/room.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/room_detector.h \
+  /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker/src/visibility_graph.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/doublebuffer_sync/doublebuffer_sync.h \
   /home/usuario/robocomp_ws/src/robocomp/robocomp_core/classes/grafcetStep/GRAFCETStep.h \
@@ -2855,22 +2854,15 @@
   /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qtstatemachine-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QCommonStyle \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsEllipseItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsLineItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLCDNumber \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLayout \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollerProperties \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpacerItem \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QtWidgets \

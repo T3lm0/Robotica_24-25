@@ -1,0 +1,4 @@
+Cannot generate into /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker
+It is already used for project /home/usuario/Documentos/person/Robotica_24-25/practica_4/person_tracker
+
+Please either delete it manually or select another generation directory

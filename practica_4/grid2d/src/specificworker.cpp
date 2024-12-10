@@ -102,10 +102,12 @@ void SpecificWorker::new_mouse_coordinates(QPointF goal)
 	qDebug() << "New mouse coordinates: " << goal;
 	draw_target(goal);
 	const auto target= lidar_to_grid(goal.x(), goal.y());
-	const GridPOS start {{0, 0}};
+	const GridPOS start {{GRID_SIZE/2, GRID_SIZE/2}};
 	auto path = dijkstra(start,target);
 	qDebug() << "Path size: " << path.size();
-	//qDebug() << "Path: " << path[path.size()-1].x() << " " << path[path.size()-1].y();
+	for (auto p: path)
+		qDebug() << "Path: " << p.x() << " " << p.y();
+
 	draw_path(path, &viewer->scene);
 }
 
@@ -182,7 +184,7 @@ void SpecificWorker::transformToGRID()
 		j = 0;
 		for (auto &celda : fila)
 		{
-			celda.state = CELL_STATE::OCCUPIED;
+			celda.state = CELL_STATE::EMPTY;
 			celda.x = i;
 			celda.y = j;
 			// Obtener la posición de la celda en el mundo
@@ -214,7 +216,6 @@ std::optional<std::pair<float, float>> SpecificWorker::lidar_to_grid(float x, fl
 
 void SpecificWorker::changeState(auto &filtered_points)
 {
-	QPen pen(Qt::blue, 5);
 	QBrush brush_in(Qt::white);
 	QBrush brush_out(Qt::red);
 	for (const auto &point: filtered_points)
@@ -231,11 +232,20 @@ void SpecificWorker::changeState(auto &filtered_points)
 				grid[i][j].rect->setBrush(brush_in);
 			}
 		}
-		const auto result = lidar_to_grid(p.x(), p.y());
-		if (result)
+		if (const auto result = lidar_to_grid(p.x(), p.y()))
 		{
 			const auto &[i, j] = *result;
 			grid[i][j].rect->setBrush(brush_out);
+			std::vector<std::pair<int, int>> neighbours = {{-1,-1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
+			for (auto n: neighbours) {
+				int a = i + n.first;
+				int b = j + n.second;
+				if (!(a < 0 or b < 0 or a >= GRID_SIZE or b >= GRID_SIZE))
+				{
+					grid[a][b].rect->setBrush(brush_out);
+					grid[a][b].state = CELL_STATE::OCCUPIED;
+				}
+			}
 			grid[i][j].state = CELL_STATE::OCCUPIED;
 		}
 	}
@@ -292,7 +302,7 @@ std::vector<QPointF> SpecificWorker::dijkstra(GridPOS start, GridPOS target)
 	 // Verificar que las posiciones de inicio y objetivo son válidas
     if (!start.has_value() || !target.has_value())
     {
-        qWarning() << "Posicin de inicio o objetivo no válida.";
+        qWarning() << "Posición de inicio o objetivo no válida.";
         return {};
     }
 
@@ -321,7 +331,6 @@ std::vector<QPointF> SpecificWorker::dijkstra(GridPOS start, GridPOS target)
                 min_distance[pos] = std::numeric_limits<int>::max();
         }
     }
-
     // Distancia al punto inicial es 0
     std::tuple<int, int> start_pos = {start_x, start_y};
     min_distance[start_pos] = 0;
@@ -331,14 +340,13 @@ std::vector<QPointF> SpecificWorker::dijkstra(GridPOS start, GridPOS target)
                         std::vector<std::pair<int, std::tuple<int, int>>>,
                         std::greater<>> pq;
     pq.push({0, start_pos});
-
     // Algoritmo de Dijkstra
     while (!pq.empty())
     {
         auto [current_dist, current] = pq.top();
         pq.pop();
 
-        // Si llegamos al objetivo, detener
+         // Si llegamos al objetivo, detener
         if (current == std::make_tuple(target_x, target_y))
             break;
 
@@ -393,49 +401,57 @@ std::vector<QPointF> SpecificWorker::dijkstra(GridPOS start, GridPOS target)
 
 
     // Pintar el camino en la cuadrícula
- std::vector<QPointF> path_points;
- path_points.reserve(path.size());
-    for (const auto &[x, y] : path)
-    {
-    	const auto result = lidar_to_grid(x, y);
-    	if (result)
-    	{
-    		const auto &[i, j] = *result;
-    		path_points.emplace_back(QPoint(i,j));
-    	}
+	std::vector<QPointF> path_points;
+	path_points.reserve(path.size());
+	for (const auto &[x, y] : path)
+	{
+		const auto result = grid_to_lidar(x, y);
+		if (result)
+		{
+			const auto &[i, j] = *result;
+			qDebug() << i << " " << j;
+			path_points.emplace_back(QPoint(i,j));
+		}
+	}
 
-    }
-
-
- return path_points;
+	return path_points;
 }
 
-void SpecificWorker::draw_target(QPointF goal)
+void SpecificWorker::draw_target(QPointF goal, bool erase)
 {
-	viewer->scene.addRect(goal.x(), goal.y(), params.TILE_SIZE, params.TILE_SIZE, QPen(Qt::red), QBrush(Qt::red));;
+	static QGraphicsItem* item;   // store items so they can be shown between iterations
+
+	// remove all items drawn in the previous iteration
+	if (item != nullptr) {
+		viewer->scene.removeItem(item);
+		delete item;
+	}
+
+	if (erase)
+		return;
+
+	item = viewer->scene.addRect(goal.x(), goal.y(), params.TILE_SIZE, params.TILE_SIZE, QPen(Qt::red), QBrush(Qt::red));
 }
 
-void SpecificWorker::draw_path(std::vector<QPointF> path, QGraphicsScene *scene)
+void SpecificWorker::draw_path(std::vector<QPointF> &path, QGraphicsScene *scene)
 {
 	static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
 
 	// remove all items drawn in the previous iteration
-	for(auto i: items)
-	{
-		viewer->scene.removeItem(i);
+	for(auto i: items) {
+		scene->removeItem(i);
 		delete i;
 	}
-	items.clear();
 
-	auto color = QColor(Qt::darkBlue);
-	auto brush = QBrush(QColor(Qt::darkBlue));
-	for(const auto &p : path)
-	{
-		auto item = scene->addRect(p.x(), p.y(), 100, 100, color, brush);
-		item->setPos(p.x(), p.y());
-		items.push_back(item);
+	items.clear();
+	const QBrush brush(Qt::blue);
+	for (const auto &[x, y] : path) {
+		auto i = scene->addEllipse(-50, -50, 100, 100, QPen (Qt::blue), brush);
+		i->setPos(x,y);
+		items.push_back(i);
 	}
 }
+
 /**************************************/
 // From the RoboCompGrid2D you can call this methods:
 // this->grid2d_proxy->getPaths(...)
