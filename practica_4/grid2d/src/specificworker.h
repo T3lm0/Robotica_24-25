@@ -130,6 +130,8 @@ private:
 	void draw_target(QPointF goal, bool erase = false);
 	void draw_path(std::vector<QPointF> &path, QGraphicsScene *scene);
 
+	//COmunication
+	RoboCompGrid2D::Result getPaths(const RoboCompGrid2D::TPoint& source, const RoboCompGrid2D::TPoint& target);
 };
 
 #endif

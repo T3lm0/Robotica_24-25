@@ -38,7 +38,6 @@
 		"/usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake",
 		"/usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake",
 		"/usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake",
-		"/usr/share/cmake-3.22/Modules/CheckIncludeFile.c.in",
 		"/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
 		"/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersion.cmake",
@@ -700,7 +699,7 @@
 		"/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/ui_mainUI.h"
 	],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 8,
+	"PARALLEL" : 16,
 	"PARSE_CACHE_FILE" : "/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_3/src/CMakeFiles/obs_person_tracker_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",

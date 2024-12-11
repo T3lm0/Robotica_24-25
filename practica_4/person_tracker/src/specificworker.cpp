@@ -87,62 +87,17 @@ void SpecificWorker::initialize()
 }
 void SpecificWorker::compute()
 {
-     //read bpearl (lower) lidar and draw
-    auto ldata_bpearl = read_lidar_bpearl();
-    if(ldata_bpearl.empty()) { qWarning() << __FUNCTION__ << "Empty bpearl lidar data"; return; };
-    //draw_lidar(ldata.points, &viewer->scene);
-
-    auto ldata_helios = read_lidar_helios();
-    if(ldata_helios.empty()) { qWarning() << __FUNCTION__ << "Empty helios lidar data"; return; };
-    //draw_lidar(ldata.points, &viewer->scene);
-
-    /// wall lines
-    auto lines = detect_wall_lines(ldata_helios, &viewer->scene);
-
-    /// remove wall points
-    auto bpearl = remove_wall_points(lines, ldata_bpearl);
-    draw_lidar(bpearl, &viewer->scene);
-
-    /// find obstacles
-    auto obstacles = rc::dbscan(bpearl, params.ROBOT_WIDTH, 2);
-
-    /// check if there is new YOLO data in buffer
     std::expected<RoboCompVisualElementsPub::TObject, std::string> tp_person = std::unexpected("No person found");
     auto [data_] = buffer.read_first();
     if(data_.has_value())
         tp_person = find_person_in_data(data_.value().objects);
 
-    /// remove person from obstacles
-    if(tp_person)
-        obstacles = find_person_polygon_and_remove(tp_person.value(), obstacles);
-
-    /// enlarge obstacles
-    obstacles = enlarge_polygons(obstacles, params.ROBOT_WIDTH);
-    draw_obstacles(obstacles, &viewer->scene, Qt::darkMagenta);
-
-    /// get walls as polygons
-    std::vector<QPolygonF> wall_obs = get_walls_as_polygons(lines, params.ROBOT_WIDTH/4);
-    obstacles.insert(obstacles.end(), wall_obs.begin(), wall_obs.end());
-
-    std::vector<Eigen::Vector2f> path;
-    /// compute an obstacle free path
-    if(tp_person)
-    {
-        // Eigen::Vector2f goal{std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos"))};
-        //  path = rc::VisibilityGraph().generate_path(Eigen::Vector2f::Zero(),
-        //                                                                         goal,
-        //                                                                         obstacles,
-        //                                                                         params.ROBOT_WIDTH / 2,
-        //                                                                         &viewer->scene);
-        // draw_path_to_person(path, &viewer->scene);
-
-        try{
-
-        }catch(const std::exception &e) { qFatal("Error calculating dijkstra"); }
-            
-    }
+    RoboCompGrid2D::TPoint target{std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos")), 0.f};
+    auto [t_path, _, __, ___] = grid2d_proxy->getPaths(RoboCompGrid2D::TPoint{0,0,0.f},target);
 
     // call state machine to track person
+    vector<Eigen::Vector2f> path;
+    std::ranges::transform(t_path, std::back_inserter(path), [](auto &p){return Eigen::Vector2f{p.x, p.y};});
     const auto &[adv, rot] = state_machine(path);
 
     // plot on UI

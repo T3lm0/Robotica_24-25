@@ -1,5 +1,5 @@
-/home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/FGDXZBSX76/moc_abstract_graphic_viewer.cpp: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
-  /home/usuario/robocomp_ws/src/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/moc_predefs.h \
+/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/FGDXZBSX76/moc_abstract_graphic_viewer.cpp: /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+  /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2d_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

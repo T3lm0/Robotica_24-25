@@ -105,8 +105,6 @@ void SpecificWorker::new_mouse_coordinates(QPointF goal)
 	const GridPOS start {{GRID_SIZE/2, GRID_SIZE/2}};
 	auto path = dijkstra(start,target);
 	qDebug() << "Path size: " << path.size();
-	for (auto p: path)
-		qDebug() << "Path: " << p.x() << " " << p.y();
 
 	draw_path(path, &viewer->scene);
 }
@@ -450,6 +448,16 @@ void SpecificWorker::draw_path(std::vector<QPointF> &path, QGraphicsScene *scene
 		i->setPos(x,y);
 		items.push_back(i);
 	}
+}
+
+RoboCompGrid2D::Result SpecificWorker::getPaths(const RoboCompGrid2D::TPoint &source, const RoboCompGrid2D::TPoint &target)
+{
+	GridPOS _source {{source.x, source.y}};
+	GridPOS _target = {{target.x, target.y}};
+	auto path = dijkstra(_source,_target);
+	RoboCompGrid2D::Result result;
+	std::ranges::transform(path, std::back_inserter(result.path), [](auto &p){return RoboCompGrid2D::TPoint{p.x(), p.y(), 0.f};});
+	return result;
 }
 
 /**************************************/
