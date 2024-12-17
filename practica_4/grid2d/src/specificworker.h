@@ -68,7 +68,7 @@ private:
 		float ROBOT_WIDTH = 460;  // mm
 		float DIMMENSION = 10000; // Dimmension(mm)
 		float ROBOT_LENGTH = 480;  // mm
-		float MAX_ADV_SPEED = 1900; // mm/s
+		float MAX_ADV_SPEED = 1300;	// mm/s
 		float MAX_ROT_SPEED = 2; // rad/s
 		float TILE_SIZE = 100; // mm
 		QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};

@@ -61,7 +61,7 @@ class SpecificWorker : public GenericWorker
         {
             float ROBOT_WIDTH = 460;  // mm
             float ROBOT_LENGTH = 480;  // mm
-            float MAX_ADV_SPEED = 1900; // mm/s
+            float MAX_ADV_SPEED = 1300; // mm/s
             float MAX_ROT_SPEED = 2; // rad/s
             float SEARCH_ROT_SPEED = 0.9; // rad/s
             float STOP_THRESHOLD = 700; // mm

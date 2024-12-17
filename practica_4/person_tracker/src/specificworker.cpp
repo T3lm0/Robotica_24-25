@@ -95,7 +95,7 @@ void SpecificWorker::compute()
     RoboCompGrid2D::TPoint target{std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos")), 0.f};
     auto [t_path, _, __, ___] = grid2d_proxy->getPaths(RoboCompGrid2D::TPoint{0,0,0.f},target);
 
-    // call state machine to track person
+    // call state machine to track personmake
     vector<Eigen::Vector2f> path;
     std::ranges::transform(t_path, std::back_inserter(path), [](auto &p){return Eigen::Vector2f{p.x, p.y};});
     const auto &[adv, rot] = state_machine(path);

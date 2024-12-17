@@ -245,9 +245,6 @@
 			"id" : "ICES__home_usuario_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src::@145eef247bfb46b6828c"
 		},
 		{
-			"id" : "grid2d_autogen_timestamp_deps::@145eef247bfb46b6828c"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "grid2d_autogen::@145eef247bfb46b6828c"
 		}
@@ -400,21 +397,19 @@
 			]
 		},
 		{
-			"name" : "",
-			"sourceIndexes" : 
-			[
-				16,
-				20
-			]
-		},
-		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
+				16,
 				17,
-				18,
-				19,
-				21
+				18
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				19
 			]
 		}
 	],
@@ -523,36 +518,24 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "src/grid2d_autogen/timestamp",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
 			"path" : "src/CommonBehavior.cpp.rule",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "src/Grid2D.cpp.rule",
-			"sourceGroupIndex" : 3
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "src/Lidar3D.cpp.rule",
-			"sourceGroupIndex" : 3
-		},
-		{
-			"backtrace" : 0,
-			"path" : "src/mainUI.ui",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "src/grid2d_autogen/timestamp.rule",
+			"path" : "src/Lidar3D.cpp.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"path" : "src/mainUI.ui",
 			"sourceGroupIndex" : 3
 		}
 	],
