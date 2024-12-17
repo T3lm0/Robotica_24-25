@@ -16,6 +16,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/grid2d.dir/genericmonitor.cpp.o.d"
   "CMakeFiles/grid2d.dir/genericworker.cpp.o"
   "CMakeFiles/grid2d.dir/genericworker.cpp.o.d"
+  "CMakeFiles/grid2d.dir/grid2dI.cpp.o"
+  "CMakeFiles/grid2d.dir/grid2dI.cpp.o.d"
   "CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/grid2d.dir/grid2d_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/grid2d.dir/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.cpp.o"

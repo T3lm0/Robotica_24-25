@@ -578,6 +578,12 @@
 			null
 		],
 		[
+			"/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2dI.h",
+			"MU",
+			"EWIEGA46WW/moc_grid2dI.cpp",
+			null
+		],
+		[
 			"/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/specificmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_specificmonitor.cpp",
@@ -697,6 +703,11 @@
 		],
 		[
 			"/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2dI.cpp",
 			"MU",
 			null
 		],

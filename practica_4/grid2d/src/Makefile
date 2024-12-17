@@ -347,6 +347,30 @@ genericworker.cpp.s:
 	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/grid2d.dir/build.make src/CMakeFiles/grid2d.dir/genericworker.cpp.s
 .PHONY : genericworker.cpp.s
 
+grid2dI.o: grid2dI.cpp.o
+.PHONY : grid2dI.o
+
+# target to build an object file
+grid2dI.cpp.o:
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/grid2d.dir/build.make src/CMakeFiles/grid2d.dir/grid2dI.cpp.o
+.PHONY : grid2dI.cpp.o
+
+grid2dI.i: grid2dI.cpp.i
+.PHONY : grid2dI.i
+
+# target to preprocess a source file
+grid2dI.cpp.i:
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/grid2d.dir/build.make src/CMakeFiles/grid2d.dir/grid2dI.cpp.i
+.PHONY : grid2dI.cpp.i
+
+grid2dI.s: grid2dI.cpp.s
+.PHONY : grid2dI.s
+
+# target to generate assembly for a file
+grid2dI.cpp.s:
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/grid2d.dir/build.make src/CMakeFiles/grid2d.dir/grid2dI.cpp.s
+.PHONY : grid2dI.cpp.s
+
 grid2d_autogen/mocs_compilation.o: grid2d_autogen/mocs_compilation.cpp.o
 .PHONY : grid2d_autogen/mocs_compilation.o
 
@@ -596,6 +620,9 @@ help:
 	@echo "... genericworker.o"
 	@echo "... genericworker.i"
 	@echo "... genericworker.s"
+	@echo "... grid2dI.o"
+	@echo "... grid2dI.i"
+	@echo "... grid2dI.s"
 	@echo "... grid2d_autogen/mocs_compilation.o"
 	@echo "... grid2d_autogen/mocs_compilation.i"
 	@echo "... grid2d_autogen/mocs_compilation.s"

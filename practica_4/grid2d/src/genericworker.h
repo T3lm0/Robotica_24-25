@@ -44,7 +44,7 @@
 #define BASIC_PERIOD 100
 
 
-using TuplePrx = std::tuple<RoboCompGrid2D::Grid2DPrxPtr,RoboCompLidar3D::Lidar3DPrxPtr>;
+using TuplePrx = std::tuple<RoboCompLidar3D::Lidar3DPrxPtr>;
 
 
 class GenericWorker : public QWidget, public Ui_guiDlg
@@ -65,9 +65,9 @@ public:
 	atomic_bool hibernation = false;
 
 
-	RoboCompGrid2D::Grid2DPrxPtr grid2d_proxy;
 	RoboCompLidar3D::Lidar3DPrxPtr lidar3d_proxy;
 
+	virtual RoboCompGrid2D::Result Grid2D_getPaths(RoboCompGrid2D::TPoint source, RoboCompGrid2D::TPoint target) = 0;
 
 protected:
 

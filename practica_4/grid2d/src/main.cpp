@@ -81,6 +81,7 @@
 #include "specificmonitor.h"
 #include "commonbehaviorI.h"
 
+#include <grid2dI.h>
 
 
 
@@ -130,26 +131,9 @@ int ::grid2d::run(int argc, char* argv[])
 	int status=EXIT_SUCCESS;
 
 	RoboCompLidar3D::Lidar3DPrxPtr lidar3d_proxy;
-	RoboCompGrid2D::Grid2DPrxPtr grid2d_proxy;
 
 	string proxy, tmp;
 	initialize();
-
-	try
-	{
-		if (not GenericMonitor::configGetString(communicator(), prefix, "Grid2DProxy", proxy, ""))
-		{
-			cout << "[" << PROGRAM_NAME << "]: Can't read configuration for proxy Grid2DProxy\n";
-		}
-		grid2d_proxy = Ice::uncheckedCast<RoboCompGrid2D::Grid2DPrx>( communicator()->stringToProxy( proxy ) );
-	}
-	catch(const Ice::Exception& ex)
-	{
-		cout << "[" << PROGRAM_NAME << "]: Exception creating proxy Grid2D: " << ex;
-		return EXIT_FAILURE;
-	}
-	rInfo("Grid2DProxy initialized Ok!");
-
 
 	try
 	{
@@ -167,7 +151,7 @@ int ::grid2d::run(int argc, char* argv[])
 	rInfo("Lidar3DProxy initialized Ok!");
 
 
-	tprx = std::make_tuple(grid2d_proxy,lidar3d_proxy);
+	tprx = std::make_tuple(lidar3d_proxy);
 	SpecificWorker *worker = new SpecificWorker(tprx, startup_check_flag);
 	//Monitor thread
 	SpecificMonitor *monitor = new SpecificMonitor(worker,communicator());
@@ -204,6 +188,24 @@ int ::grid2d::run(int argc, char* argv[])
 
 		}
 
+
+
+		try
+		{
+			// Server adapter creation and publication
+			if (not GenericMonitor::configGetString(communicator(), prefix, "Grid2D.Endpoints", tmp, ""))
+			{
+				cout << "[" << PROGRAM_NAME << "]: Can't read configuration for proxy Grid2D";
+			}
+			Ice::ObjectAdapterPtr adapterGrid2D = communicator()->createObjectAdapterWithEndpoints("Grid2D", tmp);
+			auto grid2d = std::make_shared<Grid2DI>(worker);
+			adapterGrid2D->add(grid2d, Ice::stringToIdentity("grid2d"));
+			adapterGrid2D->activate();
+			cout << "[" << PROGRAM_NAME << "]: Grid2D adapter created in port " << tmp << endl;
+		}
+		catch (const IceStorm::TopicExists&){
+			cout << "[" << PROGRAM_NAME << "]: ERROR creating or activating adapter for Grid2D\n";
+		}
 
 
 		// Server adapter creation and publication

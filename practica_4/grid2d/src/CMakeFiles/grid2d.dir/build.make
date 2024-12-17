@@ -263,10 +263,24 @@ src/CMakeFiles/grid2d.dir/genericworker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grid2d.dir/genericworker.cpp.s"
 	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/genericworker.cpp -o CMakeFiles/grid2d.dir/genericworker.cpp.s
 
+src/CMakeFiles/grid2d.dir/grid2dI.cpp.o: src/CMakeFiles/grid2d.dir/flags.make
+src/CMakeFiles/grid2d.dir/grid2dI.cpp.o: src/grid2dI.cpp
+src/CMakeFiles/grid2d.dir/grid2dI.cpp.o: src/CMakeFiles/grid2d.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/grid2d.dir/grid2dI.cpp.o"
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/grid2d.dir/grid2dI.cpp.o -MF CMakeFiles/grid2d.dir/grid2dI.cpp.o.d -o CMakeFiles/grid2d.dir/grid2dI.cpp.o -c /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2dI.cpp
+
+src/CMakeFiles/grid2d.dir/grid2dI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/grid2d.dir/grid2dI.cpp.i"
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2dI.cpp > CMakeFiles/grid2d.dir/grid2dI.cpp.i
+
+src/CMakeFiles/grid2d.dir/grid2dI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/grid2d.dir/grid2dI.cpp.s"
+	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/grid2dI.cpp -o CMakeFiles/grid2d.dir/grid2dI.cpp.s
+
 src/CMakeFiles/grid2d.dir/CommonBehavior.cpp.o: src/CMakeFiles/grid2d.dir/flags.make
 src/CMakeFiles/grid2d.dir/CommonBehavior.cpp.o: src/CommonBehavior.cpp
 src/CMakeFiles/grid2d.dir/CommonBehavior.cpp.o: src/CMakeFiles/grid2d.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/grid2d.dir/CommonBehavior.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/grid2d.dir/CommonBehavior.cpp.o"
 	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/grid2d.dir/CommonBehavior.cpp.o -MF CMakeFiles/grid2d.dir/CommonBehavior.cpp.o.d -o CMakeFiles/grid2d.dir/CommonBehavior.cpp.o -c /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.cpp
 
 src/CMakeFiles/grid2d.dir/CommonBehavior.cpp.i: cmake_force
@@ -280,7 +294,7 @@ src/CMakeFiles/grid2d.dir/CommonBehavior.cpp.s: cmake_force
 src/CMakeFiles/grid2d.dir/Grid2D.cpp.o: src/CMakeFiles/grid2d.dir/flags.make
 src/CMakeFiles/grid2d.dir/Grid2D.cpp.o: src/Grid2D.cpp
 src/CMakeFiles/grid2d.dir/Grid2D.cpp.o: src/CMakeFiles/grid2d.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/grid2d.dir/Grid2D.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/grid2d.dir/Grid2D.cpp.o"
 	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/grid2d.dir/Grid2D.cpp.o -MF CMakeFiles/grid2d.dir/Grid2D.cpp.o.d -o CMakeFiles/grid2d.dir/Grid2D.cpp.o -c /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.cpp
 
 src/CMakeFiles/grid2d.dir/Grid2D.cpp.i: cmake_force
@@ -294,7 +308,7 @@ src/CMakeFiles/grid2d.dir/Grid2D.cpp.s: cmake_force
 src/CMakeFiles/grid2d.dir/Lidar3D.cpp.o: src/CMakeFiles/grid2d.dir/flags.make
 src/CMakeFiles/grid2d.dir/Lidar3D.cpp.o: src/Lidar3D.cpp
 src/CMakeFiles/grid2d.dir/Lidar3D.cpp.o: src/CMakeFiles/grid2d.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/grid2d.dir/Lidar3D.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/grid2d.dir/Lidar3D.cpp.o"
 	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/grid2d.dir/Lidar3D.cpp.o -MF CMakeFiles/grid2d.dir/Lidar3D.cpp.o.d -o CMakeFiles/grid2d.dir/Lidar3D.cpp.o -c /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.cpp
 
 src/CMakeFiles/grid2d.dir/Lidar3D.cpp.i: cmake_force
@@ -319,6 +333,7 @@ grid2d_OBJECTS = \
 "CMakeFiles/grid2d.dir/genericmonitor.cpp.o" \
 "CMakeFiles/grid2d.dir/commonbehaviorI.cpp.o" \
 "CMakeFiles/grid2d.dir/genericworker.cpp.o" \
+"CMakeFiles/grid2d.dir/grid2dI.cpp.o" \
 "CMakeFiles/grid2d.dir/CommonBehavior.cpp.o" \
 "CMakeFiles/grid2d.dir/Grid2D.cpp.o" \
 "CMakeFiles/grid2d.dir/Lidar3D.cpp.o"
@@ -338,6 +353,7 @@ bin/grid2d: src/CMakeFiles/grid2d.dir/main.cpp.o
 bin/grid2d: src/CMakeFiles/grid2d.dir/genericmonitor.cpp.o
 bin/grid2d: src/CMakeFiles/grid2d.dir/commonbehaviorI.cpp.o
 bin/grid2d: src/CMakeFiles/grid2d.dir/genericworker.cpp.o
+bin/grid2d: src/CMakeFiles/grid2d.dir/grid2dI.cpp.o
 bin/grid2d: src/CMakeFiles/grid2d.dir/CommonBehavior.cpp.o
 bin/grid2d: src/CMakeFiles/grid2d.dir/Grid2D.cpp.o
 bin/grid2d: src/CMakeFiles/grid2d.dir/Lidar3D.cpp.o
@@ -355,7 +371,7 @@ bin/grid2d: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4
 bin/grid2d: /usr/lib/x86_64-linux-gnu/libGLX.so
 bin/grid2d: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 bin/grid2d: src/CMakeFiles/grid2d.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable ../bin/grid2d"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable ../bin/grid2d"
 	cd /home/usuario/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/grid2d.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
