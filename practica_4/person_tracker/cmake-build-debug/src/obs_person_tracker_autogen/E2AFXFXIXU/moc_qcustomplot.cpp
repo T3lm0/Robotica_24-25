@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../../../../../classes/qcustomplot/qcustomplot.h"
+#include "../../../../../../../../../classes/qcustomplot/qcustomplot.h"
 #include <QtGui/qtextcursor.h>
 #include <QScreen>
 #include <QtCore/qbytearray.h>

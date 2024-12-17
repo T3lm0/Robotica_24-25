@@ -3,9 +3,6 @@ LIST(APPEND SOURCES
   specificworker.cpp
   specificmonitor.cpp
   $ENV{ROBOCOMP}/classes/qcustomplot/qcustomplot.cpp
-  dbscan.cpp
-  visibility_graph.cpp
-  room_detector.cpp
 
 )
 
@@ -14,8 +11,7 @@ LIST(APPEND HEADERS
   specificworker.h
   specificmonitor.h
   $ENV{ROBOCOMP}/classes/qcustomplot/qcustomplot.h
-  room_detector.h
-)
+ )
 INCLUDE( $ENV{ROBOCOMP}/cmake/modules/opencv4.cmake )
 #find_package(MLPACK REQUIRED)
 

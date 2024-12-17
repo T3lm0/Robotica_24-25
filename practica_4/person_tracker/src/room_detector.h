@@ -7,14 +7,9 @@
 
 #include <vector>
 #include <abstract_graphic_viewer/abstract_graphic_viewer.h>
-#include <Eigen/Dense>
-#include <Eigen/SVD>
 #include <Eigen/Geometry>
 #include <opencv2/core.hpp>
-#include <opencv2/imgproc.hpp>
 #include <QtCore>
-#include "room.h"
-#include <cmath>
 #include <ranges>
 
 // Room_Detector class is a class that detects rooms in a 2D space. It uses a set of Hough lines to detect the rooms.

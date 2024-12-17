@@ -37,9 +37,8 @@ SpecificWorker::~SpecificWorker()
 {
 	std::cout << "Destroying SpecificWorker" << std::endl;
 }
-bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
-{
-	return true;
+bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params) {
+    return true;
 }
 void SpecificWorker::initialize()
 {
@@ -93,7 +92,14 @@ void SpecificWorker::compute()
         tp_person = find_person_in_data(data_.value().objects);
 
     RoboCompGrid2D::TPoint target{std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos")), 0.f};
-    auto [t_path, _, __, ___] = grid2d_proxy->getPaths(RoboCompGrid2D::TPoint{0,0,0.f},target);
+
+    RoboCompGrid2D::TPath t_path;
+
+    try {
+        auto [t_path, _, __, ___] = grid2d_proxy->getPaths(RoboCompGrid2D::TPoint{0,0,0.f},target);
+    } catch (Ice::Exception &e) {
+        printf("%s\n",e.what());
+    }
 
     // call state machine to track personmake
     vector<Eigen::Vector2f> path;
@@ -122,117 +128,6 @@ void SpecificWorker::compute()
 //////////////////////////////////////////////////////////////////
 /// YOUR CODE HERE
 //////////////////////////////////////////////////////////////////
-// Read the BPEARL lidar data and filter the points
-std::vector<Eigen::Vector2f> SpecificWorker::read_lidar_bpearl()
-{
-    try
-    {
-        auto ldata =  lidar3d1_proxy->getLidarData("bpearl", 0, 2*M_PI, 1);
-        // filter points according to height and distance
-        std::vector<Eigen::Vector2f>  p_filter;
-        for(const auto &a: ldata.points)
-        {
-            if(a.z < 500 and a.distance2d > 200)
-                p_filter.emplace_back(a.x, a.y);
-        }
-        return p_filter;
-    }
-    catch(const Ice::Exception &e){std::cout << e << std::endl;}
-    return {};
-}
-std::vector<Eigen::Vector2f> SpecificWorker::read_lidar_helios()
-{
-    try
-    {
-
-        auto ldata =  lidar3d_proxy->getLidarData("helios", 0, 2*M_PI, 2);
-        // filter points according to height and distance
-        std::vector<Eigen::Vector2f> p_filter;
-        for(const auto &a: ldata.points)
-        {
-            if(a.z > 1300 and a.distance2d > 200)
-                p_filter.emplace_back(a.x, a.y);
-        }
-
-
-
-        return p_filter;
-    }
-    catch(const Ice::Exception &e){std::cout << e << std::endl;}
-    return {};
-}
-std::vector<QLineF> SpecificWorker::detect_wall_lines(const vector<Eigen::Vector2f> &points, QGraphicsScene *scene)
-{
-    std::vector<QLineF> lines;
-    const auto &[ls, _, __, ___] = room_detector.compute_features(points, &viewer->scene);
-    for(const auto &l: ls)
-        lines.emplace_back(l.second);
-    return lines;
-}
-std::vector<Eigen::Vector2f> SpecificWorker::remove_wall_points(const std::vector<QLineF> &lines, const auto &bpearl)
-{
-    std::vector<Eigen::Vector2f> points_inside;
-    for(const auto &p: bpearl)
-    {
-        bool outside = true;
-        for(const auto &line: lines)
-        {
-            Eigen::Vector2f p1{line.x1(), line.y1()};
-            Eigen::Vector2f p2{line.x2(), line.y2()};
-            auto pline = Eigen::ParametrizedLine<float, 2>::Through(p1, p2);
-            if (pline.distance(p) < params.ROBOT_WIDTH)
-            {
-                outside = false;
-                break;
-            }
-        }
-        if(outside) points_inside.emplace_back(p);
-    }
-    return points_inside;
-}
-std::vector<QPolygonF> SpecificWorker::get_walls_as_polygons(const std::vector<QLineF> &lines, float robot_width)
-{
-    std::vector<QPolygonF> obstacles;
-    for(const auto &l: lines)
-    {
-        // create line
-        QLineF line = l;
-        // Calculate the direction vector of the line
-        QPointF direction = line.p2() - line.p1();
-        // Calculate the normal vector of the line
-        QPointF normal = QPointF(-direction.y(), direction.x());
-        // Normalize the normal vector
-        normal /= sqrt(normal.x()*normal.x() + normal.y()*normal.y());
-        // Create the polygon
-        QPolygonF poly;
-        poly << line.p1() + normal * robot_width/2 << line.p2() + normal * robot_width/2
-             << line.p2() - normal * robot_width/2 << line.p1() - normal * robot_width/2;
-        obstacles.push_back(poly);
-    }
-    return obstacles;
-}
-std::vector<QPolygonF> SpecificWorker::enlarge_polygons(const std::vector<QPolygonF> &polygons, float amount)
-{
-    std::vector<QPolygonF> enlargedPolygons;
-    for(const auto &poly: polygons)
-    {
-        QPolygonF exp_poly; // expanded polygon
-        if (poly.size() < 3) continue;  // skip polygons with less than 3 points
-        QPolygonF copy_poly(poly); // copy of the polygon to insert the first point at the end
-        copy_poly << poly[0] << poly[1];
-        for (const auto &p: iter::sliding_window(copy_poly, 3))
-        {
-            const auto p1 = Eigen::Vector2f{p[0].x(), p[0].y()};
-            const auto p2 = Eigen::Vector2f{p[1].x(), p[1].y()};
-            const auto p3 = Eigen::Vector2f{p[2].x(), p[2].y()};
-            const auto bisectrix = ((p1 - p2).normalized() + (p3 - p2).normalized()).normalized();
-            const Eigen::Vector2f np2 = p2 - amount * bisectrix;
-            exp_poly << QPointF{np2.x(), np2.y()};
-        }
-        enlargedPolygons.emplace_back(exp_poly);
-    }
-    return enlargedPolygons;
-}
 std::expected<RoboCompVisualElementsPub::TObject, std::string> SpecificWorker::find_person_in_data(const std::vector<RoboCompVisualElementsPub::TObject> &objects)
 {
     if(objects.empty())
@@ -246,29 +141,7 @@ std::expected<RoboCompVisualElementsPub::TObject, std::string> SpecificWorker::f
         return *p_;
     }
 }
-std::vector<QPolygonF> SpecificWorker::find_person_polygon_and_remove(const RoboCompVisualElementsPub::TObject &person, const std::vector<QPolygonF> &obstacles)
-{
-    std::vector<QPolygonF> new_obs;
-    QPointF pp = QPointF(std::stof(person.attributes.at("x_pos")), std::stof(person.attributes.at("y_pos")));
-    // compute 8 point around pp in circular configuration
-    std::vector<QPointF> ppoly;
-    for (auto i: iter::range(0.0, 2 * M_PI, M_PI / 2))
-        ppoly.push_back(pp + QPointF(80 * cos(i), 80 * sin(i)));
-    // check if any polygon contains the person and remove it
-    for(const auto &poly: obstacles)
-    {
-        bool contains = false;
-        for(const auto &p: ppoly)
-            if(poly.containsPoint(p, Qt::OddEvenFill))
-            {
-                contains = true;
-                break;
-            }
-        if(not contains)
-            new_obs.push_back(poly);
-    }
-    return new_obs;
-}
+
 //////////////////////////////////////////////////////////////////
 /// STATE  MACHINE
 //////////////////////////////////////////////////////////////////
@@ -473,15 +346,6 @@ void SpecificWorker::draw_person(RoboCompVisualElementsPub::TObject &person, QGr
                                                            QPen(Qt::magenta, 20));
     items.push_back(item_line);
 }
-std::expected<int, string> SpecificWorker::closest_lidar_index_to_given_angle(const auto &points, float angle)
-{
-    // search for the point in points whose phi value is closest to angle
-    auto res = std::ranges::find_if(points, [angle](auto &a){ return a.phi > angle;});
-    if(res != std::end(points))
-        return std::distance(std::begin(points), res);
-    else
-        return std::unexpected("No closest value found in method <closest_lidar_index_to_given_angle>");
-}
 void SpecificWorker::draw_path_to_person(const auto &points, QGraphicsScene *scene)
 {
     if(points.empty())
@@ -582,8 +446,6 @@ int SpecificWorker::startup_check()
 	QTimer::singleShot(200, qApp, SLOT(quit()));
 	return 0;
 }
-
-
 
 /**************************************/
 // From the RoboCompLidar3D you can call this methods:

@@ -1,5 +1,5 @@
-/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3/cmake-build-debug/src/obs_person_tracker_autogen/O3EPOQWXUL/moc_GRAFCETStep.cpp: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
-  /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_3/cmake-build-debug/src/obs_person_tracker_autogen/moc_predefs.h \
+/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/cmake-build-debug/src/obs_person_tracker_autogen/O3EPOQWXUL/moc_GRAFCETStep.cpp: /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
+  /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/cmake-build-debug/src/obs_person_tracker_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
