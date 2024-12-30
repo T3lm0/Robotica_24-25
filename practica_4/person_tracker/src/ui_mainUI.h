@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainUI.ui'
 **
-** Created by: Qt User Interface Compiler version 6.2.4
+** Created by: Qt User Interface Compiler version 6.4.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -59,18 +59,18 @@ public:
     void setupUi(QWidget *guiDlg)
     {
         if (guiDlg->objectName().isEmpty())
-            guiDlg->setObjectName(QString::fromUtf8("guiDlg"));
+            guiDlg->setObjectName("guiDlg");
         guiDlg->resize(1044, 678);
         verticalLayout_2 = new QVBoxLayout(guiDlg);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setObjectName("verticalLayout_2");
         splitter_2 = new QSplitter(guiDlg);
-        splitter_2->setObjectName(QString::fromUtf8("splitter_2"));
+        splitter_2->setObjectName("splitter_2");
         splitter_2->setOrientation(Qt::Horizontal);
         splitter = new QSplitter(splitter_2);
-        splitter->setObjectName(QString::fromUtf8("splitter"));
+        splitter->setObjectName("splitter");
         splitter->setOrientation(Qt::Vertical);
         frame = new QFrame(splitter);
-        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setObjectName("frame");
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -81,14 +81,14 @@ public:
         frame->setFrameShadow(QFrame::Raised);
         splitter->addWidget(frame);
         frame_dist = new QFrame(splitter);
-        frame_dist->setObjectName(QString::fromUtf8("frame_dist"));
+        frame_dist->setObjectName("frame_dist");
         frame_dist->setMaximumSize(QSize(16777215, 150));
         frame_dist->setFrameShape(QFrame::StyledPanel);
         frame_dist->setFrameShadow(QFrame::Raised);
         splitter->addWidget(frame_dist);
         splitter_2->addWidget(splitter);
         frame_2 = new QFrame(splitter_2);
-        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        frame_2->setObjectName("frame_2");
         QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -97,19 +97,19 @@ public:
         frame_2->setFrameShape(QFrame::StyledPanel);
         frame_2->setFrameShadow(QFrame::Raised);
         verticalLayout_3 = new QVBoxLayout(frame_2);
-        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_3->setObjectName("verticalLayout_3");
         verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        verticalLayout_4->setObjectName("verticalLayout_4");
         verticalLayout_4->setSizeConstraint(QLayout::SetMinimumSize);
         horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
         label = new QLabel(frame_2);
-        label->setObjectName(QString::fromUtf8("label"));
+        label->setObjectName("label");
 
         horizontalLayout_2->addWidget(label);
 
         lcdNumber_dist_to_person = new QLCDNumber(frame_2);
-        lcdNumber_dist_to_person->setObjectName(QString::fromUtf8("lcdNumber_dist_to_person"));
+        lcdNumber_dist_to_person->setObjectName("lcdNumber_dist_to_person");
         QFont font;
         font.setBold(true);
         lcdNumber_dist_to_person->setFont(font);
@@ -120,14 +120,14 @@ public:
         verticalLayout_4->addLayout(horizontalLayout_2);
 
         horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
         label_2 = new QLabel(frame_2);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setObjectName("label_2");
 
         horizontalLayout_3->addWidget(label_2);
 
         lcdNumber_angle_to_person = new QLCDNumber(frame_2);
-        lcdNumber_angle_to_person->setObjectName(QString::fromUtf8("lcdNumber_angle_to_person"));
+        lcdNumber_angle_to_person->setObjectName("lcdNumber_angle_to_person");
         lcdNumber_angle_to_person->setFont(font);
 
         horizontalLayout_3->addWidget(lcdNumber_angle_to_person);
@@ -136,14 +136,14 @@ public:
         verticalLayout_4->addLayout(horizontalLayout_3);
 
         horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalLayout_4->setObjectName("horizontalLayout_4");
         label_4 = new QLabel(frame_2);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setObjectName("label_4");
 
         horizontalLayout_4->addWidget(label_4);
 
         lcdNumber_adv = new QLCDNumber(frame_2);
-        lcdNumber_adv->setObjectName(QString::fromUtf8("lcdNumber_adv"));
+        lcdNumber_adv->setObjectName("lcdNumber_adv");
 
         horizontalLayout_4->addWidget(lcdNumber_adv);
 
@@ -151,14 +151,14 @@ public:
         verticalLayout_4->addLayout(horizontalLayout_4);
 
         horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalLayout_5->setObjectName("horizontalLayout_5");
         label_5 = new QLabel(frame_2);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setObjectName("label_5");
 
         horizontalLayout_5->addWidget(label_5);
 
         lcdNumber_rot = new QLCDNumber(frame_2);
-        lcdNumber_rot->setObjectName(QString::fromUtf8("lcdNumber_rot"));
+        lcdNumber_rot->setObjectName("lcdNumber_rot");
 
         horizontalLayout_5->addWidget(lcdNumber_rot);
 
@@ -166,14 +166,14 @@ public:
         verticalLayout_4->addLayout(horizontalLayout_5);
 
         horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setObjectName("horizontalLayout");
         label_state_name = new QLabel(frame_2);
-        label_state_name->setObjectName(QString::fromUtf8("label_state_name"));
+        label_state_name->setObjectName("label_state_name");
 
         horizontalLayout->addWidget(label_state_name);
 
         label_state = new QLabel(frame_2);
-        label_state->setObjectName(QString::fromUtf8("label_state"));
+        label_state->setObjectName("label_state");
 
         horizontalLayout->addWidget(label_state);
 
@@ -181,7 +181,7 @@ public:
         verticalLayout_4->addLayout(horizontalLayout);
 
         horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
+        horizontalLayout_8->setObjectName("horizontalLayout_8");
 
         verticalLayout_4->addLayout(horizontalLayout_8);
 
@@ -190,9 +190,9 @@ public:
         verticalLayout_4->addItem(verticalSpacer);
 
         verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setObjectName("verticalLayout");
         horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
+        horizontalLayout_7->setObjectName("horizontalLayout_7");
 
         verticalLayout->addLayout(horizontalLayout_7);
 
@@ -200,14 +200,14 @@ public:
         verticalLayout_4->addLayout(verticalLayout);
 
         pushButton_adapt = new QPushButton(frame_2);
-        pushButton_adapt->setObjectName(QString::fromUtf8("pushButton_adapt"));
+        pushButton_adapt->setObjectName("pushButton_adapt");
         pushButton_adapt->setCheckable(true);
         pushButton_adapt->setChecked(true);
 
         verticalLayout_4->addWidget(pushButton_adapt);
 
         pushButton_stop = new QPushButton(frame_2);
-        pushButton_stop->setObjectName(QString::fromUtf8("pushButton_stop"));
+        pushButton_stop->setObjectName("pushButton_stop");
         pushButton_stop->setCheckable(true);
         pushButton_stop->setChecked(true);
 

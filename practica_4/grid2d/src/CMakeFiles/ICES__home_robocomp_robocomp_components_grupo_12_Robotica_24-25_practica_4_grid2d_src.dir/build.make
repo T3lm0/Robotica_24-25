@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/305/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/310/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/305/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/310/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -69,6 +69,8 @@ include src/CMakeFiles/ICES__home_robocomp_robocomp_components_grupo_12_Robotica
 ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src: src/CMakeFiles/ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src.dir/build.make
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "BU robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/CommonBehavior.idsl /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.ice"
 	cd /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/CommonBehavior.idsl /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/CommonBehavior.ice
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "BU robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Grid2D.idsl /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.ice"
+	cd /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Grid2D.idsl /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Grid2D.ice
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "BU robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.ice"
 	cd /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src && robocompdsl /home/robocomp/robocomp//interfaces/IDSLs/Lidar3D.idsl /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/grid2d/src/Lidar3D.ice
 .PHONY : ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_4_grid2d_src

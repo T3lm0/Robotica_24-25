@@ -91,19 +91,20 @@ void SpecificWorker::compute()
     if(data_.has_value())
         tp_person = find_person_in_data(data_.value().objects);
 
-    RoboCompGrid2D::TPoint target{std::stof(tp_person.value().attributes.at("x_pos")), std::stof(tp_person.value().attributes.at("y_pos")), 0.f};
+    RoboCompGrid2D::TPoint target{std::stof(tp_person.value().attributes.at("x_pos")),
+                                    std::stof(tp_person.value().attributes.at("y_pos")), 0.f};
 
-    RoboCompGrid2D::TPath t_path;
+    RoboCompGrid2D::Result result;
 
     try {
-        auto [t_path, _, __, ___] = grid2d_proxy->getPaths(RoboCompGrid2D::TPoint{0,0,0.f},target);
+        result = grid2d_proxy->getPaths(RoboCompGrid2D::TPoint{0,0,0.f},target);
     } catch (Ice::Exception &e) {
         printf("%s\n",e.what());
     }
 
     // call state machine to track personmake
     vector<Eigen::Vector2f> path;
-    std::ranges::transform(t_path, std::back_inserter(path), [](auto &p){return Eigen::Vector2f{p.x, p.y};});
+    std::ranges::transform(result.path, std::back_inserter(path), [](auto &p){return Eigen::Vector2f{p.x, p.y};});
     const auto &[adv, rot] = state_machine(path);
 
     // plot on UI

@@ -117,12 +117,17 @@ private:
     std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
 	void changeState(auto &filtered_points);
 	using GridPOS = std::optional<std::tuple<int, int>>;
+	using LidarPOS = std::optional<std::tuple<float, float>>;
     // Coordinates
 	void transformToGRID();
 
     // Transformations
     std::optional<std::pair<int, int>> grid_to_lidar(float i, float j);
 	std::optional<std::pair<float, float>> lidar_to_grid(float x, float y);
+	LidarPOS lidar_to_grid_pos(GridPOS gp);
+	GridPOS grid_to_lidar_pos(LidarPOS lp);
+	QString cellStateToString(CELL_STATE state);
+
 
 	//Dijkstra
 	std::vector<TCell> get_neighbors(TCell& current, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE>& grid);
@@ -131,7 +136,7 @@ private:
 	void draw_path(std::vector<QPointF> &path, QGraphicsScene *scene);
 
 	//COmunication
-	RoboCompGrid2D::Result getPaths(const RoboCompGrid2D::TPoint& source, const RoboCompGrid2D::TPoint& target);
+	RoboCompGrid2D::Result Grid2D_getPaths(RoboCompGrid2D::TPoint source, RoboCompGrid2D::TPoint target) override;
 };
 
 #endif

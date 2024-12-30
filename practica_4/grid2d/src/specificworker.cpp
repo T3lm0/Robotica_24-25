@@ -212,6 +212,32 @@ std::optional<std::pair<float, float>> SpecificWorker::lidar_to_grid(float x, fl
 	return std::make_pair(i, j);
 }
 
+SpecificWorker::LidarPOS SpecificWorker::lidar_to_grid_pos(GridPOS gp)
+{
+	auto &[i,j] = *gp;
+	auto result = grid_to_lidar(i,j);
+	auto &[x,y] = *result;
+	return LidarPOS{{x,y}};
+}
+
+SpecificWorker::GridPOS SpecificWorker::grid_to_lidar_pos(LidarPOS lp)
+{
+	auto &[x, y] = *lp;
+	auto result = lidar_to_grid(x, y);
+	auto &[i, j] = *result;
+	return {{i, j}};
+}
+
+QString SpecificWorker::cellStateToString(CELL_STATE state)
+{
+	switch (state) {
+		case CELL_STATE::UNKNOWN: return "UNKNOWN";
+		case CELL_STATE::OCCUPIED: return "OCCUPIED";
+		case CELL_STATE::EMPTY: return "EMPTY";
+		default: return "INVALID_STATE";
+	}
+}
+
 void SpecificWorker::changeState(auto &filtered_points)
 {
 	QBrush brush_in(Qt::white);
@@ -407,7 +433,6 @@ std::vector<QPointF> SpecificWorker::dijkstra(GridPOS start, GridPOS target)
 		if (result)
 		{
 			const auto &[i, j] = *result;
-			qDebug() << i << " " << j;
 			path_points.emplace_back(QPoint(i,j));
 		}
 	}
@@ -450,15 +475,26 @@ void SpecificWorker::draw_path(std::vector<QPointF> &path, QGraphicsScene *scene
 	}
 }
 
-RoboCompGrid2D::Result SpecificWorker::getPaths(const RoboCompGrid2D::TPoint &source, const RoboCompGrid2D::TPoint &target)
+RoboCompGrid2D::Result SpecificWorker::Grid2D_getPaths(RoboCompGrid2D::TPoint source, RoboCompGrid2D::TPoint target)
 {
-	GridPOS _source {{source.x, source.y}};
-	GridPOS _target = {{target.x, target.y}};
-	auto path = dijkstra(_source,_target);
+	LidarPOS _source {{source.x, source.y}};
+	LidarPOS _target  {{target.x, target.y}};
+	GridPOS goal = grid_to_lidar_pos(_target);
+	GridPOS start = grid_to_lidar_pos(_source);
+	auto &[i,j] = *goal;
+	qDebug() << i << " " << j << "Estado Celda: " << cellStateToString(grid[i][j].state);
+	auto &[l,m] = *start;
+	qDebug() << l << " " << m << "Estado Celda: " << cellStateToString(grid[i][j].state);
+	std::vector<QPointF> path = dijkstra(start,goal);
+	qDebug() << "Tamaño del camino" << path.size();
 	RoboCompGrid2D::Result result;
-	std::ranges::transform(path, std::back_inserter(result.path), [](auto &p){return RoboCompGrid2D::TPoint{p.x(), p.y(), 0.f};});
+	std::ranges::transform(path, std::back_inserter(result.path), [](auto &p) {
+							return RoboCompGrid2D::TPoint{static_cast<float>(p.x()), static_cast<float>(p.y()), 0.f};
+	});
+	qDebug() << "Tamaño del camino" << result.path.size();
 	return result;
 }
+
 
 /**************************************/
 // From the RoboCompGrid2D you can call this methods:
