@@ -62,7 +62,8 @@ void emergency();
 
 private:
 	bool startup_check_flag;
-
+	using GridPOS = std::optional<std::tuple<int, int>>;
+	using LidarPOS = std::optional<std::tuple<float, float>>;
 	struct Params
 	{
 		float ROBOT_WIDTH = 460;  // mm
@@ -71,6 +72,9 @@ private:
 		float MAX_ADV_SPEED = 1300;	// mm/s
 		float MAX_ROT_SPEED = 2; // rad/s
 		float TILE_SIZE = 100; // mm
+		LidarPOS actual_target;
+		std::vector<QPointF> actual_path;
+
 		QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
 	};
 	Params params;
@@ -116,8 +120,7 @@ private:
     static constexpr int GRID_SIZE = 100;
     std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE> grid;
 	void changeState(auto &filtered_points);
-	using GridPOS = std::optional<std::tuple<int, int>>;
-	using LidarPOS = std::optional<std::tuple<float, float>>;
+
     // Coordinates
 	void transformToGRID();
 
@@ -134,8 +137,11 @@ private:
 	std::vector<QPointF> dijkstra(GridPOS start, GridPOS target);
 	void draw_target(QPointF goal, bool erase = false);
 	void draw_path(std::vector<QPointF> &path, QGraphicsScene *scene);
+	void clean_near_data(GridPOS target);
+	std::vector<QPointF> smooth_path(const std::vector<QPointF>& path);
 
-	//COmunication
+
+	//Comunication
 	RoboCompGrid2D::Result Grid2D_getPaths(RoboCompGrid2D::TPoint source, RoboCompGrid2D::TPoint target) override;
 };
 

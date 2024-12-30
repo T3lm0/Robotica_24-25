@@ -90,10 +90,10 @@ void SpecificWorker::compute()
     auto [data_] = buffer.read_first();
     if(data_.has_value())
         tp_person = find_person_in_data(data_.value().objects);
-
-    RoboCompGrid2D::TPoint target{std::stof(tp_person.value().attributes.at("x_pos")),
-                                    std::stof(tp_person.value().attributes.at("y_pos")), 0.f};
-
+    RoboCompGrid2D::TPoint target;
+    if (tp_person.has_value())
+        target = {std::stof(tp_person.value().attributes.at("x_pos")),
+                     std::stof(tp_person.value().attributes.at("y_pos")), 0.f};
     RoboCompGrid2D::Result result;
 
     try {
@@ -105,6 +105,8 @@ void SpecificWorker::compute()
     // call state machine to track personmake
     vector<Eigen::Vector2f> path;
     std::ranges::transform(result.path, std::back_inserter(path), [](auto &p){return Eigen::Vector2f{p.x, p.y};});
+    if (path.size() > 0)
+        draw_path(path, &viewer->scene);
     const auto &[adv, rot] = state_machine(path);
 
     // plot on UI
@@ -204,12 +206,10 @@ SpecificWorker::RetVal SpecificWorker::track(const vector<Eigen::Vector2f> &path
         float s = -xset*xset/(log(yset));
         return (float)exp(-x*x/s);
     };
-
     if(path.empty())
     {  qWarning() << __FUNCTION__ << "No path found";  return RetVal(STATE::SEARCH, 0.f, 0.f); }
 
-
-    auto distance = std::accumulate(path.begin() + 1, path.end(), 0.f, [](auto a, auto b){
+        auto distance = std::accumulate(path.begin() + 1, path.end(), 0.f, [](auto a, auto b){
         static Eigen::Vector2f ant{0, 0};
         auto aux = a + (b - ant).norm();
         ant = b;
@@ -235,9 +235,6 @@ SpecificWorker::RetVal SpecificWorker::track(const vector<Eigen::Vector2f> &path
 //
 SpecificWorker::RetVal SpecificWorker::wait(const vector<Eigen::Vector2f> &path)
 {
-    if(path.empty())
-    {  qWarning() << __FUNCTION__ << "No person found"; return RetVal(STATE::TRACK, 0.f, 0.f); }
-
     // check if the person is further than a threshold
     if(std::accumulate(path.begin() + 1, path.end(), 0.f, [](auto a, auto b)
         { static Eigen::Vector2f ant{0, 0};
@@ -254,7 +251,16 @@ SpecificWorker::RetVal SpecificWorker::wait(const vector<Eigen::Vector2f> &path)
 SpecificWorker::RetVal SpecificWorker::search(const vector<Eigen::Vector2f> &path)
 {
     if(!path.empty())
-    {  qWarning() << __FUNCTION__ << "Person found, moving to TRACK"; return RetVal(STATE::TRACK, 0.f, 0.f); }
+    {
+        auto distance = std::accumulate(path.begin() + 1, path.end(), 0.f, [](auto a, auto b){
+        static Eigen::Vector2f ant{0, 0};
+        auto aux = a + (b - ant).norm();
+        ant = b;
+        return aux;});
+        if(distance < params.PERSON_MIN_DIST)
+        { qWarning() << __FUNCTION__ << "Distance to person lower than threshold"; return RetVal(STATE::WAIT, 0.f, 0.f);}
+        qWarning() << __FUNCTION__ << "Person found, moving to TRACK"; return RetVal(STATE::TRACK, 0.f, 0.f);
+    }
 
     return RetVal(STATE::SEARCH, 0.f, params.SEARCH_ROT_SPEED);
 }
@@ -268,38 +274,7 @@ SpecificWorker::RetVal SpecificWorker::stop()
 
     return RetVal (STATE::STOP, 0.f, 0.f);
 }
-/**
- * Draws LIDAR points onto a QGraphicsScene.
- *
- * This method clears any existing graphical items from the scene, then iterates over the filtered
- * LIDAR points to add new items. Each LIDAR point is represented as a colored rectangle. The point
- * with the minimum distance is highlighted in red, while the other points are drawn in green.
- *
- * @param filtered_points A collection of filtered points to be drawn, each containing the coordinates
- *                        and distance.
- * @param scene A pointer to the QGraphicsScene where the points will be drawn.
- */
-void SpecificWorker::draw_lidar(auto &filtered_points, QGraphicsScene *scene)
-{
-    static std::vector<QGraphicsItem*> items;   // store items so they can be shown between iterations
 
-    // remove all items drawn in the previous iteration
-    for(auto i: items)
-    {
-        scene->removeItem(i);
-        delete i;
-    }
-    items.clear();
-
-    auto color = QColor(Qt::darkGreen);
-    auto brush = QBrush(QColor(Qt::darkGreen));
-    for(const auto &p : filtered_points)
-    {
-        auto item = scene->addRect(-50, -50, 100, 100, color, brush);
-        item->setPos(p.x(), p.y());
-        items.push_back(item);
-    }
-}
 /**
  * @brief Calculates the index of the closest lidar point to the given angle.
  *
@@ -347,12 +322,9 @@ void SpecificWorker::draw_person(RoboCompVisualElementsPub::TObject &person, QGr
                                                            QPen(Qt::magenta, 20));
     items.push_back(item_line);
 }
-void SpecificWorker::draw_path_to_person(const auto &points, QGraphicsScene *scene)
-{
-    if(points.empty())
-        return;
 
-    // remove all items drawn in the previous iteration
+void SpecificWorker::draw_path(vector<Eigen::Vector2f> path, QGraphicsScene *scene)
+{
     static std::vector<QGraphicsItem*> items;
     for(auto i: items)
     {
@@ -360,18 +332,17 @@ void SpecificWorker::draw_path_to_person(const auto &points, QGraphicsScene *sce
         delete i;
     }
     items.clear();
-
-    // draw the path as a series of lines with dots in between
-    for (auto i : iter::range(0UL, points.size() - 1))
+    for (auto i : iter::range(0UL, path.size() - 1))
     {
-        auto line = scene->addLine(QLineF(QPointF(points[i].x(), points[i].y()), QPointF(points[i+1].x(), points[i+1].y())),
+        auto line = scene->addLine(QLineF(QPointF(path[i].x(), path[i].y()), QPointF(path[i+1].x(), path[i+1].y())),
                                    QPen(Qt::blue, 40));
         items.push_back(line);
         auto dot = scene->addEllipse(-30, -30, 60, 60, QPen(Qt::darkBlue, 40));
-        dot->setPos(points[i].x(), points[i].y());
-       items.push_back(dot);
+        dot->setPos(path[i].x(), path[i].y());
+        items.push_back(dot);
     }
 }
+
 void SpecificWorker::plot_distance(double distance)
 {
     // add value to plot
@@ -391,23 +362,7 @@ float SpecificWorker::running_average(float dist)
     count++;
     return avg;
 }
-void SpecificWorker::draw_obstacles(const vector<QPolygonF> &list_poly, QGraphicsScene *scene, const QColor &color) const
-{
-    static std::vector<QGraphicsItem*> items;
-    // remove all items drawn in the previous iteration
-    for(auto i: items)
-    {
-        scene->removeItem(i);
-        delete i;
-    }
-    items.clear();
 
-    for(const auto &poly : list_poly)
-    {
-        auto item = scene->addPolygon(poly, QPen(color, 50));
-        items.push_back(item);
-    }
-}
 //////////////////////////////////////////////////////////////////
 /// SUBSCRIPTIONS (runs in a different thread)
 //////////////////////////////////////////////////////////////////

@@ -93,6 +93,12 @@ void SpecificWorker::compute()
 	auto ldata_bpearl = read_lidar_bpearl();
 	if(ldata_bpearl.empty()) { qWarning() << __FUNCTION__ << "Empty bpearl lidar data"; return; };
 	draw_lidar(ldata_bpearl, &viewer->scene);
+	if (params.actual_path.size() > 0 and params.actual_target.has_value())
+	{
+		draw_path(params.actual_path, &viewer->scene);
+		auto &[x,y] = *params.actual_target;
+		draw_target(QPointF{x,y}, &viewer->scene);
+	}
 
 	changeState(ldata_bpearl);
 }
@@ -300,24 +306,6 @@ int SpecificWorker::startup_check()
 	return 0;
 }
 
-std::vector<SpecificWorker::TCell> SpecificWorker::get_neighbors(TCell& current, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE>& grid)
-{
-	std::vector<TCell> neighbors;
-    int directions[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}}; // Movimientos: arriba, abajo, izquierda, derecha
-
-    for (auto& dir : directions) {
-        int new_x = current.x + dir[0];
-        int new_y = current.y + dir[1];
-
-        if (new_x >= 0 && new_x < GRID_SIZE && new_y >= 0 && new_y < GRID_SIZE) {
-            TCell& neighbor = grid[new_x][new_y];
-            if (neighbor.state != CELL_STATE::OCCUPIED) {  // Sólo agregar celdas transitables
-                neighbors.push_back(neighbor);
-            }
-        }
-    }
-    return neighbors;
-}
 
 
 
@@ -475,22 +463,67 @@ void SpecificWorker::draw_path(std::vector<QPointF> &path, QGraphicsScene *scene
 	}
 }
 
+void SpecificWorker::clean_near_data(GridPOS target)
+{
+	const auto &[i, j] = *target;
+	std::vector<std::pair<int, int>> neighbours = {{-1,-1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
+	for (auto n: neighbours) {
+		int a = i + n.first;
+		int b = j + n.second;
+		if (!(a < 0 or b < 0 or a >= GRID_SIZE or b >= GRID_SIZE))
+		{
+			grid[a][b].state = CELL_STATE::UNKNOWN;
+		}
+	}
+	grid[i][j].state = CELL_STATE::UNKNOWN;
+}
+
+std::vector<QPointF> SpecificWorker::smooth_path(const std::vector<QPointF> &path)
+{
+	if (path.size() < 3)
+		return path;
+
+	std::vector<QPointF> smoothed_path;
+	smoothed_path.push_back(path.front()); // Agregar el primer punto
+
+	for (size_t i = 1; i < path.size() - 1; ++i)
+	{
+		QPointF prev = path[i - 1];
+		QPointF curr = path[i];
+		QPointF next = path[i + 1];
+
+		QPointF smoothed_point = (prev + curr * 2.0 + next) / 4.0;
+		smoothed_path.push_back(smoothed_point);
+	}
+
+	smoothed_path.push_back(path.back()); // Agregar el último punto
+	return smoothed_path;
+}
+
+
+
 RoboCompGrid2D::Result SpecificWorker::Grid2D_getPaths(RoboCompGrid2D::TPoint source, RoboCompGrid2D::TPoint target)
 {
 	LidarPOS _source {{source.x, source.y}};
 	LidarPOS _target  {{target.x, target.y}};
 	GridPOS goal = grid_to_lidar_pos(_target);
+	params.actual_target = _source;
 	GridPOS start = grid_to_lidar_pos(_source);
 	auto &[i,j] = *goal;
-	qDebug() << i << " " << j << "Estado Celda: " << cellStateToString(grid[i][j].state);
 	auto &[l,m] = *start;
-	qDebug() << l << " " << m << "Estado Celda: " << cellStateToString(grid[i][j].state);
 	std::vector<QPointF> path = dijkstra(start,goal);
+	std::vector<QPointF> smoothed_path = smooth_path(path);
 	qDebug() << "Tamaño del camino" << path.size();
 	RoboCompGrid2D::Result result;
-	std::ranges::transform(path, std::back_inserter(result.path), [](auto &p) {
+	clean_near_data(goal);
+	qDebug() << i << " " << j << "Estado Celda: " << cellStateToString(grid[i][j].state);
+	qDebug() << l << " " << m << "Estado Celda: " << cellStateToString(grid[i][j].state);
+
+	std::ranges::transform(smoothed_path, std::back_inserter(result.path), [](auto &p) {
 							return RoboCompGrid2D::TPoint{static_cast<float>(p.x()), static_cast<float>(p.y()), 0.f};
 	});
+	params.actual_path.clear();
+	std::ranges::copy(smoothed_path, std::back_inserter(params.actual_path));
 	qDebug() << "Tamaño del camino" << result.path.size();
 	return result;
 }
