@@ -1,7 +1,7 @@
 src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o: \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.cpp \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.cpp \
  /usr/include/stdc-predef.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.h \
  /usr/include/IceUtil/PushDisableWarnings.h /usr/include/Ice/ProxyF.h \
  /usr/include/Ice/Config.h /usr/include/IceUtil/Config.h \
  /usr/include/c++/13/stdlib.h /usr/include/c++/13/cstdlib \
@@ -279,4 +279,4 @@ src/CMakeFiles/obs_person_tracker.dir/OmniRobot.cpp.o: \
  /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
  /usr/include/c++/13/bits/deque.tcc /usr/include/Ice/FactoryTableInit.h \
  /usr/include/Ice/DefaultValueFactory.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.h
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.h

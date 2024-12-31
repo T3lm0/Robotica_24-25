@@ -14,36 +14,36 @@ obs_person_tracker_autogen/timestamp: \
 	/home/robocomp/robocomp/cmake/modules/opencv4.cmake \
 	/home/robocomp/robocomp/cmake/modules/qt.cmake \
 	/home/robocomp/robocomp/cmake/robocomp.cmake \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeLists.txt \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeListsSpecific.txt \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Grid2D.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/VisualElementsPub.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.cpp \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/config.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.cpp \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.cpp \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/main.cpp \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/moc_predefs.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificmonitor.cpp \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificmonitor.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificworker.cpp \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificworker.h \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/visualelementspubI.cpp \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/visualelementspubI.h \
-	/home/telmo/robocomp/core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
-	/home/telmo/robocomp/core/classes/doublebuffer_sync/doublebuffer_sync.h \
-	/home/telmo/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
-	/home/telmo/robocomp/core/classes/qcustomplot/qcustomplot.h \
-	/home/telmo/robocomp/core/classes/qlog/qlog.h \
-	/home/telmo/robocomp/core/classes/threadpool/threadpool.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeLists.txt \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeListsSpecific.txt \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Grid2D.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/VisualElementsPub.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.cpp \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/config.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.cpp \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.cpp \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/main.cpp \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/moc_predefs.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificmonitor.cpp \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificmonitor.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificworker.cpp \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificworker.h \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/visualelementspubI.cpp \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/visualelementspubI.h \
+	/home/robocomp/robocomp/core/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
+	/home/robocomp/robocomp/core/classes/doublebuffer_sync/doublebuffer_sync.h \
+	/home/robocomp/robocomp/core/classes/grafcetStep/GRAFCETStep.h \
+	/home/robocomp/robocomp/core/classes/qcustomplot/qcustomplot.h \
+	/home/robocomp/robocomp/core/classes/qlog/qlog.h \
+	/home/robocomp/robocomp/core/classes/threadpool/threadpool.h \
 	/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake \
 	/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake \
@@ -1495,5 +1495,5 @@ obs_person_tracker_autogen/timestamp: \
 	/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules.cmake \
-	/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/mainUI.ui \
+	/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/mainUI.ui \
 	/snap/clion/310/bin/cmake/linux/x64/bin/cmake

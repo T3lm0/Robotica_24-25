@@ -91,17 +91,16 @@ void SpecificWorker::compute()
     if(data_.has_value())
         tp_person = find_person_in_data(data_.value().objects);
     RoboCompGrid2D::TPoint target;
-    if (tp_person.has_value())
+    RoboCompGrid2D::Result result;
+    if (tp_person.has_value()) {
         target = {std::stof(tp_person.value().attributes.at("x_pos")),
                      std::stof(tp_person.value().attributes.at("y_pos")), 0.f};
-    RoboCompGrid2D::Result result;
-
-    try {
-        result = grid2d_proxy->getPaths(RoboCompGrid2D::TPoint{0,0,0.f},target);
-    } catch (Ice::Exception &e) {
-        printf("%s\n",e.what());
+        try {
+            result = grid2d_proxy->getPaths(RoboCompGrid2D::TPoint{0,0,0.f},target);
+        } catch (Ice::Exception &e) {
+            printf("%s\n",e.what());
+        }
     }
-
     // call state machine to track personmake
     vector<Eigen::Vector2f> path;
     std::ranges::transform(result.path, std::back_inserter(path), [](auto &p){return Eigen::Vector2f{p.x, p.y};});
@@ -125,7 +124,6 @@ void SpecificWorker::compute()
     // move the robot
     try{ omnirobot_proxy->setSpeedBase(0.f, adv, rot); }
     catch(const Ice::Exception &e){std::cout << e << std::endl;}
-
 }
 
 //////////////////////////////////////////////////////////////////
@@ -217,11 +215,11 @@ SpecificWorker::RetVal SpecificWorker::track(const vector<Eigen::Vector2f> &path
     lcdNumber_dist_to_person->display(distance);
 
     // check if the distance to the person is lower than a threshold
-    if(distance < params.PERSON_MIN_DIST)
+    if(distance < params.PERSON_MIN_DIST and path.empty())
     { qWarning() << __FUNCTION__ << "Distance to person lower than threshold"; return RetVal(STATE::WAIT, 0.f, 0.f);}
 
     // angle error is the angle between the robot and the person. It has to be brought to zero
-    float angle_error = atan2(path.at(1).x(), path.at(1).y());
+    float angle_error = atan2(path.at(2).x(), path.at(2).y());
     float rot_speed = params.k1 * angle_error + params.k2 * (angle_error-ant_angle_error);
     ant_angle_error = angle_error;
     // rot_brake is a value between 0 and 1 that decreases the speed when the robot is not facing the person
@@ -258,7 +256,7 @@ SpecificWorker::RetVal SpecificWorker::search(const vector<Eigen::Vector2f> &pat
         ant = b;
         return aux;});
         if(distance < params.PERSON_MIN_DIST)
-        { qWarning() << __FUNCTION__ << "Distance to person lower than threshold"; return RetVal(STATE::WAIT, 0.f, 0.f);}
+        { qWarning() << __FUNCTION__ << "Distance to person lower than threshold" << path.size(); return RetVal(STATE::WAIT, 0.f, 0.f);}
         qWarning() << __FUNCTION__ << "Person found, moving to TRACK"; return RetVal(STATE::TRACK, 0.f, 0.f);
     }
 

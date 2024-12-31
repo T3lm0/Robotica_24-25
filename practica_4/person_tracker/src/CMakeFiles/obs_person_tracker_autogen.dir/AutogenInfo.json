@@ -1,12 +1,12 @@
 {
-	"BUILD_DIR" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen",
-	"CMAKE_BINARY_DIR" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src",
+	"BUILD_DIR" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen",
+	"CMAKE_BINARY_DIR" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src",
 	"CMAKE_EXECUTABLE" : "/snap/clion/310/bin/cmake/linux/x64/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeLists.txt",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeLists.txt",
 		"/home/robocomp/robocomp/cmake/robocomp.cmake",
 		"/home/robocomp/robocomp/cmake/modules/qt.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake",
@@ -195,7 +195,7 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineTargets-none.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineAdditionalTargetInfo.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6StateMachine/Qt6StateMachineVersionlessTargets.cmake",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeListsSpecific.txt",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeListsSpecific.txt",
 		"/home/robocomp/robocomp/cmake/modules/opencv4.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake",
@@ -221,88 +221,88 @@
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker",
+	"CMAKE_SOURCE_DIR" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/deps",
+	"DEP_FILE" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "obs_person_tracker_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
 			"/home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h",
 			"MU",
-			"FJSVBVKUX3/moc_abstract_graphic_viewer.cpp",
+			"C5I4E6MOFA/moc_abstract_graphic_viewer.cpp",
 			null
 		],
 		[
 			"/home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h",
 			"MU",
-			"ZAV7YM6KZS/moc_GRAFCETStep.cpp",
+			"CEMD3IQAC5/moc_GRAFCETStep.cpp",
 			null
 		],
 		[
 			"/home/robocomp/robocomp/classes/qcustomplot/qcustomplot.h",
 			"MU",
-			"Q5Z3B2SSF6/moc_qcustomplot.cpp",
+			"MBZIBWM5N2/moc_qcustomplot.cpp",
 			null
 		],
 		[
 			"/home/robocomp/robocomp/classes/qlog/qlog.h",
 			"MU",
-			"TMDPG3ER6E/moc_qlog.cpp",
+			"PIFB3DKPLJ/moc_qlog.cpp",
 			null
 		],
 		[
 			"/home/robocomp/robocomp/classes/rapplication/rapplication.h",
 			"MU",
-			"QV56BMCHM5/moc_rapplication.cpp",
+			"NC2XPEGGRP/moc_rapplication.cpp",
 			null
 		],
 		[
 			"/home/robocomp/robocomp/classes/sigwatch/sigwatch.h",
 			"MU",
-			"E63V2YUGZG/moc_sigwatch.cpp",
+			"4OOVC6I5YW/moc_sigwatch.cpp",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.h",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.h",
 			"MU",
 			"EWIEGA46WW/moc_commonbehaviorI.cpp",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.h",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_genericmonitor.cpp",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.h",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.h",
 			"MU",
 			"EWIEGA46WW/moc_genericworker.cpp",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificmonitor.h",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_specificmonitor.cpp",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificworker.h",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificworker.h",
 			"MU",
 			"EWIEGA46WW/moc_specificworker.cpp",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/visualelementspubI.h",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/visualelementspubI.h",
 			"MU",
 			"EWIEGA46WW/moc_visualelementspubI.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"ICE_CPP11_MAPPING",
@@ -323,11 +323,11 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src",
 		"/opt/robocomp/include",
 		"/classes",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker",
 		"/home/robocomp/robocomp/classes",
 		"/home/robocomp/robocomp/libs",
 		"/home/robocomp/robocomp/interfaces",
@@ -368,27 +368,27 @@
 		"-c",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Grid2D.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/VisualElementsPub.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/ui_mainUI.h"
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Grid2D.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/VisualElementsPub.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/ui_mainUI.h"
 	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 12,
-	"PARSE_CACHE_FILE" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeFiles/obs_person_tracker_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeFiles/obs_person_tracker_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 4,
-	"SETTINGS_FILE" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeFiles/obs_person_tracker_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CMakeFiles/obs_person_tracker_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
@@ -414,37 +414,37 @@
 		],
 		[ "/home/robocomp/robocomp/classes/sigwatch/sigwatch.cpp", "MU", null ],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.cpp",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.cpp",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.cpp",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/main.cpp",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/main.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificmonitor.cpp",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificmonitor.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificworker.cpp",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificworker.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/visualelementspubI.cpp",
+			"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/visualelementspubI.cpp",
 			"MU",
 			null
 		]
@@ -453,15 +453,15 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Grid2D.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/VisualElementsPub.cpp",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/mainUI.ui",
-		"/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/ui_mainUI.h"
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Grid2D.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/VisualElementsPub.cpp",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/mainUI.ui",
+		"/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/ui_mainUI.h"
 	],
 	"UIC_UI_FILES" : [],
 	"USE_BETTER_GRAPH" : false,

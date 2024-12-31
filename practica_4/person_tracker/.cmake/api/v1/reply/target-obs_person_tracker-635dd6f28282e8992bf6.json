@@ -225,15 +225,15 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/include"
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/include"
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src"
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src"
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/."
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/."
 				},
 				{
 					"backtrace" : 22,
@@ -245,7 +245,7 @@
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker"
+					"path" : "/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker"
 				},
 				{
 					"backtrace" : 24,
@@ -349,14 +349,14 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ICES__home_telmo_robocomp_components_grupo_12_Robotica_24-25_practica_4_person_tracker_src::@145eef247bfb46b6828c"
-		},
-		{
-			"id" : "obs_person_tracker_autogen_timestamp_deps::@145eef247bfb46b6828c"
+			"id" : "ICES__home_robocomp_robocomp_components_grupo_12_Robotica_24-25_practica_4_person_tracker_src::@145eef247bfb46b6828c"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "obs_person_tracker_autogen::@145eef247bfb46b6828c"
+		},
+		{
+			"id" : "obs_person_tracker_autogen_timestamp_deps::@145eef247bfb46b6828c"
 		}
 	],
 	"id" : "obs_person_tracker::@145eef247bfb46b6828c",

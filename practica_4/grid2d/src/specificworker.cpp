@@ -97,9 +97,8 @@ void SpecificWorker::compute()
 	{
 		draw_path(params.actual_path, &viewer->scene);
 		auto &[x,y] = *params.actual_target;
-		draw_target(QPointF{x,y}, &viewer->scene);
-	}
-
+		draw_target(QPointF{x,y});
+		}
 	changeState(ldata_bpearl);
 }
 
@@ -428,6 +427,144 @@ std::vector<QPointF> SpecificWorker::dijkstra(GridPOS start, GridPOS target)
 	return path_points;
 }
 
+std::vector<QPointF> SpecificWorker::dijkstra2(GridPOS start, GridPOS target)
+{
+    // Verificar que las posiciones de inicio y objetivo son válidas
+    if (!start.has_value() || !target.has_value())
+    {
+        qWarning() << "Posición de inicio o objetivo no válida.";
+        return {};
+    }
+
+    // Desempaquetar las posiciones
+    auto [start_x, start_y] = start.value();
+    auto [target_x, target_y] = target.value();
+
+    // Direcciones de movimiento (arriba, abajo, izquierda, derecha)
+    const std::vector<std::tuple<int, int>> directions = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+
+    // Mapa de distancias mínimas desde el inicio
+    std::unordered_map<std::tuple<int, int>, int, boost::hash<std::tuple<int, int>>> min_distance;
+
+    // Mapa para reconstruir el camino
+    std::unordered_map<std::tuple<int, int>, std::tuple<int, int>, boost::hash<std::tuple<int, int>>> previous;
+
+    // Inicializar distancias
+    for (int i = 0; i < GRID_SIZE; ++i)
+    {
+        for (int j = 0; j < GRID_SIZE; ++j)
+        {
+            std::tuple<int, int> pos = {i, j};
+            if (grid[i][j].state == CELL_STATE::OCCUPIED || grid[i][j].state == CELL_STATE::UNKNOWN)
+                min_distance[pos] = std::numeric_limits<int>::max(); // Obstáculo
+            else
+                min_distance[pos] = std::numeric_limits<int>::max();
+        }
+    }
+
+    // Distancia al punto inicial es 0
+    std::tuple<int, int> start_pos = {start_x, start_y};
+    min_distance[start_pos] = 0;
+
+    // Crear la cola de prioridad (min heap)
+    std::priority_queue<std::pair<int, std::tuple<int, int>>,
+                        std::vector<std::pair<int, std::tuple<int, int>>>,
+                        std::greater<>> pq;
+    pq.push({0, start_pos});
+
+    // Algoritmo de Dijkstra
+    while (!pq.empty())
+    {
+        auto [current_dist, current] = pq.top();
+        pq.pop();
+
+        // Si llegamos al objetivo, detener
+        if (current == std::make_tuple(target_x, target_y))
+            break;
+
+        // Obtener coordenadas del nodo actual
+        auto [cx, cy] = current;
+
+        // Explorar vecinos
+        for (const auto &[dx, dy] : directions)
+        {
+            int nx = cx + dx;
+            int ny = cy + dy;
+
+            // Verificar límites de la cuadrícula
+            if (nx < 0 || ny < 0 || nx >= GRID_SIZE || ny >= GRID_SIZE)
+                continue;
+
+            // Verificar si la celda es transitable y si sus vecinos en un rango 7x7 también lo son
+            bool safe_to_move = true;
+            for (int i = -3; i <= 3 && safe_to_move; ++i) // Expandimos el rango a -3, 3 para cubrir 7x7
+            {
+                for (int j = -3; j <= 3; ++j)
+                {
+                    int neighbor_x = nx + i;
+                    int neighbor_y = ny + j;
+
+                    if (neighbor_x < 0 || neighbor_y < 0 || neighbor_x >= GRID_SIZE || neighbor_y >= GRID_SIZE)
+                        continue;
+
+                    if (grid[neighbor_x][neighbor_y].state == CELL_STATE::OCCUPIED)
+                    {
+                        safe_to_move = false;
+                        break;
+                    }
+                }
+            }
+
+            if (!safe_to_move)
+                continue;
+
+            std::tuple<int, int> neighbor = {nx, ny};
+            int new_dist = current_dist + 1; // Coste uniforme de 1 para cada movimiento
+
+            // Actualizar si se encuentra un camino más corto
+            if (new_dist < min_distance[neighbor])
+            {
+                min_distance[neighbor] = new_dist;
+                previous[neighbor] = current;
+                pq.push({new_dist, neighbor});
+            }
+        }
+    }
+
+    // Reconstruir el camino desde el objetivo al inicio
+    std::vector<std::tuple<int, int>> path;
+    std::tuple<int, int> current = {target_x, target_y};
+
+    while (current != start_pos)
+    {
+        path.push_back(current);
+        if (previous.find(current) == previous.end())
+        {
+            qWarning() << "No se encontró un camino válido.";
+            return {};
+        }
+        current = previous[current];
+    }
+    path.push_back(start_pos);
+    std::reverse(path.begin(), path.end());
+
+    // Pintar el camino en la cuadrícula
+    std::vector<QPointF> path_points;
+    path_points.reserve(path.size());
+    for (const auto &[x, y] : path)
+    {
+        const auto result = grid_to_lidar(x, y);
+        if (result)
+        {
+            const auto &[i, j] = *result;
+            path_points.emplace_back(QPointF(i, j));
+        }
+    }
+
+    return path_points;
+}
+
+
 void SpecificWorker::draw_target(QPointF goal, bool erase)
 {
 	static QGraphicsItem* item;   // store items so they can be shown between iterations
@@ -481,22 +618,33 @@ void SpecificWorker::clean_near_data(GridPOS target)
 std::vector<QPointF> SpecificWorker::smooth_path(const std::vector<QPointF> &path)
 {
 	if (path.size() < 3)
-		return path;
+		return path; // Si el camino tiene menos de 3 puntos, no se puede suavizar
 
-	std::vector<QPointF> smoothed_path;
-	smoothed_path.push_back(path.front()); // Agregar el primer punto
+	// Copiar el camino original para trabajar sobre él
+	std::vector<QPointF> smoothed_path = path;
 
-	for (size_t i = 1; i < path.size() - 1; ++i)
+	// Parámetros de suavizado
+	const float alpha = 0.1; // Peso para acercarse al promedio de los vecinos
+	const float beta = 0.1;  // Peso para mantener cercanía al camino original
+	const int iterations = 10; // Número de iteraciones para suavizar
+
+	for (int it = 0; it < iterations; ++it)
 	{
-		QPointF prev = path[i - 1];
-		QPointF curr = path[i];
-		QPointF next = path[i + 1];
+		for (size_t i = 1; i < smoothed_path.size() - 1; ++i)
+		{
+			// Puntos vecinos
+			QPointF prev = smoothed_path[i - 1];
+			QPointF next = smoothed_path[i + 1];
 
-		QPointF smoothed_point = (prev + curr * 2.0 + next) / 4.0;
-		smoothed_path.push_back(smoothed_point);
+			// Punto original
+			QPointF original = path[i];
+
+			// Desplazamiento de vértice
+			smoothed_path[i].setX(smoothed_path[i].x() + alpha * (prev.x() + next.x() - 2 * smoothed_path[i].x()) + beta * (original.x() - smoothed_path[i].x()));
+			smoothed_path[i].setY(smoothed_path[i].y() + alpha * (prev.y() + next.y() - 2 * smoothed_path[i].y()) + beta * (original.y() - smoothed_path[i].y()));
+		}
 	}
 
-	smoothed_path.push_back(path.back()); // Agregar el último punto
 	return smoothed_path;
 }
 
@@ -509,21 +657,17 @@ RoboCompGrid2D::Result SpecificWorker::Grid2D_getPaths(RoboCompGrid2D::TPoint so
 	GridPOS goal = grid_to_lidar_pos(_target);
 	params.actual_target = _source;
 	GridPOS start = grid_to_lidar_pos(_source);
-	auto &[i,j] = *goal;
-	auto &[l,m] = *start;
+	clean_near_data(goal);
 	std::vector<QPointF> path = dijkstra(start,goal);
 	std::vector<QPointF> smoothed_path = smooth_path(path);
 	qDebug() << "Tamaño del camino" << path.size();
 	RoboCompGrid2D::Result result;
-	clean_near_data(goal);
-	qDebug() << i << " " << j << "Estado Celda: " << cellStateToString(grid[i][j].state);
-	qDebug() << l << " " << m << "Estado Celda: " << cellStateToString(grid[i][j].state);
-
+	result.path.reserve(smoothed_path.size()); // Reservar memoria para evitar realocaciones
 	std::ranges::transform(smoothed_path, std::back_inserter(result.path), [](auto &p) {
 							return RoboCompGrid2D::TPoint{static_cast<float>(p.x()), static_cast<float>(p.y()), 0.f};
 	});
 	params.actual_path.clear();
-	std::ranges::copy(smoothed_path, std::back_inserter(params.actual_path));
+	params.actual_path = smoothed_path; // Realiza una copia completa
 	qDebug() << "Tamaño del camino" << result.path.size();
 	return result;
 }

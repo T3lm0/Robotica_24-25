@@ -1,5 +1,5 @@
-/home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/EWIEGA46WW/moc_genericmonitor.cpp: /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.h \
-  /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/moc_predefs.h \
+/home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/EWIEGA46WW/moc_genericmonitor.cpp: /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.h \
+  /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/obs_person_tracker_autogen/moc_predefs.h \
   /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.h \
   /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.h \
   /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.h \

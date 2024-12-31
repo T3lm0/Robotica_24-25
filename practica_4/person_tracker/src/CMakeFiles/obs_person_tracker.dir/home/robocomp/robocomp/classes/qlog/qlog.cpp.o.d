@@ -1,7 +1,7 @@
 src/CMakeFiles/obs_person_tracker.dir/home/robocomp/robocomp/classes/qlog/qlog.cpp.o: \
  /home/robocomp/robocomp/classes/qlog/qlog.cpp /usr/include/stdc-predef.h \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/config.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCore \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QtCoreDepends \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \

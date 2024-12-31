@@ -135,6 +135,7 @@ private:
 	//Dijkstra
 	std::vector<TCell> get_neighbors(TCell& current, std::array<std::array<TCell, GRID_SIZE>, GRID_SIZE>& grid);
 	std::vector<QPointF> dijkstra(GridPOS start, GridPOS target);
+	std::vector<QPointF> dijkstra2(GridPOS start, GridPOS target);
 	void draw_target(QPointF goal, bool erase = false);
 	void draw_path(std::vector<QPointF> &path, QGraphicsScene *scene);
 	void clean_near_data(GridPOS target);

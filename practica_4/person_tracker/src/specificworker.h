@@ -59,7 +59,7 @@ class SpecificWorker : public GenericWorker
             float ROBOT_WIDTH = 460;  // mm
             float ROBOT_LENGTH = 480;  // mm
             float MAX_ADV_SPEED = 900; // mm/s
-            float MAX_ROT_SPEED = 2; // rad/s
+            float MAX_ROT_SPEED = 0.5; // rad/s
             float SEARCH_ROT_SPEED = 0.9; // rad/s
             float STOP_THRESHOLD = 700; // mm
             float ADVANCE_THRESHOLD = ROBOT_WIDTH * 3; // mm
@@ -73,7 +73,7 @@ class SpecificWorker : public GenericWorker
             QRectF GRID_MAX_DIM{-5000, 2500, 10000, -5000};
             // control track
             float acc_distance_factor = 2;
-            float k1 = 1.1;  // proportional gain for the angle error;
+            float k1 = 0.6;  // proportional gain for the angle error;
             float k2 = 0.5; // proportional gain for derivative of the angle error;
         };
         Params params;
@@ -105,7 +105,6 @@ class SpecificWorker : public GenericWorker
 
         // person
         std::expected<RoboCompVisualElementsPub::TObject, std::string> find_person_in_data(const std::vector<RoboCompVisualElementsPub::TObject> &objects);
-        std::vector<QPolygonF> find_person_polygon_and_remove(const RoboCompVisualElementsPub::TObject &person, const std::vector<QPolygonF> &obstacles);
 
         // random number generator
         std::random_device rd;
@@ -117,6 +116,6 @@ class SpecificWorker : public GenericWorker
         QCustomPlot *plot;
         void plot_distance(double distance);
 
-         float running_average(float dist);
+        float running_average(float dist);
 };
 #endif

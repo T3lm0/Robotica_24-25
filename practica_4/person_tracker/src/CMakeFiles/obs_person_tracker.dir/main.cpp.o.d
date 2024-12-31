@@ -1,5 +1,5 @@
 src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/main.cpp \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/signal.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -1197,12 +1197,12 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: \
  /home/robocomp/robocomp/classes/sigwatch/sigwatch.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /home/robocomp/robocomp/classes/qlog/qlog.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/config.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/config.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/config.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/config.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericmonitor.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QtGui \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/ui_mainUI.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/ui_mainUI.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFrame \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
@@ -1213,7 +1213,7 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSplitter \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/CommonBehavior.h \
  /home/robocomp/robocomp/classes/grafcetStep/GRAFCETStep.h \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/QState \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
@@ -1227,14 +1227,14 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtStateMachine/qstate.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Grid2D.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/VisualElementsPub.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificworker.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Camera360RGB.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/GenericBase.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Grid2D.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/OmniRobot.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/VisualElementsPub.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificworker.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/genericworker.h \
  /home/robocomp/robocomp/classes/abstract_graphic_viewer/abstract_graphic_viewer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsScene \
@@ -1249,7 +1249,7 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsPolygonItem \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/Lidar3D.h \
  /usr/include/c++/13/expected \
  /home/robocomp/robocomp/classes/doublebuffer_sync/doublebuffer_sync.h \
  /usr/include/c++/13/ranges /usr/include/c++/13/shared_mutex \
@@ -1478,6 +1478,6 @@ src/CMakeFiles/obs_person_tracker.dir/main.cpp.o: \
  /usr/include/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/Eigen/src/Eigenvalues/./RealQZ.h \
  /usr/include/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificmonitor.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.h \
- /home/telmo/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/visualelementspubI.h
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/specificmonitor.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/commonbehaviorI.h \
+ /home/robocomp/robocomp/components/grupo_12/Robotica_24-25/practica_4/person_tracker/src/visualelementspubI.h
