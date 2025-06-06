@@ -63,9 +63,7 @@ This project involves the design, implementation, and testing of an autonomous m
 ---
 
 ## 📚 References
-
-- Course lectures and guides  
-- [YOLO official documentation](https://github.com/AlexeyAB/darknet)  
+  
 - [RoboComp GitHub](https://github.com/robocomp)
 
 ---
